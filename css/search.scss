@@ -1,0 +1,469 @@
+@import "./_reset";
+
+
+
+header:hover {
+    background-color: #ffffff;
+    transition: .5s;
+}
+
+header {
+    width: 100%;
+    @include fl(space-between, flex-start);
+    margin: 0 auto;
+    position: fixed;
+    left: 0%;
+    top: 0;
+    z-index: 10;
+
+    .hdbg {
+        width: 100%;
+        @include fl(center, flex-start);
+
+        .head {
+            width: 1280px;
+            @include fl(space-between, flex-start);
+
+            .head_logo {
+                width: 20%;
+                padding-top: 30px;
+
+                a {
+                    img {
+                        width: 200px;
+                    }
+                }
+            }
+
+            .menu_wrap {
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                @include fl(center, stretch);
+
+                >li {
+                    width: 20%;
+                    text-align: center;
+                    padding: 40px 0;
+
+                    a {
+                        @include fon('Noto Sans KR', 500, 1.1em);
+                        color: #1c1c1b;
+
+                    }
+
+                    >a::after {
+                        content: '';
+                        display: block;
+                        border-bottom: 1px solid black;
+                        padding-top: 20px;
+                        width: 0px;
+                        margin: 0 auto;
+                    }
+
+                    div {
+
+                        padding-top: 20px;
+                        margin-top: 0;
+                        padding-bottom: 20px;
+                        margin-bottom: 0;
+
+                        ul {
+                            @include fon("Noto Sans KR", 400, 0.9em);
+                            margin-top: 10%;
+
+                            li {
+                                width: 100%;
+                                padding: 2% 0% 2%;
+
+                            }
+
+                            li:nth-of-type(1) {
+                                margin-top: 5%;
+                            }
+                        }
+
+                    }
+                }
+
+                li:hover>a::after {
+                    width: 25%;
+                    left: 0%;
+                    transition: 0.2s;
+                }
+            }
+
+            li:hover {
+                background-color: #fdd000;
+
+            }
+
+            .sns {
+                width: 20%;
+                padding-top: 30px;
+
+                nav {
+                    width: 100%;
+                    display: flex;
+
+                    a {
+                        width: 100%;
+                        border: 2px solid black;
+                        border-radius: 100%;
+                        padding: 7px;
+                        margin: 5px;
+
+                        @include fl(center, flex-start) {}
+                    }
+
+                    a:hover {
+                        background-color: #fdd000;
+                        border-color: #fdd000;
+                    }
+
+                }
+
+                .burger_bg {
+                    display: none;
+                }
+            }
+
+        }
+    }
+
+    .wrap {
+        position: fixed;
+        right: 30px;
+        top: 30%;
+
+        li {
+            width: 110px;
+            height: 110px;
+
+            @include fl(center, center) {}
+
+            border: 2px solid black;
+            background-color: black;
+            border-radius: 100%;
+            text-align: center;
+            margin-top: 10px;
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+
+            div {
+                a {
+                    color: white;
+
+                    p {
+                        margin: 0px;
+                        @include fon('Noto Sans KR', 500, 14px);
+                    }
+
+                    b {
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 20px;
+
+                    }
+                }
+            }
+
+        }
+
+        li:hover {
+            background-color: #fdd000;
+            border-color: #fdd000;
+
+            a {
+                color: #1c1c1b;
+            }
+        }
+    }
+
+}
+
+
+main {
+
+    padding-top: 120px;
+
+    .top {
+        padding: 120px 0px;
+        background-color: #444;
+        color: #fff;
+        text-align: center;
+
+        h2 {
+            @include fon('Noto Sans KR', 300, 24px);
+            ;
+        }
+
+        div {
+            @include fon('Roboto', 900, 3em);
+            color: #fdd000;
+        }
+
+        p {
+            @include fon('Noto Sans KR', 300, 16px);
+            text-align: center;
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+    }
+
+    .map {
+        background-image: url(../img-sub/map.PNG);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 60vh;
+        position: relative;
+
+        .search {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 300px;
+            align-items: center;
+            transform: translateY(10%)translateX(50px);
+            background-color: white;
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+
+            .btn {
+                margin: 0;
+                display: flex;
+
+                button {
+                    width: 100%;
+                    padding: 5% 0;
+                    background-color: #fdd000;
+                    border: 1px solid #a3a3a3;
+                    border-width: 1px 0px;
+                    @include fon('Noto Sans KR', 300, 1.1rem);
+                }
+
+                button:nth-of-type(2) {
+                    background-color: #1c1c1b;
+                    color: white;
+                }
+            }
+
+            .search_bar {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #fdd000;
+                padding-bottom: 5%;
+
+                h3 {
+                    @include fon('Noto Sans KR', 400, 1.5rem);
+                    margin: 5% 0;
+                }
+
+                p {
+                    margin: 0;
+                    margin-bottom: 5%;
+                    @include fon('Noto Sans KR', 300, 1rem);
+                }
+
+                div {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    position: relative;
+
+                    input {
+                        width: 90%;
+                        padding: 5% 10%;
+                        border: none;
+                        border-radius: 7px;
+
+                    }
+
+                }
+
+                div::after {
+                    content: 'search';
+                    position: absolute;
+                    left: 85%;
+                    top: 20%;
+                    width: 30px;
+                    height: 30px;
+                    font-family: 'material symbols outlined';
+                    z-index: 2;
+
+                    .material-symbols-outlined {
+                        font-variation-settings:
+                            'FILL' 0,
+                            'wght' 400,
+                            'GRAD' 0,
+                            'opsz' 48
+                    }
+
+
+                }
+
+
+            }
+
+
+        }
+
+        .result {
+            padding-bottom: 70%;
+            text-align: center;
+
+            p {
+                @include fon('Noto Sans KR', 300, 1rem);
+            }
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background: #212121;
+
+    .footer_1 {
+        background-color: #fdd000;
+
+        nav {
+            width: 1280px;
+            padding: 20px 100px;
+            margin: 0 auto;
+
+            @include fon('Noto Sans KR', 700, 16px) {}
+
+            a:nth-of-type(2) {
+                padding-left: 20px;
+            }
+
+        }
+    }
+
+    .footer_box {
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        padding: 60px 20px;
+        color: #aaa;
+
+        .footer_text {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: 10%;
+
+            div {
+                span {
+                    margin: 0px 10px 0px 0px;
+
+                    @include fon('Noto Sans KR', 300, 14px) {}
+                }
+
+                b {
+                    span {
+                        @include fon('Noto Sans KR', 700, 14px) {}
+
+                        color: #fff;
+
+                    }
+                }
+
+                p {
+                    @include fon('Noto Sans KR', 300, 14px) {}
+
+                    margin: 10px 0px;
+                }
+            }
+
+            .img_box {
+                width: 100%;
+
+                @include fl(flax-start, center) {}
+
+                margin-bottom: 15px;
+
+                .logo {
+                    width: 180px;
+                    height: 36px;
+                    padding-right: 5%;
+                }
+
+                nav {
+                    display: flex;
+                    width: 60%;
+
+                    div {
+                        width: 13%;
+                        display: flex;
+                        border-radius: 100%;
+                        background-color: #fff;
+                        margin-right: 10px;
+
+                        a {
+                            display: flex;
+                            justify-content: center;
+                            width: 100%;
+                            padding: 5px
+                        }
+                    }
+
+                    div:hover {
+                        background-color: #fdd000;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .footer_wrap {
+        width: 50%;
+        display: flex;
+        color: #fff;
+
+        li {
+            width: 100%;
+            margin: 10px 0px;
+            margin-right: 20px;
+
+            b {
+                @include fon('Noto Sans KR', 300, 18px) {}
+            }
+
+            div {
+                a {
+                    display: block;
+                    color: #bdbdbd;
+                    padding-top: 10%;
+
+                    @include fon('Noto Sans KR', 300, 0.8rem){};
+
+                }
+            }
+
+        }
+    }
+}
+
+
+@import "./_media-search";

@@ -1,0 +1,70 @@
+
+
+
+
+
+@mixin ani{animation: ani-1 1s forwards};
+
+
+@keyframes ani-1 {
+     0%{ opacity: 0;
+        transform: translateY(30%);}
+     100%{opacity: 100;
+         transform: translateY(0%);}
+            }
+
+
+@mixin ani2{animation: ani2 1s forwards}
+
+
+@keyframes ani2 {
+     0%{ opacity: 0;
+        transform: translateY(50%);}
+     100%{opacity: 100;
+         transform: translateY(-10%);}
+            }
+        
+            
+ @mixin aniline1{animation: aniline1 1s forwards}
+
+ @keyframes aniline1 {
+    0%{ left: 50%; width: 0;}
+    100%{width: 100%;}
+           }
+            
+ @mixin aniline{animation: aniline 1s forwards}
+
+ @keyframes aniline {
+    0%{ left: 30%; width: 0;}
+    100%{width: 70%;}
+           }
+
+ @mixin aniline3{animation: aniline3 1s forwards}
+
+ @keyframes aniline3 {
+    0%{ left: 20%; width: 0;}
+    100%{width: 55%;}
+           }
+
+ @mixin aniline4{animation: aniline4 1s forwards}
+
+ @keyframes aniline4 {
+    0%{ left: 50%; width: 0;}
+    100%{width: 100%;}
+           }
+
+@mixin row{
+   animation: row1 1s forwards;
+}
+@keyframes row1 {
+   0% {transform: translateY(-100%);}
+   100% {transform: translateY(-5%);}
+}
+
+@mixin row0{
+   animation: row2 forwards;
+}
+@keyframes row2 {
+   0% {transform: translateY(-50%) rotate(45deg);}
+   100% {transform: translateY(220%) rotate(45deg);}
+}

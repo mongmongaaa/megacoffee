@@ -1,0 +1,1220 @@
+@import "./reset";
+
+
+@media(max-width:1280px) {
+
+    header {
+        width: 100%;
+        @include fl(space-between, flex-start);
+        margin: 0 auto;
+        position: fixed;
+        left: 0%;
+        top: 0;
+        z-index: 10;
+
+        .hdbg {
+            width: 100%;
+            @include fl(center, flex-start);
+
+            .head {
+                width: 100%;
+                @include fl(space-between, flex-start);
+                padding: 0px 3%;
+
+                .head_logo {
+                    width: 30%;
+                    padding-top: 30px;
+
+                    a {
+                        img {
+                            width: 200px;
+                        }
+                    }
+                }
+
+                .menu_wrap {
+                    margin: 0;
+                    width: 100%;
+                    height: 100%;
+                    @include fl(center, stretch);
+                    display: none;
+
+                    >li {
+                        width: 20%;
+                        text-align: center;
+                        padding: 40px 0;
+
+                        a {
+                            @include fon('Noto Sans KR', 500, 1.1em);
+                            color: #1c1c1b;
+
+                        }
+
+                        >a::after {
+                            content: '';
+                            display: block;
+                            border-bottom: 1px solid black;
+                            padding-top: 20px;
+                            width: 0px;
+                            margin: 0 auto;
+                        }
+
+                        div {
+
+                            padding-top: 20px;
+                            margin-top: 0;
+                            padding-bottom: 20px;
+                            margin-bottom: 0;
+
+                            ul {
+                                @include fon("Noto Sans KR", 400, 0.9em);
+                                margin-top: 10%;
+
+                                li {
+                                    width: 100%;
+                                    padding: 2% 0% 2%;
+
+                                }
+
+                                li:nth-of-type(1) {
+                                    margin-top: 5%;
+                                }
+                            }
+
+                        }
+                    }
+
+                    li:hover>a::after {
+                        width: 25%;
+                        left: 0%;
+                        transition: 0.2s;
+                    }
+                }
+
+                li:hover {
+                    background-color: #fdd000;
+
+                }
+
+                .sns {
+                    width: 30%;
+                    padding-top: 25px;
+                    display: flex;
+
+                    nav {
+                        width: 85%;
+                        display: flex;
+                        justify-content: flex-end;
+
+                        a {
+                            width: 50px;
+                            border: 2px solid black;
+                            border-radius: 100%;
+                            padding: 5px;
+                            margin: 10px;
+
+                            @include fl(center, flex-start) {}
+                        }
+
+                        a:hover {
+                            background-color: #fdd000;
+                            border-color: #fdd000;
+                        }
+
+
+
+                    }
+
+                    .burger_bg {
+                        display: block;
+                        display: flex;
+                        align-items: center;
+                        width: 15%;
+                        justify-content: center;
+
+                        .line {
+                            width: 25px;
+                            border: 1px solid black;
+                            margin-bottom: 10%;
+                            border-width: 0px 0px 2.5px 0px;
+                        }
+
+                        .line::after {
+                            content: '';
+                            width: 25px;
+                            border: 1px solid black;
+                            display: block;
+                            margin-bottom: 15%;
+                            border-width: 0px 0px 2.5px 0px;
+                        }
+
+                        .line::before {
+                            content: '';
+                            width: 25px;
+                            border: 1px solid black;
+                            display: block;
+                            margin-bottom: 12%;
+                            border-width: 0px 0px 2.5px 0px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .wrap {
+
+            position: fixed;
+            right: 30px;
+            top: 30%;
+            display: none;
+
+            li {
+                width: 110px;
+                height: 110px;
+
+                @include fl(center, center) {}
+
+                border: 2px solid black;
+                background-color: black;
+                border-radius: 100%;
+                text-align: center;
+                margin-top: 10px;
+                box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+
+                div {
+                    a {
+                        color: white;
+
+                        p {
+                            margin: 0px;
+                            @include fon('Noto Sans KR', 500, 14px);
+                        }
+
+                        b {
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 20px;
+
+                        }
+                    }
+                }
+
+            }
+
+            li:hover {
+                background-color: #fdd000;
+                border-color: #fdd000;
+
+                a {
+                    color: #1c1c1b;
+                }
+            }
+        }
+
+        .media_menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 35%;
+            height: 100vh;
+            background-color: #212121;
+            color: #fdd000;
+
+            .burger_2 {
+                .line2 {
+                    width: 40px;
+                    border: 1px solid black;
+                    margin-bottom: 7%;
+                    border-width: 0px 0px 5px 0px;
+                }
+
+                .line2::after {
+                    content: '';
+                    width: 40px;
+                    border: 1px solid black;
+                    display: block;
+                    margin-bottom: 10%;
+                    border-width: 0px 0px 5px 0px;
+                }
+
+                .line2::before {
+                    content: '';
+                    width: 40px;
+                    border: 1px solid black;
+                    display: block;
+                    margin-bottom: 7%;
+                    border-width: 0px 0px 5px 0px;
+                }
+            }
+
+
+
+        }
+
+
+
+
+    }
+
+
+    main {
+
+        padding-top: 100px;
+
+        .top {
+            padding: 50px 0px;
+            background-color: #3b3b3b;
+            ;
+            color: #fff;
+            text-align: center;
+            position: relative;
+
+            h2 {
+                @include fon('Noto Sans KR', 300, 1.5rem);
+                ;
+            }
+
+            div {
+                @include fon('Roboto', 900, 3em);
+                color: #fdd000;
+            }
+
+            p {
+                @include fon('Noto Sans KR', 300, 0.9rem);
+                text-align: center;
+
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+
+        }
+
+
+        .row {
+            padding: 50px 0px;
+            background-color: #fdd000;
+            text-align: center;
+            align-items: center;
+            @include row;
+            @include fon('Noto Sans KR', 600, 1.8em);
+
+            p {
+                @include fon('Noto Sans KR', 300, 0.9em);
+                margin: 0px;
+            }
+        }
+
+        .row::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 50px;
+            height: 50px;
+            background-color: #fdd000;
+            border: 1px solid #fdd000;
+            position: absolute;
+            left: 50%;
+            top: 22%;
+            transform: translate(-50%, 180%) rotate(45deg);
+            @include row0;
+        }
+
+        .midle {
+            width: 100%;
+            margin: 0 auto;
+            padding: 60px;
+
+            .menu_infobox {
+                padding: 0px;
+                width: 100%;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                margin-bottom: 10%;
+
+                .left {
+                    width: 55%;
+
+                    .txt1 {
+                        b {
+                            @include fon('Noto Sans KR', 300, 1.3rem);
+                        }
+
+                        h2 {
+                            @include fon('Noto Sans KR', 700, 3rem);
+                            margin: 1.5% 0px;
+                            margin-bottom: 5%
+                        }
+
+                        p {
+                            @include fon('Noto Sans KR', 400, 1.2rem);
+                            margin: 1.5% 0px;
+                        }
+
+                        padding-right: 10%;
+                    }
+
+                    .txt1::after {
+                        content: '';
+                        display: block;
+                        border-bottom: 1px solid #e4e4e4;
+                        width: 100%;
+                    }
+
+                    .txt2 {
+                        p {
+                            @include fon('Noto Sans KR', 300, 0.85rem);
+                            color: #525252;
+                        }
+                    }
+                }
+
+                .rihgt {
+                    width: 45%;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+            }
+
+            .menu {
+                width: 100%;
+
+                .menu_txt {
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    b {
+                        @include fon('Noto Sans KR', 300, 1.2rem);
+                    }
+
+                    h2 {
+                        @include fon('Roboto', 900, 3em);
+                        margin: 1%;
+                    }
+
+                    p {
+                        @include fon('Noto Sans KR', 300, 0.8rem);
+                        color: #aaa;
+                    }
+                }
+
+                .menu_ul {
+                    width: 100%;
+                    margin: 0 auto;
+
+                    .menu_img {
+                        width: 100%;
+                        display: flex;
+
+                        //flex-wrap: wrap;
+                        li {
+                            width: 25%;
+                            margin: 5px;
+                            margin-bottom: 5%;
+                            overflow: hidden;
+
+                            figure {
+                                position: relative;
+                                width: 100%;
+                                overflow: hidden;
+                                align-items: center;
+                                margin: 0 auto;
+
+                                img {
+                                    width: 100%;
+
+                                }
+
+                            }
+
+                            figure:hover {
+                                img {
+                                    transform: scale(1.1);
+                                    transition: 0.2s;
+                                }
+                            }
+
+                            figure::after {
+                                content: 'ICE';
+                                position: absolute;
+                                color: #fff;
+                                background-color: #007eff;
+                                border-radius: 25px;
+                                padding: 5px 15px;
+                                top: 80%;
+                                right: 10%;
+
+                            }
+
+                            figcaption {
+                                padding: 10px 0;
+
+                                b {
+                                    display: block;
+                                    @include fon('Noto Sans KR', 400, 1.1rem);
+                                }
+
+                                b::after {
+                                    content: '';
+                                    width: 100%;
+                                    border-bottom: 1px solid #c7c7c7;
+                                    display: block;
+                                    padding: 15px 0;
+                                }
+
+                                p {
+                                    @include fon('Noto Sans KR', 300, 0.75rem);
+                                    color: #979595;
+                                    margin: 4% 0;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 10%;
+
+                button {
+                    margin: 0px 0.2%;
+                    background-color: white;
+                    border: 1px solid #d8d8d8;
+                    border-radius: 10%;
+                    width: 40px;
+                    height: 40px;
+                    @include fon('Noto Sans KR', 300, 0.9rem);
+                }
+
+                button:nth-of-type(1) {
+                    width: 60px;
+                }
+
+                button:nth-of-type(6) {
+                    width: 60px;
+                }
+
+                button:nth-of-type(7) {
+                    width: 65px;
+                }
+
+                button:hover {
+                    background-color: #f7f7f7;
+                }
+            }
+
+        }
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+    footer {
+        width: 100%;
+        background: #212121;
+
+        .footer_wrap {
+            display: none;
+        }
+
+        .footer_1 {
+
+            nav {
+                text-align: center;
+                width: 100%;
+                padding: 20px;
+
+            }
+        }
+
+        .footer_box {
+            width: 100%;
+
+            .footer_text {
+                width: 100%;
+                margin: 0 auto;
+                justify-content: center;
+
+                .img_box {
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 25px;
+
+                    .logo {
+                        padding-right: 2%;
+                    }
+
+                    nav {
+                        display: flex;
+                        width: 15%;
+
+                        div {
+                            width: 50px;
+
+                        }
+
+                    }
+
+                }
+
+                div {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+
+
+@media(max-width:760px) {
+
+    header {
+        width: 100%;
+        @include fl(space-between, flex-start);
+        margin: 0 auto;
+        position: fixed;
+        left: 0%;
+        top: 0;
+        z-index: 10;
+
+        .hdbg {
+            width: 100%;
+            @include fl(center, flex-start);
+
+            .head {
+                width: 100%;
+                @include fl(space-between, flex-start);
+                padding: 0px 3%;
+
+                .head_logo {
+                    width: 30%;
+                    padding-top: 10px;
+
+                    a {
+                        img {
+                            width: 150px;
+                        }
+                    }
+                }
+
+                .menu_wrap {
+                    margin: 0;
+                    width: 100%;
+                    height: 100%;
+                    @include fl(center, stretch);
+                    display: none;
+
+                    >li {
+                        width: 20%;
+                        text-align: center;
+                        padding: 40px 0;
+
+                        a {
+                            @include fon('Noto Sans KR', 500, 1.1em);
+                            color: #1c1c1b;
+
+                        }
+
+                        >a::after {
+                            content: '';
+                            display: block;
+                            border-bottom: 1px solid black;
+                            padding-top: 20px;
+                            width: 0px;
+                            margin: 0 auto;
+                        }
+
+                        div {
+
+                            padding-top: 20px;
+                            margin-top: 0;
+                            padding-bottom: 20px;
+                            margin-bottom: 0;
+
+                            ul {
+                                @include fon("Noto Sans KR", 400, 0.9em);
+                                margin-top: 10%;
+
+                                li {
+                                    width: 100%;
+                                    padding: 2% 0% 2%;
+
+                                }
+
+                                li:nth-of-type(1) {
+                                    margin-top: 5%;
+                                }
+                            }
+
+                        }
+                    }
+
+                    li:hover>a::after {
+                        width: 25%;
+                        left: 0%;
+                        transition: 0.2s;
+                    }
+                }
+
+                li:hover {
+                    background-color: #fdd000;
+
+                }
+
+                .sns {
+                    width: 30%;
+                    padding-top: 25px;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    nav {
+                        width: 85%;
+                        display: none;
+                        justify-content: flex-end;
+
+                        a {
+                            width: 50px;
+                            border: 2px solid black;
+                            border-radius: 100%;
+                            padding: 5px;
+                            margin: 10px;
+
+                            @include fl(center, flex-start) {}
+                        }
+
+                        a:hover {
+                            background-color: #fdd000;
+                            border-color: #fdd000;
+                        }
+
+
+
+                    }
+
+                    .burger_bg {
+                        display: block;
+                        display: flex;
+                        align-items: center;
+                        width: 15%;
+                        justify-content: center;
+
+                        .line {
+                            width: 25px;
+                            border: 1px solid black;
+                            margin-bottom: 10%;
+                            border-width: 0px 0px 2.5px 0px;
+                        }
+
+                        .line::after {
+                            content: '';
+                            width: 25px;
+                            border: 1px solid black;
+                            display: block;
+                            margin-bottom: 15%;
+                            border-width: 0px 0px 2.5px 0px;
+                        }
+
+                        .line::before {
+                            content: '';
+                            width: 25px;
+                            border: 1px solid black;
+                            display: block;
+                            margin-bottom: 12%;
+                            border-width: 0px 0px 2.5px 0px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .wrap {
+            position: fixed;
+            right: 30px;
+            top: 30%;
+            display: none;
+
+            li {
+                width: 110px;
+                height: 110px;
+
+                @include fl(center, center) {}
+
+                border: 2px solid black;
+                background-color: black;
+                border-radius: 100%;
+                text-align: center;
+                margin-top: 10px;
+                box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+
+                div {
+                    a {
+                        color: white;
+
+                        p {
+                            margin: 0px;
+                            @include fon('Noto Sans KR', 500, 14px);
+                        }
+
+                        b {
+                            font-family: 'Roboto', sans-serif;
+                            font-size: 20px;
+
+                        }
+                    }
+                }
+
+            }
+
+            li:hover {
+                background-color: #fdd000;
+                border-color: #fdd000;
+
+                a {
+                    color: #1c1c1b;
+                }
+            }
+        }
+
+        .media_menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 35%;
+            height: 100vh;
+            background-color: #212121;
+            color: #fdd000;
+
+            .burger_2 {
+                .line2 {
+                    width: 40px;
+                    border: 1px solid black;
+                    margin-bottom: 7%;
+                    border-width: 0px 0px 5px 0px;
+                }
+
+                .line2::after {
+                    content: '';
+                    width: 40px;
+                    border: 1px solid black;
+                    display: block;
+                    margin-bottom: 10%;
+                    border-width: 0px 0px 5px 0px;
+                }
+
+                .line2::before {
+                    content: '';
+                    width: 40px;
+                    border: 1px solid black;
+                    display: block;
+                    margin-bottom: 7%;
+                    border-width: 0px 0px 5px 0px;
+                }
+            }
+
+
+
+        }
+
+
+
+
+    }
+
+
+
+    main {
+
+        padding-top: 70px;
+
+        .top {
+            padding: 50px 0px;
+            background-color: #3b3b3b;
+            ;
+            color: #fff;
+            text-align: center;
+            position: relative;
+
+            h2 {
+                @include fon('Noto Sans KR', 300, 1.5rem);
+                ;
+            }
+
+            div {
+                @include fon('Roboto', 900, 3em);
+                color: #fdd000;
+            }
+
+            p {
+                @include fon('Noto Sans KR', 300, 0.9rem);
+                text-align: center;
+
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+
+        }
+
+
+        .row {
+            padding: 50px 0px;
+            background-color: #fdd000;
+            text-align: center;
+            align-items: center;
+            @include row;
+            @include fon('Noto Sans KR', 600, 1.8em);
+
+            p {
+                @include fon('Noto Sans KR', 300, 0.9em);
+                margin: 0px;
+            }
+        }
+
+        .row::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 50px;
+            height: 50px;
+            background-color: #fdd000;
+            border: 1px solid #fdd000;
+            position: absolute;
+            left: 50%;
+            top: 22%;
+            transform: translate(-50%, 180%) rotate(45deg);
+            @include row0;
+        }
+
+        .midle {
+            width: 100%;
+            margin: 0 auto;
+            padding: 50px 20px;
+
+            .menu_infobox {
+                padding: 0px;
+                width: 100%;
+                margin: 0 auto;
+                display: flex;
+                margin-bottom: 5%;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .left {
+                    width: 100%;
+
+                    .txt1 {
+                        b {
+                            @include fon('Noto Sans KR', 300, 1rem);
+                        }
+
+                        h2 {
+                            @include fon('Noto Sans KR', 700, 2.5rem);
+                            margin: 1.5% 0px;
+                            margin-bottom: 5%
+                        }
+
+                        p {
+                            @include fon('Noto Sans KR', 400, 0.95rem);
+                            margin: 1.5% 0px;
+                        }
+
+                        padding-right: 10%;
+                    }
+
+                    .txt1::after {
+                        content: '';
+                        display: block;
+                        border-bottom: 1px solid #e4e4e4;
+                        width: 100%;
+                    }
+
+                    .txt2 {
+                        p {
+                            margin-bottom: 5%;
+                            @include fon('Noto Sans KR', 300, 0.8rem);
+                            color: #525252;
+
+                            br:nth-of-type(2) {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .rihgt {
+                    width: 100%;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+            }
+
+            .menu {
+                width: 100%;
+
+                .menu_txt {
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    b {
+                        @include fon('Noto Sans KR', 300, 1rem);
+                    }
+
+                    h2 {
+                        @include fon('Roboto', 900, 2em);
+                        margin: 2%;
+                    }
+
+                    p {
+                        @include fon('Noto Sans KR', 300, 0.7rem);
+                        color: #aaa;
+                    }
+                }
+
+                .menu_ul {
+                    width: 100%;
+                    margin: 0 auto;
+
+                    .menu_img {
+                        width: 100%;
+                        display: flex;
+                       
+
+                        flex-wrap: wrap;
+                        li {
+                            width: 48%;
+                            margin: 5px;
+                            margin-bottom: 5%;
+                            overflow: hidden;
+
+                            figure {
+                                position: relative;
+                                width: 100%;
+                                overflow: hidden;
+                                align-items: center;
+                                margin: 0 auto;
+
+                                img {
+                                    width: 100%;
+
+                                }
+
+                            }
+
+                            figure:hover {
+                                img {
+                                    transform: scale(1.1);
+                                    transition: 0.2s;
+                                }
+                            }
+
+                            figure::after {
+                                content: 'ICE';
+                                position: absolute;
+                                color: #fff;
+                                background-color: #007eff;
+                                border-radius: 25px;
+                                padding: 0px 5px;
+                                top: 90%;
+                                right: 0%;
+                                font-size: 13px;
+
+                            }
+
+                            figcaption {
+                                padding: 10px 0;
+
+                                b {
+                                    display: block;
+                                    @include fon('Noto Sans KR', 400, 0.9rem);
+                                }
+
+                                b::after {
+                                    content: '';
+                                    width: 100%;
+                                    border-bottom: 1px solid #c7c7c7;
+                                    display: block;
+                                    padding: 15px 0;
+                                }
+
+                                p {
+                                    @include fon('Noto Sans KR', 300, 0.75rem);
+                                    color: #979595;
+                                    margin: 2% 0;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 10%;
+
+                button {
+                    margin: 0px 0.2%;
+                    background-color: white;
+                    border: 1px solid #d8d8d8;
+                    border-radius: 10%;
+                    width: 40px;
+                    height: 40px;
+                    @include fon('Noto Sans KR', 300, 0.9rem);
+                }
+
+                button:nth-of-type(1) {
+                    width: 60px;
+                }
+
+                button:nth-of-type(6) {
+                    width: 60px;
+                }
+
+                button:nth-of-type(7) {
+                    width: 65px;
+                }
+
+                button:hover {
+                    background-color: #f7f7f7;
+                }
+            }
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+    footer {
+        width: 100%;
+        background: #212121;
+
+        .footer_wrap {
+            display: none;
+        }
+
+        .footer_1 {
+
+            nav {
+                text-align: center;
+                width: 100%;
+                padding: 20px;
+                @include fon('Noto Sans KR', 600, 0.8rem);
+
+            }
+        }
+
+        .footer_box {
+            width: 100%;
+            padding: 30px;
+
+            .footer_text {
+                width: 100%;
+                margin: 0 auto;
+                justify-content: center;
+
+                div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+
+                    b {
+                        span {
+                            @include fon('Noto Sans KR', 500, 0.8rem);
+                        }
+                    }
+
+                    span {
+                        @include fon('Noto Sans KR', 400, 0.5rem);
+                    }
+
+                    p {
+                        @include fon('Noto Sans KR', 400, 0.5rem);
+                    }
+                }
+
+                .img_box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 25px;
+
+                    .logo {
+                        padding-right: 2%;
+                    }
+
+                    nav {
+                        display: flex;
+                        width: 15%;
+                        margin-top: 4%;
+
+                        div {
+                            width: 50px;
+
+                        }
+
+                    }
+
+                }
+
+                div {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+
+
+
+}

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+    
+li{margin: 0;}
+a,ul{text-decoration:none;
+    list-style-type: none;
+}
+
+ul{padding: 0;}
+
+::selection{background: #fdd000 ;color: #1c1c1b;}
+
+*,::after,::before{box-sizing: border-box;}
+// *별표는 모든 태그들을 가리킴
+ 
+
+@mixin fon($a,$b,$c){
+        font-family: $a;
+        font-weight: $b;
+        font-size: $c;
+        @content
+};
+
+@mixin fl($q: flex-start,$w: flex-start){
+        display: flex;
+        justify-content: $q;
+        align-items: $w;
+        @content
+};
+   
+

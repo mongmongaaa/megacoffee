@@ -148,7 +148,6 @@
   
               li {
                 width: 350px;
-                min-width: 350px;
                 height: 100%;
                 font-family: "Noto Sans KR", sans-serif;
                 flex-shrink: 0;
@@ -304,7 +303,6 @@
   
               li {
                 width: 350px;
-                min-width: 350px;
                 height: 100%;
                 font-family: "Noto Sans KR", sans-serif;
                 flex-shrink: 0;
@@ -325,7 +323,7 @@
                     padding: 33px;
                     border: none;
                     width: 100%;
-                    display: block;
+                    display: none;
   
                     b {
                       font-weight: 400;
@@ -1372,7 +1370,7 @@
                 border: 1px solid #e6e5e5;
                 border-radius: 15px;
                 overflow: hidden;
-                margin: 0 2.5%;
+                margin: 0;
 
                 div {
                   width: 100%;

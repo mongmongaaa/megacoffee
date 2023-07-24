@@ -5067,7 +5067,6 @@ header.active .wrap li:hover a {
   }
   main .midle .content_1 .button_ul .menu_ul .menu_img li {
     width: 350px;
-    min-width: 350px;
     height: 100%;
     font-family: "Noto Sans KR", sans-serif;
     flex-shrink: 0;
@@ -5200,7 +5199,6 @@ header.active .wrap li:hover a {
   }
   main .midle .content_1.active .button_ul .menu_ul .menu_img li {
     width: 350px;
-    min-width: 350px;
     height: 100%;
     font-family: "Noto Sans KR", sans-serif;
     flex-shrink: 0;
@@ -5220,7 +5218,7 @@ header.active .wrap li:hover a {
     padding: 33px;
     border: none;
     width: 100%;
-    display: block;
+    display: none;
   }
   main .midle .content_1.active .button_ul .menu_ul .menu_img li div .menu_text b {
     font-weight: 400;
@@ -5871,7 +5869,7 @@ header.active .wrap li:hover a {
     border: 1px solid #e6e5e5;
     border-radius: 15px;
     overflow: hidden;
-    margin: 0 2.5%;
+    margin: 0;
   }
   main .midle .content_1.active .button_ul .menu_ul .menu_img li div {
     width: 100%;

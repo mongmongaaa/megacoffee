@@ -86,10 +86,12 @@ main {
         overflow: visible;
 
         li {
+          picture{
           img {
             width: 100vw;
             height: 100vh;
           }
+        }
         }
       }
 
@@ -123,7 +125,7 @@ main {
         .text_box1 {
           position: absolute;
           left: 50%;
-          top: 10%;
+          top: 20%;
           width: 1080px;
           transform: translateX(-50%);
           font-family: "Noto Sans KR", sans-serif;
@@ -204,7 +206,7 @@ main {
         width: 50%;
         overflow: hidden;
         position: relative;
-        top: -10%;
+        top: 0%;
 
         .menu_ul {
           .menu_img {
@@ -432,12 +434,12 @@ main {
 
     .content_2 {
       width: 100%;
-      height: 990px;
+      height: 900px;
       background-color: #fdd000;
 
       .conbox_2 {
         width: 1080px;
-        height: 760px;
+        height: 100%;
         margin: 0 auto;
         display: flex;
         justify-content: space-evenly;
@@ -637,6 +639,7 @@ main {
 
     .content_3 {
       width: 1280px;
+      height: 950px;
       margin: 0 auto;
       display: flex;
       justify-content: flex-end;
@@ -644,10 +647,10 @@ main {
 
       .txt2 {
         width: 1080px;
-
+        height: 100%;
         .text_box3 {
           position: absolute;
-          top: 20%;
+          top: 25%;
           left: 7.8%;
 
           @include fl(center, flex-start) {
@@ -714,9 +717,10 @@ main {
 
       .spot_2 {
         width: 50%;
+        height: 100%;
 
         img {
-          height: 100vh;
+          height: 100%;
           width: 100vw;
           object-fit: cover;
         }
@@ -827,12 +831,13 @@ main {
 
         h1 {
           @include fon("Noto Sans KR", 300, 24px);
-          margin-top: 60px;
+          margin-top: 50px;
+          transform: translateY(43px);
         }
 
         h2 {
           @include fon("Rotobo", 900, 60px);
-          margin: 15px;
+          margin: 30px 0px 0;
 
           span::after {
             content: "";

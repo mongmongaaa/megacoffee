@@ -121,11 +121,11 @@ main {
 
       .txt {
         width: 50%;
-        transition: 1s;
+
         .text_box1 {
           position: absolute;
           left: 50%;
-          top: 20%;
+          top: 30%;
           width: 1080px;
           transform: translateX(-50%);
           font-family: "Noto Sans KR", sans-serif;
@@ -136,8 +136,7 @@ main {
             font-weight: 300;
             color: #1c1c1b;
             line-height: 1.4;
-            transform: translateY(130%);
-            transition: 1s;
+            transform: translateY(60%);
           }
 
           b:nth-of-type(1) {
@@ -147,18 +146,20 @@ main {
             color: #1c1c1b;
             font-size: 51px;
             display: inline;
-            top: 50px;
-            transition: 1s;
+            @include ani;
+            top: -10px;
           }
 
           b:nth-of-type(1)::after {
             content: "";
-            width: 100%;
+            @include ani;
+            @include aniline1;
+            width: 10%;
             position: absolute;
             left: 0%;
             background-color: #fdd000;
             border: 5px;
-            padding: 5%;
+            padding: 18px;
             z-index: -1;
             display: inline;
             transform: translateY(30px);
@@ -170,19 +171,16 @@ main {
             font-size: 22px;
             display: block;
             margin: 15px 0px;
-            transform: translateY(150%);
-            transition: 1s;
+            @include ani;
           }
 
           p:nth-of-type(2) {
             font-weight: 300;
             color: #1c1c1b;
             font-size: 16px;
-
+            @include ani;
             animation-delay: 0.1s;
             overflow: hidden;
-            transform: translateY(150%);
-            transition: 1s;
           }
 
           a {
@@ -194,10 +192,8 @@ main {
             margin-top: 20px;
             display: block;
             text-align: center;
-
+            @include ani;
             animation-delay: 0.2s;
-            transform: translateY(150%);
-            transition: 1s;
           }
         }
       }
@@ -206,7 +202,6 @@ main {
         width: 50%;
         overflow: hidden;
         position: relative;
-        top: 0%;
 
         .menu_ul {
           .menu_img {
@@ -434,7 +429,7 @@ main {
 
     .content_2 {
       width: 100%;
-      height: 900px;
+      height: 965px;
       background-color: #fdd000;
 
       .conbox_2 {
@@ -650,7 +645,7 @@ main {
         height: 100%;
         .text_box3 {
           position: absolute;
-          top: 25%;
+          top: 15%;
           left: 7.8%;
 
           @include fl(center, flex-start) {
@@ -842,12 +837,12 @@ main {
           span::after {
             content: "";
 
-            width: 0%;
+            width: 20%;
             position: absolute;
             left: 40%;
             background-color: #fdd000;
             border: 5px;
-            padding: 0px;
+            padding: 1%;
             z-index: -1;
             display: block;
             transform: translateY(-40px);
@@ -947,13 +942,12 @@ main {
 
     //       span::after {
     //         content: "";
-    //         @include aniline4;
-    //         width: 20%;
+    //         width: 30%;
     //         position: absolute;
     //         left: 0%;
     //         background-color: #fdd000;
     //         border: 5px;
-    //         padding: 20px;
+    //         padding: 1.5%;
     //         z-index: -1;
     //         display: block;
     //         transform: translateY(-30px);

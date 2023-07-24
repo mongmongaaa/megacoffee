@@ -2893,6 +2893,7 @@ header.active .wrap li:hover a {
     display: flex;
     width: 15%;
     margin-top: 4%;
+    justify-content: center;
   }
   footer .footer_box .footer_text .img_box nav div {
     width: 50px;

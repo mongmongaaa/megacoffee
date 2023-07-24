@@ -130,27 +130,6 @@ elWrap.forEach(function (v, key) {
 //1. 왜 메뉴부터 시작하냐
 //2. 스크롤이랑 온클릭이랑 따로 논다
 
-if (matchMedia("screen and (max-width:px)").matches){
-
-}
-if ($(window).width() < 1280) {
-  // window 크기가 1280보다 작을때
-/* 
-  const io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove("active");
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-  elContents.forEach((el) => {
-    io.observe(el);
-  }); */
-} else {
-  // window 크기가 1280보다 클때
 
   const elHeader = document.querySelector("header");
   let HeaderHeight = elHeader.offsetHeight;
@@ -178,4 +157,3 @@ if ($(window).width() < 1280) {
 
   // 헤더를 떼다가 붙였기땜시 그 시간 시점 이후 0.1초 뒤에 실행
   // 이게 아래에 있어야 하는 이유는 이미지라서 그런가?
-}

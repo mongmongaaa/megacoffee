@@ -17,357 +17,6 @@ header:hover {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
-header {
-  width: 100%;
-  @include fl(space-between, flex-start);
-  margin: 0 auto;
-  position: fixed;
-  left: 0%;
-  top: 0;
-  z-index: 20;
-  transition: 0.5s;
-
-  .hdbg {
-    width: 100%;
-    @include fl(center, flex-start);
-    transition: 0.5s;
-    .head {
-      width: 1280px;
-      @include fl(space-between, flex-start);
-
-      .head_logo {
-        width: 20%;
-        padding-top: 30px;
-
-        a {
-          img {
-            width: 200px;
-          }
-        }
-      }
-
-      .menu_wrap {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        @include fl(center, stretch);
-
-        > li {
-          width: 20%;
-          text-align: center;
-          padding: 40px 0px 20px;
-
-          a {
-            @include fon("Noto Sans KR", 500, 1.1em);
-            color: #1c1c1b;
-          }
-
-          > a::after {
-            content: "";
-            display: block;
-            border-bottom: 1px solid black;
-            padding-top: 20px;
-            width: 0px;
-            margin: 0 auto;
-          }
-
-          div {
-            // padding-top: 20px;
-            margin-top: 0;
-            padding-bottom: 20px;
-            margin-bottom: 0;
-            display: none;
-
-            ul {
-              @include fon("Noto Sans KR", 400, 0.9em);
-              margin-top: 10%;
-
-              li {
-                width: 100%;
-                padding: 2% 0% 2%;
-              }
-
-              li:nth-of-type(1) {
-                margin-top: 5%;
-              }
-            }
-          }
-        }
-
-        li:hover > a::after {
-          width: 25%;
-          left: 0%;
-          transition: 0.2s;
-        }
-      }
-
-      .menu_wrap {
-        div {
-          display: block;
-        }
-      }
-
-      li:hover {
-        background-color: #fdd000;
-      }
-
-      .sns {
-        width: 20%;
-        padding-top: 30px;
-        display: flex;
-
-        nav {
-          width: 100%;
-          display: flex;
-
-          a {
-            width: 100%;
-            border: 2px solid black;
-            border-radius: 100%;
-            padding: 7px;
-            margin: 5px;
-
-            @include fl(center, flex-start) {
-            }
-          }
-
-          a:hover {
-            background-color: #fdd000;
-            border-color: #fdd000;
-          }
-        }
-
-        .burger_bg {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .wrap {
-    position: fixed;
-    right: 30px;
-    top: 30%;
-    z-index: 10;
-
-    li {
-      width: 110px;
-      height: 110px;
-
-      @include fl(center, center) {
-      }
-
-      border: 2px solid black;
-      background-color: black;
-      border-radius: 100%;
-      text-align: center;
-      margin-top: 10px;
-      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
-
-      div {
-        a {
-          color: white;
-
-          p {
-            margin: 0px;
-            @include fon("Noto Sans KR", 500, 14px);
-          }
-
-          b {
-            font-family: "Roboto", sans-serif;
-            font-size: 20px;
-          }
-        }
-      }
-    }
-
-    li:hover {
-      background-color: #fdd000;
-      border-color: #fdd000;
-
-      a {
-        color: #1c1c1b;
-      }
-    }
-  }
-}
-
-header.active {
-  width: 100%;
-  @include fl(space-between, flex-start);
-  margin: 0 auto;
-  position: fixed;
-  left: 0%;
-  top: 0;
-  z-index: 10;
-  transition: 0.5s;
-
-  .hdbg {
-    background-color: #ffffff;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    @include fl(center, flex-start);
-
-    .head {
-      width: 1280px;
-      @include fl(space-between, flex-start);
-
-      .head_logo {
-        width: 20%;
-        padding-top: 30px;
-
-        a {
-          img {
-            width: 200px;
-          }
-        }
-      }
-
-      .menu_wrap {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        @include fl(center, stretch);
-
-        > li {
-          width: 20%;
-          text-align: center;
-          padding: 40px 0px 20px;
-
-          a {
-            @include fon("Noto Sans KR", 500, 1.1em);
-            color: #1c1c1b;
-          }
-
-          > a::after {
-            content: "";
-            display: block;
-            border-bottom: 1px solid black;
-            padding-top: 20px;
-            width: 0px;
-            margin: 0 auto;
-          }
-
-          div {
-            padding-top: 20px;
-            margin-top: 0;
-            padding-bottom: 20px;
-            margin-bottom: 0;
-            display: none;
-
-            ul {
-              @include fon("Noto Sans KR", 400, 0.9em);
-              margin-top: 10%;
-
-              li {
-                width: 100%;
-                padding: 2% 0% 2%;
-              }
-
-              li:nth-of-type(1) {
-                margin-top: 5%;
-              }
-            }
-          }
-        }
-
-        li:hover > a::after {
-          width: 25%;
-          left: 0%;
-          transition: 0.2s;
-        }
-      }
-
-      .menu_wrap {
-        div {
-          display: block;
-        }
-      }
-
-      li:hover {
-        background-color: #fdd000;
-      }
-
-      .sns {
-        width: 20%;
-        padding-top: 30px;
-        display: flex;
-
-        nav {
-          width: 100%;
-          display: flex;
-
-          a {
-            width: 100%;
-            border: 2px solid black;
-            border-radius: 100%;
-            padding: 7px;
-            margin: 5px;
-
-            @include fl(center, flex-start) {
-            }
-          }
-
-          a:hover {
-            background-color: #fdd000;
-            border-color: #fdd000;
-          }
-        }
-
-        .burger_bg {
-          display: none;
-        }
-      }
-    }
-  }
-
-  .wrap {
-    position: fixed;
-    right: 30px;
-    top: 30%;
-
-    li {
-      width: 110px;
-      height: 110px;
-
-      @include fl(center, center) {
-      }
-
-      border: 2px solid black;
-      background-color: black;
-      border-radius: 100%;
-      text-align: center;
-      margin-top: 10px;
-      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
-
-      div {
-        h2 {
-          color: white;
-
-          p {
-            margin: 0px;
-            @include fon("Noto Sans KR", 500, 14px);
-          }
-
-          b {
-            font-family: "Roboto", sans-serif;
-            font-size: 20px;
-          }
-        }
-      }
-    }
-
-    li:hover {
-      background-color: #fdd000;
-      border-color: #fdd000;
-
-      a {
-        color: #1c1c1b;
-      }
-    }
-  }
-}
-
 main {
   .menu_wrap_top {
     position: fixed;
@@ -474,7 +123,7 @@ main {
         .text_box1 {
           position: absolute;
           left: 50%;
-          top: 30%;
+          top: 10%;
           width: 1080px;
           transform: translateX(-50%);
           font-family: "Noto Sans KR", sans-serif;
@@ -496,18 +145,18 @@ main {
             color: #1c1c1b;
             font-size: 51px;
             display: inline;
-            top: 60px;
+            top: 50px;
             transition: 1s;
           }
 
           b:nth-of-type(1)::after {
             content: "";
-            width: 0%;
+            width: 100%;
             position: absolute;
             left: 0%;
             background-color: #fdd000;
             border: 5px;
-            padding: 0px;
+            padding: 5%;
             z-index: -1;
             display: inline;
             transform: translateY(30px);
@@ -555,6 +204,7 @@ main {
         width: 50%;
         overflow: hidden;
         position: relative;
+        top: -10%;
 
         .menu_ul {
           .menu_img {
@@ -787,7 +437,7 @@ main {
 
       .conbox_2 {
         width: 1080px;
-        height: 100%;
+        height: 760px;
         margin: 0 auto;
         display: flex;
         justify-content: space-evenly;
@@ -807,7 +457,8 @@ main {
               position: relative;
               z-index: 1;
               width: 80%;
-              top: 100px;
+              top: 0px;
+              display: inline;
               transition: 1s;
 
               span {
@@ -830,7 +481,7 @@ main {
 
             div {
               @include fon("Roboto", 900, 24px);
-              transform: translateY(150%);
+              transform: translateY(10%);
               transition: 1.2s;
 
               span {
@@ -843,13 +494,13 @@ main {
             display: block;
 
             @include fon("Noto Sans KR", 400, 22px);
-            transform: translateY(130%);
+            transform: translateY(10%);
             transition: 1.3s;
           }
 
           p:nth-of-type(2) {
             @include fon("Noto Sans KR", 300, 16px);
-            transform: translateY(150%);
+            transform: translateY(10%);
             transition: 1.4s;
           }
         }

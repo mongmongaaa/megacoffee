@@ -1,87 +1,63 @@
 @import "./_reset";
 @import "./_header";
 
-body {
-  transition: 0.5s;
-}
-
-@media (min-width: 1280px){
-    .media_menu{
-        display: none;
-    }
-}
-
 @media (max-width: 1280px) {
 
   main {
     .menu_wrap_top {
-      display: none;
-
-      li {
-        display: flex;
-        margin-bottom: 20px;
-
-        div::before {
-          content: "";
-          display: inline-block;
-          /* 기억하자 */
-          vertical-align: middle;
-          border: 1px solid black;
-          width: 8px;
-          margin-right: 5px;
-        }
-
-        div {
-          @include fon("Roboto", 900, 16px);
-          line-height: 1;
-          letter-spacing: -1px;
-          color: #1c1c1b;
-        }
-      }
+     display: none;
     }
-
-    .spot_1 {
-      width: 100%;
-
-      ul {
-        width: 100%;
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-        overflow: hidden;
-
-        li {
-          img {
-            object-fit: cover;
-            width: 100vw;
-            height: 100vh;
-          }
-        }
-      }
-
-      .media_spot1 {
-        width: 100%;
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-        overflow: hidden;
-        display: none;
-
-        li {
-          img {
-            width: 100vw;
-            height: 100vh;
-          }
-        }
-      }
-    }
-
+  
     .midle {
+      width: 100%;
+      position: fixed;
+      transition: 1s;
+  
+      .spot_1 {
+        width: 100%;
+        overflow: hidden;
+  
+        ul {
+          width: 100%;
+          margin: 0;
+          display: flex;
+          flex-direction: row;
+          overflow: visible;
+  
+          li {
+            img {
+              width: 100vw;
+              height: 100vh;
+              object-fit: cover;
+            }
+          }
+        }
+  
+        .media_spot1 {
+          width: 100%;
+          margin: 0;
+          display: flex;
+          flex-direction: row;
+          overflow: hidden;
+          display: none;
+  
+          li {
+            img {
+              width: 100vw;
+              height: 100vh;
+            }
+          }
+        }
+      }
+  
+      overflow: hidden;
+  
       .content_1 {
         position: static;
-        height: 969px;
+        width: 100%;
+        height: 790px;
         @include fl(flex-end, center);
-
+  
         .txt {
           width: 45%;
           word-break: keep-all;
@@ -90,7 +66,7 @@ body {
           .text_box1 {
             position: static;
             width: 100%;
-            transform: translateX(0%);
+            transform: translateX(0%) translateY(-150px);
             font-family: "Noto Sans KR", sans-serif;
 
             p:nth-of-type(1) {
@@ -107,156 +83,22 @@ body {
               color: #1c1c1b;
               font-size: 2.5rem;
               display: inline;
+             
             }
 
             b:nth-of-type(1)::after {
               content: "";
-              @include aniline1;
-              width: 0%;
-              height: 0%;
-              position: absolute;
-              left: 0%;
-              background-color: #fdd000;
-              z-index: -1;
-              display: inline;
-              bottom: 0;
-              padding: 0;
-              transform: translateY(-50px);
-            }
-
-            b:nth-of-type(2) {
-              font-weight: 400;
-              color: #1c1c1b;
-              font-size: 22px;
-              display: block;
-              margin: 15px 0px;
-
-            }
-
-            p:nth-of-type(2) {
-              font-weight: 300;
-              color: #1c1c1b;
-              font-size: 0.9em;
-
-              animation-delay: 0.1s;
-              overflow: hidden;
-            }
-
-            a {
-              width: 150px;
-              background-color: #fdd000;
-              font-weight: 500;
-              padding: 15px 30px;
-              font-size: 18px;
-              margin-top: 20px;
-              display: block;
-              text-align: center;
-
-              animation-delay: 0.2s;
-            }
-          }
-        }
-
-        .button_ul {
-          width: 50%;
-          overflow: hidden;
-
-          .button_img {
-            display: none;
-          }
-
-          .menu_ul {
-            .menu_img {
-              width: 100%;
-              display: flex;
-
-              li {
-                width: 420px;
-                font-family: "Noto Sans KR", sans-serif;
-                flex-shrink: 0;
-                border: 1px solid #aaa;
-                border-radius: 15px;
-                overflow: hidden;
-
-                div {
-                  width: 100%;
-
-                  img {
-                    vertical-align: middle;
-                    width: 100%;
-                  }
-
-                  .menu_text {
-                    background-color: #e9e9e9;
-                    padding: 33px;
-                    border: none;
-                    width: 100%;
-
-                    b {
-                      font-weight: 400;
-                      font-size: 1.4em;
-                    }
-                  }
-
-                  p {
-                    font-weight: 300;
-                    font-size: 14px;
-                    width: 100%;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      .content_1.active {
-        position: static;
-        height: 969px;
-        @include fl(flex-end, center);
-
-        .txt {
-          width: 45%;
-          word-break: keep-all;
-
-          /* < 단어 줄 바꿈 */
-          .text_box1 {
-            position: static;
-            width: 100%;
-            transform: translateX(0%);
-            font-family: "Noto Sans KR", sans-serif;
-
-            p:nth-of-type(1) {
-              font-size: 1.3rem;
-              font-weight: 300;
-              color: #1c1c1b;
-              line-height: 1.4;
-              transform: translateY(-108px);
-            }
-
-            b:nth-of-type(1) {
-              position: relative;
-              width: 100%;
-              font-weight: 700;
-              color: #1c1c1b;
-              font-size: 2.5rem;
-              display: inline;
-              top: -100px;
-            }
-
-            b:nth-of-type(1)::after {
-              content: "";
-         
               @include aniline1;
               width: 100%;
               height: 10%;
               position: absolute;
               left: 0%;
-              padding: 5%;
+              padding: 20px;
               background-color: #fdd000;
               z-index: -1;
               display: inline;
               bottom: 0;
-              transform: translateY(-5px);
+              transform: translateY(-7px);
             }
 
             b:nth-of-type(2) {
@@ -265,8 +107,6 @@ body {
               font-size: 22px;
               display: block;
               margin: 15px 0px;
-              transform: translateY(-90px);
-            
             }
 
             p:nth-of-type(2) {
@@ -275,7 +115,6 @@ body {
               font-size: 0.9em;
               animation-delay: 0.1s;
               overflow: hidden;
-              transform: translateY(-90px);
             }
 
             a {
@@ -288,204 +127,269 @@ body {
               display: block;
               text-align: center;
               animation-delay: 0.2s;
-              transform: translateY(-90px);
             }
           }
         }
 
+  
         .button_ul {
           width: 50%;
           overflow: hidden;
-
-          .button_img {
-            display: none;
-          }
-
+          position: static;
+          top: 10%;
+  
           .menu_ul {
             .menu_img {
               width: 100%;
               display: flex;
-
+              align-items: flex-end;
+  
               li {
-                width: 420px;
+                width: 350px;
+                min-width: 350px;
+                height: 100%;
                 font-family: "Noto Sans KR", sans-serif;
                 flex-shrink: 0;
-                border: 1px solid #aaa;
+                border: 1px solid #e4e4e4;
                 border-radius: 15px;
                 overflow: hidden;
-
+  
                 div {
                   width: 100%;
-
+  
                   img {
                     vertical-align: middle;
                     width: 100%;
                   }
-
+  
                   .menu_text {
                     background-color: #f5f5f5;
                     padding: 33px;
                     border: none;
                     width: 100%;
-
+                    display: block;
+  
                     b {
                       font-weight: 400;
                       font-size: 1.4em;
                     }
                   }
-
+  
                   p {
                     font-weight: 300;
                     font-size: 14px;
                     width: 100%;
+                    color: #8a8a8a;
                   }
                 }
               }
+  
+              li.swiper-slide-active {
+                .menu_text {
+                  display: block;
+                }
+              }
+            }
+          }
+          .slide-btn {
+            display: none;
+            position: absolute;
+            left: 55%;
+            top: 15%;
+  
+            .swiper-button-next {
+              display: inline-block;
+              width: 30px;
+            }
+            .swiper-button-prev {
+              display: inline-block;
             }
           }
         }
       }
-
+      // .content_1.active {
+      //   position: relative;
+      //   height: 990px;
+      //   @include fl(flex-end, center);
+  
+      //   .txt {
+      //     width: 50%;
+  
+      //     .text_box1 {
+      //       position: absolute;
+      //       left: 50%;
+      //       top: 30%;
+      //       width: 1080px;
+      //       transform: translateX(-50%);
+      //       font-family: "Noto Sans KR", sans-serif;
+      //       pointer-events: none;
+  
+      //       p:nth-of-type(1) {
+      //         font-size: 24px;
+      //         font-weight: 300;
+      //         color: #1c1c1b;
+      //         line-height: 1.4;
+      //         transform: translateY(60%);
+      //       }
+  
+      //       b:nth-of-type(1) {
+      //         width: 50%;
+      //         position: relative;
+      //         font-weight: 700;
+      //         color: #1c1c1b;
+      //         font-size: 51px;
+      //         display: inline;
+      //         @include ani;
+      //         top: -10px;
+      //       }
+  
+      //       b:nth-of-type(1)::after {
+      //         content: "";
+      //         @include ani;
+      //         @include aniline1;
+      //         width: 10%;
+      //         position: absolute;
+      //         left: 0%;
+      //         background-color: #fdd000;
+      //         border: 5px;
+      //         padding: 18px;
+      //         z-index: -1;
+      //         display: inline;
+      //         transform: translateY(30px);
+      //       }
+  
+      //       b:nth-of-type(2) {
+      //         font-weight: 400;
+      //         color: #1c1c1b;
+      //         font-size: 22px;
+      //         display: block;
+      //         margin: 15px 0px;
+      //         @include ani;
+      //       }
+  
+      //       p:nth-of-type(2) {
+      //         font-weight: 300;
+      //         color: #1c1c1b;
+      //         font-size: 16px;
+      //         @include ani;
+      //         animation-delay: 0.1s;
+      //         overflow: hidden;
+      //       }
+  
+      //       a {
+      //         width: 15%;
+      //         background-color: #fdd000;
+      //         font-weight: 500;
+      //         padding: 15px 30px;
+      //         font-size: 18px;
+      //         margin-top: 20px;
+      //         display: block;
+      //         text-align: center;
+      //         @include ani;
+      //         animation-delay: 0.2s;
+      //       }
+      //     }
+      //   }
+  
+      //   .button_ul {
+      //     width: 50%;
+      //     overflow: hidden;
+      //     position: relative;
+  
+      //     .menu_ul {
+      //       .menu_img {
+      //         width: 100%;
+      //         display: flex;
+      //         align-items: flex-end;
+  
+      //         li {
+      //           width: 350px;
+      //           height: 100%;
+      //           font-family: "Noto Sans KR", sans-serif;
+      //           flex-shrink: 0;
+      //           border: 1px solid #e4e4e4;
+      //           border-radius: 15px;
+      //           overflow: hidden;
+  
+      //           div {
+      //             width: 100%;
+  
+      //             img {
+      //               vertical-align: middle;
+      //               width: 100%;
+      //             }
+  
+      //             .menu_text {
+      //               background-color: #f5f5f5;
+      //               padding: 33px;
+      //               border: none;
+      //               width: 100%;
+      //               display: none;
+  
+      //               b {
+      //                 font-weight: 400;
+      //                 font-size: 1.4em;
+      //               }
+      //             }
+  
+      //             p {
+      //               font-weight: 300;
+      //               font-size: 14px;
+      //               width: 100%;
+      //               color: #8a8a8a;
+      //             }
+      //           }
+      //         }
+  
+      //         li.swiper-slide-active {
+      //           .menu_text {
+      //             display: block;
+      //           }
+      //         }
+      //       }
+      //     }
+      //     .slide-btn {
+      //       position: absolute;
+      //       left: 55%;
+      //       top: 15%;
+  
+      //       .swiper-button-next {
+      //         display: inline-block;
+      //         width: 30px;
+      //       }
+      //       .swiper-button-prev {
+      //         display: inline-block;
+      //       }
+      //     }
+      //   }
+      // }
+  
       .content_2 {
         width: 100%;
-        height: 969px;
+        height: 760px;
         background-color: #fdd000;
-
+  
         .conbox_2 {
           width: 100%;
-          padding: 0 5%;
+          padding: 60px;
           height: 100%;
           margin: 0 auto;
           display: flex;
           justify-content: space-evenly;
           align-items: center;
-
+  
           .text_box2 {
             width: 50%;
             word-break: keep-all;
-
+            padding-right: 2%;
+            transform: translateY(-40px);
             p:nth-of-type(1) {
               @include fon("Roboto", 300, 1.3rem);
-              transform: translateY(-50px);
-              transition: 0.5s
-            }
-
-            div {
-              transform: translateY(-56px);
-              h2 {
-                @include fon("Roboto", 900, 3rem);
-                margin: 5px 0;
-                position: static;
-                width: 100%;
-                display: inline;
-
-                span {
-                  display: inline;
-                  position: relative;
-                  padding: 0 1%;
-                }
-
-                span::after {
-                  content: "";
-                  width: 100%;
-                  position: absolute;
-                  padding: 6% 50%;
-                  left: 0;
-                  background-color: #ffffff;
-
-                  z-index: -1;
-                  display: inline;
-                  transform: translateY(5px);
-                }
-              }
-
-              div {
-                @include fon("Roboto", 900, 1.5rem);
-
-                span {
-                  font-size: 3rem;
-                }
-              }
-            }
-
-            b {
-              display: block;
-              @include fon("Noto Sans KR", 400, 1.2rem);
-
-              br {
-                display: inline-block;
-                content: " ";
-                padding: 0 2px;
-              }
-            }
-
-            p:nth-of-type(2) {
-              @include fon("Noto Sans KR", 300, 0.8rem);
-
-              br {
-                display: inline-block;
-                content: " ";
-                padding: 0 2px;
-              }
-            }
-          }
-
-          .video {
-            width: 50%;
-
-            .video_2 {
-              width: 100%;
-              overflow: hidden;
-              object-fit: cover;
-            }
-
-            .button_1 {
-              width: 100%;
-              height: 55px;
-              position: relative;
-
-              input {
-                width: 100%;
-                height: 100%;
-                padding: 0px 30px;
-                background: #1c1c1b;
-                color: #fff;
-                position: absolute;
-                left: 0;
-                top: -20%;
-                border: 1px solid #1c1c1b;
-                @include fon("Noto Sans KR", 300, 1rem);
-              }
-            }
-          }
-        }
-      }
-      .content_2.active {
-        width: 100%;
-        height: 969px;
-        background-color: #fdd000;
-
-        .conbox_2 {
-          width: 100%;
-          padding: 0 5%;
-          height: 100%;
-          margin: 0 auto;
-          display: flex;
-          justify-content: space-evenly;
-          align-items: center;
-
-          .text_box2 {
-            width: 50%;
-            word-break: keep-all;
-
-            p:nth-of-type(1) {
-              @include fon("Roboto", 300, 1.3rem);
-              transform: translateY(-60px);
             }
 
             div {
               h2 {
-                transform: translateY(-60px);
+                @include ani2;
                 @include fon("Roboto", 900, 3rem);
                 margin: 5px 0;
                 position: static;
@@ -546,21 +450,21 @@ body {
               }
             }
           }
-
+  
           .video {
             width: 50%;
-
+  
             .video_2 {
               width: 100%;
               overflow: hidden;
               object-fit: cover;
             }
-
+  
             .button_1 {
               width: 100%;
               height: 55px;
               position: relative;
-
+  
               input {
                 width: 100%;
                 height: 100%;
@@ -571,13 +475,112 @@ body {
                 left: 0;
                 top: -20%;
                 border: 1px solid #1c1c1b;
-                @include fon("Noto Sans KR", 300, 1rem);
+                @include fon("Noto Sans KR", 400, 1.1rem);
               }
             }
           }
         }
       }
-
+      // .content_2.active {
+      //   width: 100%;
+      //   height: 990px;
+      //   background-color: #fdd000;
+  
+      //   .conbox_2 {
+      //     width: 1080px;
+      //     height: 100%;
+      //     margin: 0 auto;
+      //     display: flex;
+      //     justify-content: space-evenly;
+      //     align-items: center;
+  
+      //     .text_box2 {
+      //       width: 50%;
+  
+      //       p:nth-of-type(1) {
+      //         @include fon("Roboto", 300, 24px);
+      //       }
+  
+      //       div {
+      //         h2 {
+      //           @include fon("Roboto", 900, 60px);
+      //           margin: 5px 0px;
+      //           position: relative;
+      //           z-index: 1;
+      //           width: 80%;
+      //           top: 0px;
+  
+      //           span {
+      //             display: inline;
+      //           }
+  
+      //           span::after {
+      //             content: "";
+      //             @include aniline3;
+      //             width: 100%;
+      //             position: absolute;
+      //             left: 0%;
+      //             background-color: #ffffff;
+      //             height: 30%;
+      //             z-index: -1;
+      //             display: inline;
+      //             transform: translateY(10%);
+      //           }
+      //         }
+  
+      //         div {
+      //           @include fon("Roboto", 900, 24px);
+      //           transform: translateY(0%);
+  
+      //           span {
+      //             font-size: 48px;
+      //           }
+      //         }
+      //       }
+  
+      //       b {
+      //         display: block;
+      //         transform: translateY(0%);
+      //         @include fon("Noto Sans KR", 400, 22px);
+      //       }
+  
+      //       p:nth-of-type(2) {
+      //         transform: translateY(0%);
+      //         @include fon("Noto Sans KR", 300, 16px);
+      //       }
+      //     }
+  
+      //     .video {
+      //       width: 50%;
+  
+      //       .video_2 {
+      //         width: 100%;
+      //         overflow: hidden;
+      //         object-fit: cover;
+      //       }
+  
+      //       .button_1 {
+      //         width: 100%;
+      //         height: 55px;
+      //         position: relative;
+  
+      //         input {
+      //           width: 100%;
+      //           height: 100%;
+      //           padding: 0px 30px;
+      //           background: #1c1c1b;
+      //           color: #fff;
+      //           position: absolute;
+      //           left: 0;
+      //           top: -20%;
+      //           border: 1px solid #1c1c1b;
+      //           @include fon("Noto Sans KR", 300, 1rem);
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+  
       .content_3 {
         width: 100%;
         display: flex;
@@ -686,138 +689,120 @@ body {
           }
         }
       }
-      .content_3.active {
-        width: 100%;
-        display: flex;
-        margin: 0 auto;
-        justify-content: flex-end;
-        position: relative;
-        align-items: center;
-
-        .txt2 {
-          width: 45%;
-
-          .text_box3 {
-            position: static;
-            transform: translateY(0%);
-            padding-right: 1%;
-            word-break: keep-all;
-
-            @include fl(center, flex-start) {
-              flex-direction: column;
-            }
-
-            font-family: "Noto Sans KR", sans-serif;
-
-            h1 {
-              font-weight: 300;
-              font-size: 1.3rem;
-            }
-
-            h2 {
-              @include ani2;
-              margin: 5px;
-              @include fon("Roboto", 900, 3rem);
-
-              span::after {
-                content: "";
-                @include aniline;
-                width: 50%;
-                position: absolute;
-                left: 0%;
-                background-color: #fdd000;
-                border: 5px;
-                padding: 20px;
-                z-index: -1;
-                display: block;
-                transform: translateY(-30px);
-              }
-            }
-
-            b {
-              @include ani2;
-              font-weight: 400;
-              font-size: 1.2rem;
-              margin: 15px 0px;
-
-              br {
-                display: none;
-              }
-            }
-
-            p {
-              @include ani2;
-              font-weight: 300;
-              font-size: 0.8rem;
-              margin-bottom: 40px;
-
-              br {
-                display: none;
-              }
-            }
-
-            .button_3 {
-              width: 100%;
-              display: flex;
-
-              a {
-                width: 30%;
-                display: block;
-                margin-right: 4%;
-
-                input {
-                  width: 100%;
-                  padding: 10%;
-                  background: #fdd000;
-                  border: 0;
-                  @include fon("Noto Sans KR", 500, 18px);
-                  @include ani2;
-                }
-              }
-
-              a:nth-ot-type(1) {
-                margin-left: 5%;
-              }
-            }
-          }
-        }
-
-        .spot_2 {
-          width: 50%;
-          overflow: hidden;
-
-          img {
-            height: 100vh;
-            width: 100vw;
-            object-fit: cover;
-            transform: translateX(-20%) scale(1.2);
-          }
-        }
-      }
-
+      // .content_3.active {
+      //   width: 1280px;
+      //   margin: 0 auto;
+      //   display: flex;
+      //   justify-content: flex-end;
+      //   position: relative;
+  
+      //   .txt2 {
+      //     width: 1080px;
+  
+      //     .text_box3 {
+      //       position: absolute;
+      //       top: 20%;
+      //       left: 7.8%;
+  
+      //       @include fl(center, flex-start) {
+      //         flex-direction: column;
+      //       }
+  
+      //       font-family: "Noto Sans KR", sans-serif;
+  
+      //       h1 {
+      //         font-weight: 300;
+      //         font-size: 24px;
+      //       }
+  
+      //       h2 {
+      //         @include ani2;
+      //         margin: 5px;
+      //         @include fon("Roboto", 900, 60px);
+  
+      //         span::after {
+      //           content: "";
+      //           @include aniline;
+      //           width: 50%;
+      //           position: absolute;
+      //           left: 0%;
+      //           background-color: #fdd000;
+      //           border: 5px;
+      //           padding: 20px;
+      //           z-index: -1;
+      //           display: block;
+      //           transform: translateY(-30px);
+      //         }
+      //       }
+  
+      //       b {
+      //         @include ani2;
+      //         font-weight: 400;
+      //         font-size: 22px;
+      //         margin: 15px 0px;
+      //       }
+  
+      //       p {
+      //         @include ani2;
+      //         font-weight: 300;
+      //         font-size: 16px;
+      //         margin-bottom: 40px;
+      //       }
+  
+      //       .button_3 {
+      //         width: 100%;
+  
+      //         a {
+      //           width: 100%;
+  
+      //           input {
+      //             width: 30%;
+      //             padding: 20px;
+      //             background: #fdd000;
+      //             border: 0;
+      //             margin-right: 5%;
+      //             @include fon("Noto Sans KR", 500, 18px);
+      //             @include ani2;
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+  
+      //   .spot_2 {
+      //     width: 50%;
+  
+      //     img {
+      //       height: 100vh;
+      //       width: 100vw;
+      //       object-fit: cover;
+      //     }
+      //   }
+      // }
+  
       .content_4 {
         height: 969px;
-
+    
         .conbox_4 {
           width: 100%;
           padding: 0 5%;
           height: 100%;
           margin: 0 auto;
-
+    
           @include fl(flex-start, center) {
             flex-direction: column;
           }
-
+    
           h1 {
             @include fon("Noto Sans KR", 300, 1.3rem);
             margin-top: 60px;
           }
-
+    
           h2 {
             @include ani2;
             @include fon("Rotobo", 900, 3rem);
             margin: 15px;
-
+    
             span::after {
               content: "";
               @include aniline4;
@@ -832,53 +817,53 @@ body {
               transform: translateY(-30px);
             }
           }
-
+    
           b {
             @include fon("Noto Sans KR", 300, 16px);
             margin: 20px 0px 15px 0px;
           }
-
+    
           .event_box {
             width: 100%;
-
+    
             .event {
               width: 100%;
               @include fl(space-between, flax-start);
-
+    
               li {
                 width: 32%;
                 border: 1px solid #aaa;
                 border-radius: 20px;
                 overflow: hidden;
-
+    
                 .event_content {
                   overflow: hidden;
-
+    
                   .imghover {
                     width: 100%;
                     overflow: hidden;
-
+    
                     width: 100%;
-
+    
                     img {
                       width: 100%;
                     }
-
+    
                     img:hover {
                       transform: scale(1.1);
                       transform-origin: 50% 50%;
                     }
                   }
-
+    
                   .text_box {
                     padding: 24px;
                     text-overflow: ellipsis;
-
+    
                     p:nth-of-type(1) {
                       @include fon("Noto Sans KR", 300, 22px);
                       margin-top: 0;
                     }
-
+    
                     p:nth-of-type(2) {
                       @include fon("Noto Sans KR", 300, 14px);
                     }
@@ -887,7 +872,7 @@ body {
               }
             }
           }
-
+    
           .event_warp {
             a {
               input {
@@ -896,7 +881,7 @@ body {
                 margin: 12px;
                 background: #fdd000;
                 border: 0;
-
+    
                 @include fon("Noto Sans KR", 500, 18px) {
                 }
               }
@@ -904,251 +889,237 @@ body {
           }
         }
       }
-      .content_4.active {
-        height: 969px;
+      // .content_4.active {
+      //   height: 969px;
+  
+      //   .conbox_4 {
+      //     width: 1080px;
+      //     height: 100%;
+      //     margin: 0 auto;
+  
+      //     @include fl(flex-start, center) {
+      //       flex-direction: column;
+      //     }
+  
+      //     h1 {
+      //       @include fon("Noto Sans KR", 300, 24px);
+      //       margin-top: 60px;
+      //     }
+  
+      //     h2 {
+      //       @include ani2;
+      //       @include fon("Rotobo", 900, 60px);
+      //       margin: 15px;
+  
+      //       span::after {
+      //         content: "";
+      //         @include aniline4;
+      //         width: 20%;
+      //         position: absolute;
+      //         left: 0%;
+      //         background-color: #fdd000;
+      //         border: 5px;
+      //         padding: 20px;
+      //         z-index: -1;
+      //         display: block;
+      //         transform: translateY(-30px);
+      //       }
+      //     }
+  
+      //     b {
+      //       @include fon("Noto Sans KR", 300, 16px);
+      //       margin: 20px 0px 15px 0px;
+      //     }
+  
+      //     .event_box {
+      //       width: 100%;
+  
+      //       .event {
+      //         width: 100%;
+      //         @include fl(space-between, flax-start);
+  
+      //         li {
+      //           width: 32%;
+      //           border: 1px solid #aaa;
+      //           border-radius: 20px;
+      //           overflow: hidden;
+  
+      //           .event_content {
+      //             overflow: hidden;
+  
+      //             .imghover {
+      //               width: 100%;
+      //               overflow: hidden;
+  
+      //               img {
+      //                 width: 100%;
+      //               }
+  
+      //               img:hover {
+      //                 transform: scale(1.1);
+      //                 transform-origin: 50% 50%;
+      //               }
+      //             }
+  
+      //             .text_box {
+      //               padding: 24px;
+      //               text-overflow: ellipsis;
+  
+      //               p:nth-of-type(1) {
+      //                 @include fon("Noto Sans KR", 300, 22px);
+      //                 margin-top: 0;
+      //               }
+  
+      //               p:nth-of-type(2) {
+      //                 @include fon("Noto Sans KR", 300, 14px);
+      //               }
+      //             }
+      //           }
+      //         }
+      //       }
+      //     }
+  
+      //     .event_warp {
+      //       a {
+      //         input {
+      //           width: 100%;
+      //           padding: 20px 30px;
+      //           margin: 12px;
+      //           background: #fdd000;
+      //           border: 0;
+  
+      //           @include fon("Noto Sans KR", 500, 18px) {
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+      footer {
+        width: 100%;
+        background: #212121;
 
-        .conbox_4 {
-          width: 100%;
-          padding: 0 5%;
-          height: 100%;
-          margin: 0 auto;
+        .footer_wrap {
+            display: none;
+        }
 
-          @include fl(flex-start, center) {
-            flex-direction: column;
-          }
+        .footer_1 {
 
-          h1 {
-            @include fon("Noto Sans KR", 300, 1.3rem);
-            margin-top: 60px;
-          }
+            nav {
+                text-align: center;
+                width: 100%;
+                padding: 20px;
+                font-size: 0.9em;
 
-          h2 {
-            @include ani2;
-            @include fon("Rotobo", 900, 3rem);
-            margin: 15px;
-
-            span::after {
-              content: "";
-              @include aniline4;
-              width: 95%;
-              position: absolute;
-              left: -5%;
-              background-color: #fdd000;
-              border: 5px;
-              padding: 20px;
-              z-index: -1;
-              display: block;
-              transform: translateY(-30px);
             }
-          }
+        }
 
-          b {
-            @include fon("Noto Sans KR", 300, 16px);
-            margin: 20px 0px 15px 0px;
-          }
-
-          .event_box {
+        .footer_box {
             width: 100%;
 
-            .event {
-              width: 100%;
-              @include fl(space-between, flax-start);
-
-              li {
-                width: 32%;
-                border: 1px solid #aaa;
-                border-radius: 20px;
-                overflow: hidden;
-
-                .event_content {
-                  overflow: hidden;
-
-                  .imghover {
-                    width: 100%;
-                    overflow: hidden;
-
-                    width: 100%;
-
-                    img {
-                      width: 100%;
-                    }
-
-                    img:hover {
-                      transform: scale(1.1);
-                      transform-origin: 50% 50%;
-                    }
-                  }
-
-                  .text_box {
-                    padding: 24px;
-                    text-overflow: ellipsis;
-
-                    p:nth-of-type(1) {
-                      @include fon("Noto Sans KR", 300, 22px);
-                      margin-top: 0;
-                    }
-
-                    p:nth-of-type(2) {
-                      @include fon("Noto Sans KR", 300, 14px);
-                    }
-                  }
-                }
-              }
-            }
-          }
-
-          .event_warp {
-            a {
-              input {
+            .footer_text {
                 width: 100%;
-                padding: 20px 30px;
-                margin: 12px;
-                background: #fdd000;
-                border: 0;
+                margin: 0 auto;
+                justify-content: center;
 
-                @include fon("Noto Sans KR", 500, 18px) {
+                .img_box {
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 25px;
+
+                    .logo {
+                        padding-right: 2%;
+                    }
+
+                    nav {
+                        display: flex;
+                        width: 15%;
+
+                        div {
+                            width: 50px;
+
+                        }
+
+                    }
+
                 }
-              }
-            }
-          }
-        }
-      }  footer {
-    width: 100%;
-    background: #212121;
 
-    .footer_wrap {
-      display: none;
+                div {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+            }
+        }
     }
 
-    .footer_1 {
-      nav {
-        text-align: center;
-        width: 100%;
-        padding: 20px;
-      }
-    }
-
-    .footer_box {
-      width: 100%;
-
-      .footer_text {
-        width: 100%;
-        margin: 0 auto;
-        justify-content: center;
-
-        .img_box {
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 25px;
-
-          .logo {
-            padding-right: 2%;
-          }
-
-          nav {
-            display: flex;
-            width: 15%;
-
-            div {
-              width: 50px;
-            }
-          }
-        }
-
-        div {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-      }
     }
   }
-    }
-  }
-
-
+  
 }
 
 @media (max-width: 760px) {
-
-
   main {
     .menu_wrap_top {
-      display: none;
-
-      li {
-        display: flex;
-        margin-bottom: 20px;
-
-        div::before {
-          content: "";
-          display: inline-block;
-          /* 기억하자 */
-          vertical-align: middle;
-          border: 1px solid black;
-          width: 8px;
-          margin-right: 5px;
-        }
-
-        div {
-          @include fon("Roboto", 900, 16px);
-          line-height: 1;
-          letter-spacing: -1px;
-          color: #1c1c1b;
-        }
-      }
+     display: none;
     }
-
-    .spot_1 {
-      width: 100%;
-
-      ul {
-        width: 100%;
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-        overflow: hidden;
-        display: none;
-
-        li {
-          img {
-            object-fit: cover;
-            width: 100vw;
-            height: 100vh;
-          }
-        }
-      }
-
-      .media_spot1 {
-        display: block;
-        width: 100%;
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-        overflow: hidden;
-
-        li {
-          img {
-            width: 100vw;
-            height: 100vh;
-          }
-        }
-      }
-    }
-
+  
     .midle {
+      width: 100%;
+      position: fixed;
+      transition: 1s;
+  
+      .spot_1 {
+        width: 100%;
+        overflow: hidden;
+  
+        ul {
+          width: 100%;
+          margin: 0;
+          display: flex;
+          flex-direction: row;
+          overflow: visible;
+  
+          li {
+            img {
+              width: 100vw;
+              height: 100vh;
+              object-fit: cover;
+            }
+          }
+        }
+  
+        .media_spot1 {
+          width: 100%;
+          margin: 0;
+          display: flex;
+          flex-direction: row;
+          overflow: hidden;
+          display: none;
+  
+          li {
+            img {
+              width: 100vw;
+              height: 100vh;
+            }
+          }
+        }
+      }
+  
+      overflow: hidden;
+  
       .content_1 {
         position: static;
-        height: 740px;
-        padding: 0%;
+        height: 100%;
+      
         margin-bottom: 15%;
         flex-direction: column;
         @include fl(flex-end, flex-start);
 
         .txt {
-          padding: 5%;
+       padding: 5% 10%;
           width: 100%;
           word-break: keep-all;
 
@@ -1168,6 +1139,7 @@ body {
 
             b:nth-of-type(1) {
               position: relative;
+              top: 10px;
               width: 100%;
               font-weight: 700;
               color: #1c1c1b;
@@ -1285,7 +1257,163 @@ body {
           }
         }
       }
-
+      // .content_1.active {
+      //   position: relative;
+      //   height: 990px;
+      //   @include fl(flex-end, center);
+  
+      //   .txt {
+      //     width: 50%;
+  
+      //     .text_box1 {
+      //       position: absolute;
+      //       left: 50%;
+      //       top: 30%;
+      //       width: 1080px;
+      //       transform: translateX(-50%);
+      //       font-family: "Noto Sans KR", sans-serif;
+      //       pointer-events: none;
+  
+      //       p:nth-of-type(1) {
+      //         font-size: 24px;
+      //         font-weight: 300;
+      //         color: #1c1c1b;
+      //         line-height: 1.4;
+      //         transform: translateY(60%);
+      //       }
+  
+      //       b:nth-of-type(1) {
+      //         width: 50%;
+      //         position: relative;
+      //         font-weight: 700;
+      //         color: #1c1c1b;
+      //         font-size: 51px;
+      //         display: inline;
+      //         @include ani;
+      //         top: -10px;
+      //       }
+  
+      //       b:nth-of-type(1)::after {
+      //         content: "";
+      //         @include ani;
+      //         @include aniline1;
+      //         width: 10%;
+      //         position: absolute;
+      //         left: 0%;
+      //         background-color: #fdd000;
+      //         border: 5px;
+      //         padding: 18px;
+      //         z-index: -1;
+      //         display: inline;
+      //         transform: translateY(30px);
+      //       }
+  
+      //       b:nth-of-type(2) {
+      //         font-weight: 400;
+      //         color: #1c1c1b;
+      //         font-size: 22px;
+      //         display: block;
+      //         margin: 15px 0px;
+      //         @include ani;
+      //       }
+  
+      //       p:nth-of-type(2) {
+      //         font-weight: 300;
+      //         color: #1c1c1b;
+      //         font-size: 16px;
+      //         @include ani;
+      //         animation-delay: 0.1s;
+      //         overflow: hidden;
+      //       }
+  
+      //       a {
+      //         width: 15%;
+      //         background-color: #fdd000;
+      //         font-weight: 500;
+      //         padding: 15px 30px;
+      //         font-size: 18px;
+      //         margin-top: 20px;
+      //         display: block;
+      //         text-align: center;
+      //         @include ani;
+      //         animation-delay: 0.2s;
+      //       }
+      //     }
+      //   }
+  
+      //   .button_ul {
+      //     width: 50%;
+      //     overflow: hidden;
+      //     position: relative;
+  
+      //     .menu_ul {
+      //       .menu_img {
+      //         width: 100%;
+      //         display: flex;
+      //         align-items: flex-end;
+  
+      //         li {
+      //           width: 350px;
+      //           height: 100%;
+      //           font-family: "Noto Sans KR", sans-serif;
+      //           flex-shrink: 0;
+      //           border: 1px solid #e4e4e4;
+      //           border-radius: 15px;
+      //           overflow: hidden;
+  
+      //           div {
+      //             width: 100%;
+  
+      //             img {
+      //               vertical-align: middle;
+      //               width: 100%;
+      //             }
+  
+      //             .menu_text {
+      //               background-color: #f5f5f5;
+      //               padding: 33px;
+      //               border: none;
+      //               width: 100%;
+      //               display: none;
+  
+      //               b {
+      //                 font-weight: 400;
+      //                 font-size: 1.4em;
+      //               }
+      //             }
+  
+      //             p {
+      //               font-weight: 300;
+      //               font-size: 14px;
+      //               width: 100%;
+      //               color: #8a8a8a;
+      //             }
+      //           }
+      //         }
+  
+      //         li.swiper-slide-active {
+      //           .menu_text {
+      //             display: block;
+      //           }
+      //         }
+      //       }
+      //     }
+      //     .slide-btn {
+      //       position: absolute;
+      //       left: 55%;
+      //       top: 15%;
+  
+      //       .swiper-button-next {
+      //         display: inline-block;
+      //         width: 30px;
+      //       }
+      //       .swiper-button-prev {
+      //         display: inline-block;
+      //       }
+      //     }
+      //   }
+      // }
+  
       .content_2 {
         width: 100%;
         height: 969px;
@@ -1294,7 +1422,7 @@ body {
         .conbox_2 {
           width: 100%;
           padding: 10%;
-          height: 100%;
+          height: 90%;
           margin: 0 auto;
           display: flex;
           justify-content: center;
@@ -1303,7 +1431,6 @@ body {
 
           .text_box2 {
             width: 100%;
-            margin-bottom: 5%;
             word-break: keep-all;
 
             p:nth-of-type(1) {
@@ -1405,7 +1532,106 @@ body {
           }
         }
       }
-
+      // .content_2.active {
+      //   width: 100%;
+      //   height: 990px;
+      //   background-color: #fdd000;
+  
+      //   .conbox_2 {
+      //     width: 1080px;
+      //     height: 100%;
+      //     margin: 0 auto;
+      //     display: flex;
+      //     justify-content: space-evenly;
+      //     align-items: center;
+  
+      //     .text_box2 {
+      //       width: 50%;
+  
+      //       p:nth-of-type(1) {
+      //         @include fon("Roboto", 300, 24px);
+      //       }
+  
+      //       div {
+      //         h2 {
+      //           @include fon("Roboto", 900, 60px);
+      //           margin: 5px 0px;
+      //           position: relative;
+      //           z-index: 1;
+      //           width: 80%;
+      //           top: 0px;
+  
+      //           span {
+      //             display: inline;
+      //           }
+  
+      //           span::after {
+      //             content: "";
+      //             @include aniline3;
+      //             width: 100%;
+      //             position: absolute;
+      //             left: 0%;
+      //             background-color: #ffffff;
+      //             height: 30%;
+      //             z-index: -1;
+      //             display: inline;
+      //             transform: translateY(10%);
+      //           }
+      //         }
+  
+      //         div {
+      //           @include fon("Roboto", 900, 24px);
+      //           transform: translateY(0%);
+  
+      //           span {
+      //             font-size: 48px;
+      //           }
+      //         }
+      //       }
+  
+      //       b {
+      //         display: block;
+      //         transform: translateY(0%);
+      //         @include fon("Noto Sans KR", 400, 22px);
+      //       }
+  
+      //       p:nth-of-type(2) {
+      //         transform: translateY(0%);
+      //         @include fon("Noto Sans KR", 300, 16px);
+      //       }
+      //     }
+  
+      //     .video {
+      //       width: 50%;
+  
+      //       .video_2 {
+      //         width: 100%;
+      //         overflow: hidden;
+      //         object-fit: cover;
+      //       }
+  
+      //       .button_1 {
+      //         width: 100%;
+      //         height: 55px;
+      //         position: relative;
+  
+      //         input {
+      //           width: 100%;
+      //           height: 100%;
+      //           padding: 0px 30px;
+      //           background: #1c1c1b;
+      //           color: #fff;
+      //           position: absolute;
+      //           left: 0;
+      //           top: -20%;
+      //           border: 1px solid #1c1c1b;
+      //           @include fon("Noto Sans KR", 300, 1rem);
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+  
       .content_3 {
         width: 100%;
         display: flex;
@@ -1417,13 +1643,13 @@ body {
 
         .txt2 {
           width: 100%;
-          height: 80vh;
+          height: 45vh;
 
           .text_box3 {
             position: absolute;
             left: 0%;
             top: 0%;
-            transform: translateY(50%);
+            transform: translateY(23%);
             padding: 30px;
             word-break: keep-all;
 
@@ -1523,9 +1749,99 @@ body {
           }
         }
       }
-
+      // .content_3.active {
+      //   width: 1280px;
+      //   margin: 0 auto;
+      //   display: flex;
+      //   justify-content: flex-end;
+      //   position: relative;
+  
+      //   .txt2 {
+      //     width: 1080px;
+  
+      //     .text_box3 {
+      //       position: absolute;
+      //       top: 20%;
+      //       left: 7.8%;
+  
+      //       @include fl(center, flex-start) {
+      //         flex-direction: column;
+      //       }
+  
+      //       font-family: "Noto Sans KR", sans-serif;
+  
+      //       h1 {
+      //         font-weight: 300;
+      //         font-size: 24px;
+      //       }
+  
+      //       h2 {
+      //         @include ani2;
+      //         margin: 5px;
+      //         @include fon("Roboto", 900, 60px);
+  
+      //         span::after {
+      //           content: "";
+      //           @include aniline;
+      //           width: 50%;
+      //           position: absolute;
+      //           left: 0%;
+      //           background-color: #fdd000;
+      //           border: 5px;
+      //           padding: 20px;
+      //           z-index: -1;
+      //           display: block;
+      //           transform: translateY(-30px);
+      //         }
+      //       }
+  
+      //       b {
+      //         @include ani2;
+      //         font-weight: 400;
+      //         font-size: 22px;
+      //         margin: 15px 0px;
+      //       }
+  
+      //       p {
+      //         @include ani2;
+      //         font-weight: 300;
+      //         font-size: 16px;
+      //         margin-bottom: 40px;
+      //       }
+  
+      //       .button_3 {
+      //         width: 100%;
+  
+      //         a {
+      //           width: 100%;
+  
+      //           input {
+      //             width: 30%;
+      //             padding: 20px;
+      //             background: #fdd000;
+      //             border: 0;
+      //             margin-right: 5%;
+      //             @include fon("Noto Sans KR", 500, 18px);
+      //             @include ani2;
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+  
+      //   .spot_2 {
+      //     width: 50%;
+  
+      //     img {
+      //       height: 100vh;
+      //       width: 100vw;
+      //       object-fit: cover;
+      //     }
+      //   }
+      // }
+  
       .content_4 {
-        height: 969px;
+        height: 100%;
 
         .conbox_4 {
           width: 100%;
@@ -1540,7 +1856,7 @@ body {
 
           h1 {
             @include fon("Noto Sans KR", 300, 1rem);
-            margin-top: 60px;
+            margin-top: 15px;
           }
 
           h2 {
@@ -1589,7 +1905,7 @@ body {
                   overflow: hidden;
 
                   .imghover {
-                    width: 50%;
+                    width: 125px;
                     overflow: hidden;
 
                     img {
@@ -1639,87 +1955,199 @@ body {
           }
         }
       }
-    }
-  }
-
-  footer {
-    width: 100%;
-    background: #212121;
-
-    .footer_wrap {
-      display: none;
-    }
-
-    .footer_1 {
-      nav {
-        text-align: center;
+      // .content_4.active {
+      //   height: 969px;
+  
+      //   .conbox_4 {
+      //     width: 1080px;
+      //     height: 100%;
+      //     margin: 0 auto;
+  
+      //     @include fl(flex-start, center) {
+      //       flex-direction: column;
+      //     }
+  
+      //     h1 {
+      //       @include fon("Noto Sans KR", 300, 24px);
+      //       margin-top: 60px;
+      //     }
+  
+      //     h2 {
+      //       @include ani2;
+      //       @include fon("Rotobo", 900, 60px);
+      //       margin: 15px;
+  
+      //       span::after {
+      //         content: "";
+      //         @include aniline4;
+      //         width: 20%;
+      //         position: absolute;
+      //         left: 0%;
+      //         background-color: #fdd000;
+      //         border: 5px;
+      //         padding: 20px;
+      //         z-index: -1;
+      //         display: block;
+      //         transform: translateY(-30px);
+      //       }
+      //     }
+  
+      //     b {
+      //       @include fon("Noto Sans KR", 300, 16px);
+      //       margin: 20px 0px 15px 0px;
+      //     }
+  
+      //     .event_box {
+      //       width: 100%;
+  
+      //       .event {
+      //         width: 100%;
+      //         @include fl(space-between, flax-start);
+  
+      //         li {
+      //           width: 32%;
+      //           border: 1px solid #aaa;
+      //           border-radius: 20px;
+      //           overflow: hidden;
+  
+      //           .event_content {
+      //             overflow: hidden;
+  
+      //             .imghover {
+      //               width: 100%;
+      //               overflow: hidden;
+  
+      //               img {
+      //                 width: 100%;
+      //               }
+  
+      //               img:hover {
+      //                 transform: scale(1.1);
+      //                 transform-origin: 50% 50%;
+      //               }
+      //             }
+  
+      //             .text_box {
+      //               padding: 24px;
+      //               text-overflow: ellipsis;
+  
+      //               p:nth-of-type(1) {
+      //                 @include fon("Noto Sans KR", 300, 22px);
+      //                 margin-top: 0;
+      //               }
+  
+      //               p:nth-of-type(2) {
+      //                 @include fon("Noto Sans KR", 300, 14px);
+      //               }
+      //             }
+      //           }
+      //         }
+      //       }
+      //     }
+  
+      //     .event_warp {
+      //       a {
+      //         input {
+      //           width: 100%;
+      //           padding: 20px 30px;
+      //           margin: 12px;
+      //           background: #fdd000;
+      //           border: 0;
+  
+      //           @include fon("Noto Sans KR", 500, 18px) {
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+      footer {
         width: 100%;
-        padding: 20px;
-        @include fon("Noto Sans KR", 600, 0.8rem);
-      }
-    }
+        background: #212121;
 
-    .footer_box {
-      width: 100%;
-      padding: 30px;
-
-      .footer_text {
-        width: 100%;
-        margin: 0 auto;
-        justify-content: center;
-
-        div {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: center;
-
-          b {
-            span {
-              @include fon("Noto Sans KR", 500, 0.8rem);
-            }
-          }
-
-          span {
-            @include fon("Noto Sans KR", 400, 0.5rem);
-          }
-
-          p {
-            @include fon("Noto Sans KR", 400, 0.5rem);
-          }
+        .footer_wrap {
+            display: none;
         }
 
-        .img_box {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 25px;
+        .footer_1 {
 
-          .logo {
-            padding-right: 2%;
-          }
+            nav {
+                text-align: center;
+                width: 100%;
+                padding: 20px;
+                @include fon('Noto Sans KR', 600, 0.8rem);
 
-          nav {
-            display: flex;
+            }
+        }
+
+        .footer_box {
             width: 100%;
-            justify-content: center;
-            margin-top: 4%;
+            padding: 30px;
 
-            div {
-              width: 50px;
+            .footer_text {
+                width: 100%;
+                margin: 0 auto;
+                justify-content: center;
+
+                div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+
+                    b {
+                        span {
+                            @include fon('Noto Sans KR', 500, 0.8rem);
+                        }
+                    }
+
+                    span {
+                        @include fon('Noto Sans KR', 400, 0.5rem);
+                    }
+
+                    p {
+                        @include fon('Noto Sans KR', 400, 0.5rem);
+                    }
+                }
+
+                .img_box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 25px;
+
+                    .logo {
+                        padding-right: 2%;
+                    }
+
+                    nav {
+                        display: flex;
+                        width: 15%;
+                        margin-top: 4%;
+                        justify-content: center;
+
+                        div {
+                            width: 50px;
+
+                        }
+
+                    }
+
+                }
+
+                div {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
             }
-          }
         }
+    }
 
-        div {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-      }
+
     }
   }
 }

@@ -653,11 +653,6 @@ ul {
   box-sizing: border-box;
 }
 
-@media (min-width: 1280px) {
-  .media_menu {
-    display: none;
-  }
-}
 header {
   width: 100%;
   display: flex;
@@ -676,6 +671,7 @@ header .hdbg {
   justify-content: center;
   align-items: flex-start;
   transition: 0.5s;
+  background-color: white;
 }
 header .hdbg .head {
   width: 1280px;
@@ -776,7 +772,7 @@ header .hdbg .head .sns .burger_bg {
 header .wrap {
   position: fixed;
   right: 30px;
-  top: 30%;
+  top: 20%;
   z-index: 10;
 }
 header .wrap li {
@@ -874,7 +870,6 @@ header.active .hdbg .head .menu_wrap > li > a::after {
   margin: 0 auto;
 }
 header.active .hdbg .head .menu_wrap > li div {
-  padding-top: 20px;
   margin-top: 0;
   padding-bottom: 20px;
   margin-bottom: 0;
@@ -904,36 +899,754 @@ header.active .hdbg .head .menu_wrap div {
 header.active .hdbg .head li:hover {
   background-color: #fdd000;
 }
-header.active .hdbg .head .sns {
-  width: 20%;
-  padding-top: 30px;
-  display: flex;
+@media (max-width: 1280px) {
+  header.active .hdbg .head header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    position: fixed;
+    left: 0%;
+    top: 0;
+    z-index: 10;
+  }
+  header.active .hdbg .head header .hdbg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  header.active .hdbg .head header .hdbg .head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px 3%;
+  }
+  header.active .hdbg .head header .hdbg .head .head_logo {
+    width: 30%;
+    padding-top: 30px;
+  }
+  header.active .hdbg .head header .hdbg .head .head_logo a img {
+    width: 200px;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    display: none;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap > li {
+    width: 20%;
+    text-align: center;
+    padding: 40px 0;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap > li a {
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #1c1c1b;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap > li > a::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid black;
+    padding-top: 20px;
+    width: 0px;
+    margin: 0 auto;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap > li div {
+    padding-top: 20px;
+    margin-top: 0;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap > li div ul {
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-top: 10%;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap > li div ul li {
+    width: 100%;
+    padding: 2% 0% 2%;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap > li div ul li:nth-of-type(1) {
+    margin-top: 5%;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap li:hover > a::after {
+    width: 25%;
+    left: 0%;
+    transition: 0.2s;
+  }
+  header.active .hdbg .head header .hdbg .head li:hover {
+    background-color: #fdd000;
+  }
+  header.active .hdbg .head header .hdbg .head .sns {
+    width: 30%;
+    padding-top: 25px;
+    display: flex;
+  }
+  header.active .hdbg .head header .hdbg .head .sns nav {
+    width: 85%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  header.active .hdbg .head header .hdbg .head .sns nav a {
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  header.active .hdbg .head header .hdbg .head .sns nav a:hover {
+    background-color: #fdd000;
+    border-color: #fdd000;
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg {
+    position: absolute;
+    left: 88%;
+    top: 53%;
+    z-index: 10;
+    display: block;
+    display: flex;
+    align-items: center;
+    width: 15%;
+    justify-content: center;
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg .line {
+    margin-top: 0px;
+    width: 25px;
+    height: 15px;
+    position: relative;
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg .line span {
+    width: 100%;
+    border: 1px solid black;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg .line span:nth-child(1) {
+    top: 0;
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg .line span:nth-child(2) {
+    top: calc(50% - 1px);
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg .line span:nth-child(3) {
+    top: calc(100% - 2px);
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg.burger_active .line span {
+    top: calc(50% - 1px);
+    border: 1px solid white;
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(2) {
+    opacity: 0;
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  header.active .hdbg .head header .wrap {
+    position: fixed;
+    right: 30px;
+    top: 30%;
+    display: none;
+  }
+  header.active .hdbg .head header .wrap li {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 100%;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  }
+  header.active .hdbg .head header .wrap li div a {
+    color: white;
+  }
+  header.active .hdbg .head header .wrap li div a p {
+    margin: 0px;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 14px;
+  }
+  header.active .hdbg .head header .wrap li div a b {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+  header.active .hdbg .head header .wrap li:hover {
+    background-color: #fdd000;
+    border-color: #fdd000;
+  }
+  header.active .hdbg .head header .wrap li:hover a {
+    color: #1c1c1b;
+  }
+  header.active .hdbg .head header .media_menu {
+    transform: translateX(100%);
+    transition: 1s;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #212121;
+    color: #fdd000;
+    display: flex;
+    flex-direction: column;
+  }
+  header.active .hdbg .head header .media_menu figure {
+    margin: 5% auto;
+  }
+  header.active .hdbg .head header .media_menu figure img {
+    width: 100%;
+    max-width: 200px;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 7%;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li {
+    width: 100%;
+    display: flex;
+    margin-bottom: 8%;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li h2 {
+    width: 20%;
+    padding-right: 5%;
+    color: #fff;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-top: 0;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li div {
+    width: 80%;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li div ul {
+    width: 100%;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li div ul li {
+    margin-bottom: 1%;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li div ul li a {
+    color: #a9a9a9;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap hr {
+    width: 100%;
+    height: 0.3px;
+    margin-bottom: 3%;
+    border: 0px;
+    border-bottom: 0.7px solid rgba(93, 93, 93, 0.4392156863);
+  }
+  header.active .hdbg .head header .media_menu.menuactive {
+    transform: translateX(0%);
+  }
+  header.active .hdbg .head header.active {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    position: fixed;
+    left: 0%;
+    top: 0;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  header.active .hdbg .head header.active .hdbg {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  header.active .hdbg .head header.active .hdbg .head {
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  header.active .hdbg .head header.active .hdbg .head .head_logo {
+    width: 20%;
+    padding-top: 30px;
+  }
+  header.active .hdbg .head header.active .hdbg .head .head_logo a img {
+    width: 200px;
+  }
+  header.active .hdbg .head header.active .hdbg .head .menu_wrap {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    display: none;
+  }
+  header.active .hdbg .head header.active .hdbg .head .menu_wrap > li {
+    width: 20%;
+    text-align: center;
+    padding: 40px 0px 20px;
+  }
+  header.active .hdbg .head header.active .hdbg .head .menu_wrap > li a {
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #1c1c1b;
+  }
+  header.active .hdbg .head header.active .hdbg .head .menu_wrap > li > a::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid black;
+    padding-top: 20px;
+    width: 0px;
+    margin: 0 auto;
+  }
+  header.active .hdbg .head header.active .hdbg .head .menu_wrap > li div {
+    padding-top: 20px;
+    margin-top: 0;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    display: none;
+  }
+  header.active .hdbg .head header.active .hdbg .head .menu_wrap > li div ul {
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-top: 10%;
+  }
+  header.active .hdbg .head header.active .hdbg .head .menu_wrap > li div ul li {
+    width: 100%;
+    padding: 2% 0% 2%;
+  }
+  header.active .hdbg .head header.active .hdbg .head .menu_wrap > li div ul li:nth-of-type(1) {
+    margin-top: 5%;
+  }
+  header.active .hdbg .head header.active .hdbg .head .menu_wrap li:hover > a::after {
+    width: 25%;
+    left: 0%;
+    transition: 0.2s;
+  }
+  header.active .hdbg .head header.active .hdbg .head .menu_wrap div {
+    display: block;
+  }
+  header.active .hdbg .head header.active .hdbg .head li:hover {
+    background-color: #fdd000;
+  }
+  header.active .hdbg .head header.active .hdbg .head .sns {
+    width: 30%;
+    padding-top: 25px;
+    display: flex;
+  }
+  header.active .hdbg .head header.active .hdbg .head .sns nav {
+    width: 85%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  header.active .hdbg .head header.active .hdbg .head .sns nav a {
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  header.active .hdbg .head header.active .hdbg .head .sns nav a:hover {
+    background-color: #fdd000;
+    border-color: #fdd000;
+  }
+  header.active .hdbg .head header.active .hdbg .head .sns .burger_bg {
+    position: absolute;
+    left: 88%;
+    top: 53%;
+    z-index: 10;
+    display: block;
+    display: flex;
+    align-items: center;
+    width: 15%;
+    justify-content: center;
+  }
+  header.active .hdbg .head header.active .hdbg .head .sns .burger_bg .line {
+    margin-top: 0px;
+    width: 25px;
+    height: 15px;
+    position: relative;
+  }
+  header.active .hdbg .head header.active .hdbg .head .sns .burger_bg .line span {
+    width: 100%;
+    border: 1px solid black;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+  }
+  header.active .hdbg .head header.active .hdbg .head .sns .burger_bg .line span:nth-child(1) {
+    top: 0;
+  }
+  header.active .hdbg .head header.active .hdbg .head .sns .burger_bg .line span:nth-child(2) {
+    top: calc(50% - 1px);
+  }
+  header.active .hdbg .head header.active .hdbg .head .sns .burger_bg .line span:nth-child(3) {
+    top: calc(100% - 2px);
+  }
+  header.active .hdbg .head header.active .hdbg .head .sns .burger_bg.burger_active .line span {
+    top: calc(50% - 1px);
+    border: 1px solid white;
+  }
+  header.active .hdbg .head header.active .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  header.active .hdbg .head header.active .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(2) {
+    opacity: 0;
+  }
+  header.active .hdbg .head header.active .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  header.active .hdbg .head header.active .wrap {
+    position: fixed;
+    right: 30px;
+    top: 30%;
+  }
+  header.active .hdbg .head header.active .wrap li {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 100%;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  }
+  header.active .hdbg .head header.active .wrap li div h2 {
+    color: white;
+  }
+  header.active .hdbg .head header.active .wrap li div h2 p {
+    margin: 0px;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 14px;
+  }
+  header.active .hdbg .head header.active .wrap li div h2 b {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+  header.active .hdbg .head header.active .wrap li:hover {
+    background-color: #fdd000;
+    border-color: #fdd000;
+  }
+  header.active .hdbg .head header.active .wrap li:hover a {
+    color: #1c1c1b;
+  }
 }
-header.active .hdbg .head .sns nav {
-  width: 100%;
-  display: flex;
-}
-header.active .hdbg .head .sns nav a {
-  width: 100%;
-  border: 2px solid black;
-  border-radius: 100%;
-  padding: 7px;
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-header.active .hdbg .head .sns nav a:hover {
-  background-color: #fdd000;
-  border-color: #fdd000;
-}
-header.active .hdbg .head .sns .burger_bg {
-  display: none;
+@media (max-width: 760px) {
+  header.active .hdbg .head header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    position: fixed;
+    left: 0%;
+    top: 0;
+    z-index: 10;
+  }
+  header.active .hdbg .head header .hdbg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  header.active .hdbg .head header .hdbg .head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px 3%;
+  }
+  header.active .hdbg .head header .hdbg .head .head_logo {
+    width: 30%;
+    padding-top: 10px;
+  }
+  header.active .hdbg .head header .hdbg .head .head_logo a img {
+    width: 150px;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    display: none;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap > li {
+    width: 20%;
+    text-align: center;
+    padding: 40px 0;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap > li a {
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #1c1c1b;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap > li > a::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid black;
+    padding-top: 20px;
+    width: 0px;
+    margin: 0 auto;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap > li div {
+    padding-top: 20px;
+    margin-top: 0;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap > li div ul {
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-top: 10%;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap > li div ul li {
+    width: 100%;
+    padding: 2% 0% 2%;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap > li div ul li:nth-of-type(1) {
+    margin-top: 5%;
+  }
+  header.active .hdbg .head header .hdbg .head .menu_wrap li:hover > a::after {
+    width: 25%;
+    left: 0%;
+    transition: 0.2s;
+  }
+  header.active .hdbg .head header .hdbg .head li:hover {
+    background-color: #fdd000;
+  }
+  header.active .hdbg .head header .hdbg .head .sns {
+    width: 30%;
+    padding-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  header.active .hdbg .head header .hdbg .head .sns nav {
+    width: 85%;
+    display: none;
+    justify-content: flex-end;
+  }
+  header.active .hdbg .head header .hdbg .head .sns nav a {
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  header.active .hdbg .head header .hdbg .head .sns nav a:hover {
+    background-color: #fdd000;
+    border-color: #fdd000;
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg {
+    position: absolute;
+    left: 85%;
+    z-index: 10;
+    top: 50%;
+    display: block;
+    display: flex;
+    align-items: center;
+    width: 15%;
+    justify-content: center;
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg .line {
+    margin-top: 0px;
+    width: 25px;
+    height: 15px;
+    position: relative;
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg .line span {
+    width: 100%;
+    border: 1px solid black;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg .line span:nth-child(1) {
+    top: 0;
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg .line span:nth-child(2) {
+    top: calc(50% - 1px);
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg .line span:nth-child(3) {
+    top: calc(100% - 2px);
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg.burger_active .line span {
+    top: calc(50% - 1px);
+    border: 1px solid white;
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(1) {
+    transform: translate rotate(45deg);
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(2) {
+    opacity: 0;
+  }
+  header.active .hdbg .head header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(3) {
+    transform: translate rotate(-45deg);
+  }
+  header.active .hdbg .head header .wrap {
+    position: fixed;
+    right: 30px;
+    top: 30%;
+    display: none;
+  }
+  header.active .hdbg .head header .wrap li {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 100%;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  }
+  header.active .hdbg .head header .wrap li div a {
+    color: white;
+  }
+  header.active .hdbg .head header .wrap li div a p {
+    margin: 0px;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 14px;
+  }
+  header.active .hdbg .head header .wrap li div a b {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+  header.active .hdbg .head header .wrap li:hover {
+    background-color: #fdd000;
+    border-color: #fdd000;
+  }
+  header.active .hdbg .head header .wrap li:hover a {
+    color: #1c1c1b;
+  }
+  header.active .hdbg .head header .media_menu {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 240px;
+    height: 100vh;
+    background-color: #212121;
+    color: #fdd000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  header.active .hdbg .head header .media_menu figure {
+    padding: 20% 0px 10%;
+    margin: 0% auto;
+  }
+  header.active .hdbg .head header .media_menu figure img {
+    width: 100%;
+    max-width: 190px;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 7%;
+    margin-top: 10%;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li {
+    width: 100%;
+    display: flex;
+    margin-bottom: 8%;
+    flex-direction: column;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li h2 {
+    width: 100%;
+    padding-right: 5%;
+    color: #fff;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.9rem;
+    position: relative;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li > h2::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "chevron_right";
+    font-family: "material symbols outlined";
+    display: inline-block;
+    width: 20px;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li div {
+    display: none;
+    width: 100%;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li div > ul {
+    width: 100%;
+    margin: 15%;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li div > ul > li {
+    margin-bottom: 1%;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li div > ul > li > a {
+    color: #a9a9a9;
+    margin-bottom: 5%;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li div > ul > li a::after {
+    content: "";
+    display: none;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li.active > h2 {
+    color: #fdd000;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap li.active > h2::after {
+    transform: rotate(90deg);
+    color: white;
+  }
+  header.active .hdbg .head header .media_menu .media_menu_wrap hr {
+    display: none;
+  }
 }
 header.active .wrap {
   position: fixed;
   right: 30px;
-  top: 30%;
+  top: 20%;
 }
 header.active .wrap li {
   width: 110px;
@@ -969,6 +1682,11 @@ header.active .wrap li:hover a {
   color: #1c1c1b;
 }
 
+@media (min-width: 1280px) {
+  .media_menu {
+    display: none;
+  }
+}
 @media (max-width: 1280px) {
   header {
     width: 100%;
@@ -1228,6 +1946,206 @@ header.active .wrap li:hover a {
   }
   header .media_menu.menuactive {
     transform: translateX(0%);
+  }
+  header.active {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    position: fixed;
+    left: 0%;
+    top: 0;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  header.active .hdbg {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  header.active .hdbg .head {
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  header.active .hdbg .head .head_logo {
+    width: 20%;
+    padding-top: 30px;
+  }
+  header.active .hdbg .head .head_logo a img {
+    width: 200px;
+  }
+  header.active .hdbg .head .menu_wrap {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    display: none;
+  }
+  header.active .hdbg .head .menu_wrap > li {
+    width: 20%;
+    text-align: center;
+    padding: 40px 0px 20px;
+  }
+  header.active .hdbg .head .menu_wrap > li a {
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #1c1c1b;
+  }
+  header.active .hdbg .head .menu_wrap > li > a::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid black;
+    padding-top: 20px;
+    width: 0px;
+    margin: 0 auto;
+  }
+  header.active .hdbg .head .menu_wrap > li div {
+    padding-top: 20px;
+    margin-top: 0;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    display: none;
+  }
+  header.active .hdbg .head .menu_wrap > li div ul {
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-top: 10%;
+  }
+  header.active .hdbg .head .menu_wrap > li div ul li {
+    width: 100%;
+    padding: 2% 0% 2%;
+  }
+  header.active .hdbg .head .menu_wrap > li div ul li:nth-of-type(1) {
+    margin-top: 5%;
+  }
+  header.active .hdbg .head .menu_wrap li:hover > a::after {
+    width: 25%;
+    left: 0%;
+    transition: 0.2s;
+  }
+  header.active .hdbg .head .menu_wrap div {
+    display: block;
+  }
+  header.active .hdbg .head li:hover {
+    background-color: #fdd000;
+  }
+  header.active .hdbg .head .sns {
+    width: 30%;
+    padding-top: 25px;
+    display: flex;
+  }
+  header.active .hdbg .head .sns nav {
+    width: 85%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  header.active .hdbg .head .sns nav a {
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  header.active .hdbg .head .sns nav a:hover {
+    background-color: #fdd000;
+    border-color: #fdd000;
+  }
+  header.active .hdbg .head .sns .burger_bg {
+    position: absolute;
+    left: 88%;
+    top: 53%;
+    z-index: 10;
+    display: block;
+    display: flex;
+    align-items: center;
+    width: 15%;
+    justify-content: center;
+  }
+  header.active .hdbg .head .sns .burger_bg .line {
+    margin-top: 0px;
+    width: 25px;
+    height: 15px;
+    position: relative;
+  }
+  header.active .hdbg .head .sns .burger_bg .line span {
+    width: 100%;
+    border: 1px solid black;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+  }
+  header.active .hdbg .head .sns .burger_bg .line span:nth-child(1) {
+    top: 0;
+  }
+  header.active .hdbg .head .sns .burger_bg .line span:nth-child(2) {
+    top: calc(50% - 1px);
+  }
+  header.active .hdbg .head .sns .burger_bg .line span:nth-child(3) {
+    top: calc(100% - 2px);
+  }
+  header.active .hdbg .head .sns .burger_bg.burger_active .line span {
+    top: calc(50% - 1px);
+    border: 1px solid white;
+  }
+  header.active .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  header.active .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(2) {
+    opacity: 0;
+  }
+  header.active .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  header.active .wrap {
+    position: fixed;
+    right: 30px;
+    top: 30%;
+  }
+  header.active .wrap li {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 100%;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  }
+  header.active .wrap li div h2 {
+    color: white;
+  }
+  header.active .wrap li div h2 p {
+    margin: 0px;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 14px;
+  }
+  header.active .wrap li div h2 b {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+  header.active .wrap li:hover {
+    background-color: #fdd000;
+    border-color: #fdd000;
+  }
+  header.active .wrap li:hover a {
+    color: #1c1c1b;
   }
 }
 @media (max-width: 760px) {
@@ -1510,6 +2428,287 @@ header.active .wrap li:hover a {
     color: white;
   }
   header .media_menu .media_menu_wrap hr {
+    display: none;
+  }
+  header.active {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    position: fixed;
+    left: 0%;
+    top: 0;
+    z-index: 10;
+  }
+  header.active .hdbg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  header.active .hdbg .head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px 3%;
+  }
+  header.active .hdbg .head .head_logo {
+    width: 30%;
+    padding-top: 10px;
+  }
+  header.active .hdbg .head .head_logo a img {
+    width: 150px;
+  }
+  header.active .hdbg .head .menu_wrap {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    display: none;
+  }
+  header.active .hdbg .head .menu_wrap > li {
+    width: 20%;
+    text-align: center;
+    padding: 40px 0;
+  }
+  header.active .hdbg .head .menu_wrap > li a {
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #1c1c1b;
+  }
+  header.active .hdbg .head .menu_wrap > li > a::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid black;
+    padding-top: 20px;
+    width: 0px;
+    margin: 0 auto;
+  }
+  header.active .hdbg .head .menu_wrap > li div {
+    padding-top: 20px;
+    margin-top: 0;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
+  header.active .hdbg .head .menu_wrap > li div ul {
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-top: 10%;
+  }
+  header.active .hdbg .head .menu_wrap > li div ul li {
+    width: 100%;
+    padding: 2% 0% 2%;
+  }
+  header.active .hdbg .head .menu_wrap > li div ul li:nth-of-type(1) {
+    margin-top: 5%;
+  }
+  header.active .hdbg .head .menu_wrap li:hover > a::after {
+    width: 25%;
+    left: 0%;
+    transition: 0.2s;
+  }
+  header.active .hdbg .head li:hover {
+    background-color: #fdd000;
+  }
+  header.active .hdbg .head .sns {
+    width: 30%;
+    padding-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  header.active .hdbg .head .sns nav {
+    width: 85%;
+    display: none;
+    justify-content: flex-end;
+  }
+  header.active .hdbg .head .sns nav a {
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  header.active .hdbg .head .sns nav a:hover {
+    background-color: #fdd000;
+    border-color: #fdd000;
+  }
+  header.active .hdbg .head .sns .burger_bg {
+    position: absolute;
+    left: 85%;
+    z-index: 10;
+    top: 50%;
+    display: block;
+    display: flex;
+    align-items: center;
+    width: 15%;
+    justify-content: center;
+  }
+  header.active .hdbg .head .sns .burger_bg .line {
+    margin-top: 0px;
+    width: 25px;
+    height: 15px;
+    position: relative;
+  }
+  header.active .hdbg .head .sns .burger_bg .line span {
+    width: 100%;
+    border: 1px solid black;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+  }
+  header.active .hdbg .head .sns .burger_bg .line span:nth-child(1) {
+    top: 0;
+  }
+  header.active .hdbg .head .sns .burger_bg .line span:nth-child(2) {
+    top: calc(50% - 1px);
+  }
+  header.active .hdbg .head .sns .burger_bg .line span:nth-child(3) {
+    top: calc(100% - 2px);
+  }
+  header.active .hdbg .head .sns .burger_bg.burger_active .line span {
+    top: calc(50% - 1px);
+    border: 1px solid white;
+  }
+  header.active .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(1) {
+    transform: translate rotate(45deg);
+  }
+  header.active .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(2) {
+    opacity: 0;
+  }
+  header.active .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(3) {
+    transform: translate rotate(-45deg);
+  }
+  header.active .wrap {
+    position: fixed;
+    right: 30px;
+    top: 30%;
+    display: none;
+  }
+  header.active .wrap li {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 100%;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  }
+  header.active .wrap li div a {
+    color: white;
+  }
+  header.active .wrap li div a p {
+    margin: 0px;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 14px;
+  }
+  header.active .wrap li div a b {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+  header.active .wrap li:hover {
+    background-color: #fdd000;
+    border-color: #fdd000;
+  }
+  header.active .wrap li:hover a {
+    color: #1c1c1b;
+  }
+  header.active .media_menu {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 240px;
+    height: 100vh;
+    background-color: #212121;
+    color: #fdd000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  header.active .media_menu figure {
+    padding: 20% 0px 10%;
+    margin: 0% auto;
+  }
+  header.active .media_menu figure img {
+    width: 100%;
+    max-width: 190px;
+  }
+  header.active .media_menu .media_menu_wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 7%;
+    margin-top: 10%;
+  }
+  header.active .media_menu .media_menu_wrap li {
+    width: 100%;
+    display: flex;
+    margin-bottom: 8%;
+    flex-direction: column;
+  }
+  header.active .media_menu .media_menu_wrap li h2 {
+    width: 100%;
+    padding-right: 5%;
+    color: #fff;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.9rem;
+    position: relative;
+  }
+  header.active .media_menu .media_menu_wrap li > h2::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "chevron_right";
+    font-family: "material symbols outlined";
+    display: inline-block;
+    width: 20px;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+  header.active .media_menu .media_menu_wrap li div {
+    display: none;
+    width: 100%;
+  }
+  header.active .media_menu .media_menu_wrap li div > ul {
+    width: 100%;
+    margin: 15%;
+  }
+  header.active .media_menu .media_menu_wrap li div > ul > li {
+    margin-bottom: 1%;
+  }
+  header.active .media_menu .media_menu_wrap li div > ul > li > a {
+    color: #a9a9a9;
+    margin-bottom: 5%;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+  header.active .media_menu .media_menu_wrap li div > ul > li a::after {
+    content: "";
+    display: none;
+  }
+  header.active .media_menu .media_menu_wrap li.active > h2 {
+    color: #fdd000;
+  }
+  header.active .media_menu .media_menu_wrap li.active > h2::after {
+    transform: rotate(90deg);
+    color: white;
+  }
+  header.active .media_menu .media_menu_wrap hr {
     display: none;
   }
 }

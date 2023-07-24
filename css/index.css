@@ -5,6 +5,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 @import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 body {
   margin: 0;
   box-sizing: border-box;
@@ -109,11 +115,43 @@ ul {
     transform: translateY(220%) rotate(45deg);
   }
 }
-header:hover {
-  background-color: #ffffff;
-  transition: 0.5s;
+body {
+  margin: 0;
+  box-sizing: border-box;
 }
 
+li {
+  margin: 0;
+}
+
+a, ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+}
+
+::-moz-selection {
+  background: #fdd000;
+  color: #1c1c1b;
+}
+
+::selection {
+  background: #fdd000;
+  color: #1c1c1b;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+@media (min-width: 1280px) {
+  .media_menu {
+    display: none;
+  }
+}
 header {
   width: 100%;
   display: flex;
@@ -123,13 +161,15 @@ header {
   position: fixed;
   left: 0%;
   top: 0;
-  z-index: 10;
+  z-index: 20;
+  transition: 0.5s;
 }
 header .hdbg {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  transition: 0.5s;
 }
 header .hdbg .head {
   width: 1280px;
@@ -155,7 +195,7 @@ header .hdbg .head .menu_wrap {
 header .hdbg .head .menu_wrap > li {
   width: 20%;
   text-align: center;
-  padding: 40px 0;
+  padding: 40px 0px 20px;
 }
 header .hdbg .head .menu_wrap > li a {
   font-family: "Noto Sans KR";
@@ -172,10 +212,10 @@ header .hdbg .head .menu_wrap > li > a::after {
   margin: 0 auto;
 }
 header .hdbg .head .menu_wrap > li div {
-  padding-top: 20px;
   margin-top: 0;
   padding-bottom: 20px;
   margin-bottom: 0;
+  display: none;
 }
 header .hdbg .head .menu_wrap > li div ul {
   font-family: "Noto Sans KR";
@@ -194,6 +234,9 @@ header .hdbg .head .menu_wrap li:hover > a::after {
   width: 25%;
   left: 0%;
   transition: 0.2s;
+}
+header .hdbg .head .menu_wrap div {
+  display: block;
 }
 header .hdbg .head li:hover {
   background-color: #fdd000;
@@ -228,6 +271,7 @@ header .wrap {
   position: fixed;
   right: 30px;
   top: 30%;
+  z-index: 10;
 }
 header .wrap li {
   width: 110px;
@@ -262,593 +306,161 @@ header .wrap li:hover {
 header .wrap li:hover a {
   color: #1c1c1b;
 }
-header .media_menu {
-  display: none;
-}
 
-main {
-  overflow: hidden;
-}
-main .menu_wrap_top {
-  position: fixed;
-  bottom: 0px;
-  left: 20px;
-}
-main .menu_wrap_top li {
-  display: flex;
-  margin-bottom: 20px;
-}
-main .menu_wrap_top li div::before {
-  content: "";
-  display: inline-block;
-  /* 기억하자 */
-  vertical-align: middle;
-  border: 1px solid black;
-  width: 8px;
-  margin-right: 5px;
-}
-main .menu_wrap_top li div {
-  font-family: "Roboto";
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 1;
-  letter-spacing: -1px;
-  color: #1c1c1b;
-}
-main .spot_1 {
-  width: 100%;
-}
-main .spot_1 ul {
-  width: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-}
-main .spot_1 ul li img {
-  width: 100vw;
-  height: 100vh;
-}
-main .spot_1 .media_spot1 {
-  width: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  display: none;
-}
-main .spot_1 .media_spot1 li img {
-  width: 100vw;
-  height: 100vh;
-}
-main .midle .content_1 {
-  position: relative;
-  height: 969px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-main .midle .content_1 .txt {
-  width: 50%;
-}
-main .midle .content_1 .txt .text_box1 {
-  position: absolute;
-  left: 50%;
-  top: 30%;
-  width: 1080px;
-  transform: translateX(-50%);
-  font-family: "Noto Sans KR", sans-serif;
-}
-main .midle .content_1 .txt .text_box1 p:nth-of-type(1) {
-  font-size: 24px;
-  font-weight: 300;
-  color: #1c1c1b;
-  line-height: 1.4;
-}
-main .midle .content_1 .txt .text_box1 b:nth-of-type(1) {
-  width: 50%;
-  position: relative;
-  font-weight: 700;
-  color: #1c1c1b;
-  font-size: 51px;
-  display: inline;
-  animation: ani-1 1s forwards;
-}
-main .midle .content_1 .txt .text_box1 b:nth-of-type(1)::after {
-  content: "";
-  animation: ani-1 1s forwards;
-  animation: aniline1 1s forwards;
-  width: 10%;
-  position: absolute;
-  left: 0%;
-  background-color: #fdd000;
-  border: 5px;
-  padding: 18px;
-  z-index: -1;
-  display: inline;
-  transform: translateY(30px);
-}
-main .midle .content_1 .txt .text_box1 b:nth-of-type(2) {
-  font-weight: 400;
-  color: #1c1c1b;
-  font-size: 22px;
-  display: block;
-  margin: 15px 0px;
-  animation: ani-1 1s forwards;
-}
-main .midle .content_1 .txt .text_box1 p:nth-of-type(2) {
-  font-weight: 300;
-  color: #1c1c1b;
-  font-size: 16px;
-  animation: ani-1 1s forwards;
-  animation-delay: 0.1s;
-  overflow: hidden;
-}
-main .midle .content_1 .txt .text_box1 a {
-  width: 15%;
-  background-color: #fdd000;
-  font-weight: 500;
-  padding: 15px 30px;
-  font-size: 18px;
-  margin-top: 20px;
-  display: block;
-  text-align: center;
-  animation: ani-1 1s forwards;
-  animation-delay: 0.2s;
-}
-main .midle .content_1 .button_ul {
-  width: 50%;
-  overflow: hidden;
-}
-main .midle .content_1 .button_ul .menu_ul .menu_img {
-  width: 100%;
-  display: flex;
-}
-main .midle .content_1 .button_ul .menu_ul .menu_img li {
-  width: 420px;
-  font-family: "Noto Sans KR", sans-serif;
-  flex-shrink: 0;
-  border: 1px solid #aaa;
-  border-radius: 15px;
-  overflow: hidden;
-}
-main .midle .content_1 .button_ul .menu_ul .menu_img li div {
-  width: 100%;
-}
-main .midle .content_1 .button_ul .menu_ul .menu_img li div img {
-  vertical-align: middle;
-  width: 100%;
-}
-main .midle .content_1 .button_ul .menu_ul .menu_img li div .menu_text {
-  background-color: #e9e9e9;
-  padding: 33px;
-  border: none;
-  width: 100%;
-}
-main .midle .content_1 .button_ul .menu_ul .menu_img li div .menu_text b {
-  font-weight: 400;
-  font-size: 1.4em;
-}
-main .midle .content_1 .button_ul .menu_ul .menu_img li div p {
-  font-weight: 300;
-  font-size: 14px;
-  width: 100%;
-}
-main .midle .content_2 {
-  width: 100%;
-  height: 969px;
-  background-color: #fdd000;
-}
-main .midle .content_2 .conbox_2 {
-  width: 1080px;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-main .midle .content_2 .conbox_2 .text_box2 {
-  width: 50%;
-}
-main .midle .content_2 .conbox_2 .text_box2 p:nth-of-type(1) {
-  font-family: "Roboto";
-  font-weight: 300;
-  font-size: 24px;
-}
-main .midle .content_2 .conbox_2 .text_box2 div h2 {
-  animation: ani2 1s forwards;
-  font-family: "Roboto";
-  font-weight: 900;
-  font-size: 60px;
-  margin: 5px 0px;
-  position: relative;
-  z-index: 1;
-  width: 80%;
-}
-main .midle .content_2 .conbox_2 .text_box2 div h2 span {
-  display: inline;
-}
-main .midle .content_2 .conbox_2 .text_box2 div h2 span::after {
-  content: "";
-  animation: aniline3 1s forwards;
-  width: 100%;
-  position: absolute;
-  left: 0%;
-  background-color: #ffffff;
-  height: 30%;
-  z-index: -1;
-  display: inline;
-  transform: translateY(10%);
-}
-main .midle .content_2 .conbox_2 .text_box2 div div {
-  animation: ani2 1s forwards;
-  font-family: "Roboto";
-  font-weight: 900;
-  font-size: 24px;
-}
-main .midle .content_2 .conbox_2 .text_box2 div div span {
-  font-size: 48px;
-}
-main .midle .content_2 .conbox_2 .text_box2 b {
-  display: block;
-  animation: ani2 1s forwards;
-  font-family: "Noto Sans KR";
-  font-weight: 400;
-  font-size: 22px;
-}
-main .midle .content_2 .conbox_2 .text_box2 p:nth-of-type(2) {
-  animation: ani2 1s forwards;
-  font-family: "Noto Sans KR";
-  font-weight: 300;
-  font-size: 16px;
-}
-main .midle .content_2 .conbox_2 .video {
-  width: 50%;
-}
-main .midle .content_2 .conbox_2 .video .video_2 {
-  width: 100%;
-  overflow: hidden;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main .midle .content_2 .conbox_2 .video .button_1 {
-  width: 100%;
-  height: 55px;
-  position: relative;
-}
-main .midle .content_2 .conbox_2 .video .button_1 input {
-  width: 100%;
-  height: 100%;
-  padding: 0px 30px;
-  background: #1c1c1b;
-  color: #fff;
-  position: absolute;
-  left: 0;
-  top: -20%;
-  border: 1px solid #1c1c1b;
-  font-family: "Noto Sans KR";
-  font-weight: 300;
-  font-size: 1rem;
-}
-main .midle .content_3 {
-  width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-end;
-  position: relative;
-}
-main .midle .content_3 .txt2 {
-  width: 1080px;
-}
-main .midle .content_3 .txt2 .text_box3 {
-  position: absolute;
-  top: 20%;
-  left: 7.8%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  font-family: "Noto Sans KR", sans-serif;
-}
-main .midle .content_3 .txt2 .text_box3 h1 {
-  font-weight: 300;
-  font-size: 24px;
-}
-main .midle .content_3 .txt2 .text_box3 h2 {
-  animation: ani2 1s forwards;
-  margin: 5px;
-  font-family: "Roboto";
-  font-weight: 900;
-  font-size: 60px;
-}
-main .midle .content_3 .txt2 .text_box3 h2 span::after {
-  content: "";
-  animation: aniline 1s forwards;
-  width: 50%;
-  position: absolute;
-  left: 0%;
-  background-color: #fdd000;
-  border: 5px;
-  padding: 20px;
-  z-index: -1;
-  display: block;
-  transform: translateY(-30px);
-}
-main .midle .content_3 .txt2 .text_box3 b {
-  animation: ani2 1s forwards;
-  font-weight: 400;
-  font-size: 22px;
-  margin: 15px 0px;
-}
-main .midle .content_3 .txt2 .text_box3 p {
-  animation: ani2 1s forwards;
-  font-weight: 300;
-  font-size: 16px;
-  margin-bottom: 40px;
-}
-main .midle .content_3 .txt2 .text_box3 .button_3 {
-  width: 100%;
-}
-main .midle .content_3 .txt2 .text_box3 .button_3 a {
-  width: 100%;
-}
-main .midle .content_3 .txt2 .text_box3 .button_3 a input {
-  width: 30%;
-  padding: 20px;
-  background: #fdd000;
-  border: 0;
-  margin-right: 5%;
-  font-family: "Noto Sans KR";
-  font-weight: 500;
-  font-size: 18px;
-  animation: ani2 1s forwards;
-}
-main .midle .content_3 .spot_2 {
-  width: 50%;
-}
-main .midle .content_3 .spot_2 img {
-  height: 100vh;
-  width: 100vw;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main .midle .content_4 {
-  height: 969px;
-}
-main .midle .content_4 .conbox_4 {
-  width: 1080px;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-}
-main .midle .content_4 .conbox_4 h1 {
-  font-family: "Noto Sans KR";
-  font-weight: 300;
-  font-size: 24px;
-  margin-top: 60px;
-}
-main .midle .content_4 .conbox_4 h2 {
-  animation: ani2 1s forwards;
-  font-family: "Rotobo";
-  font-weight: 900;
-  font-size: 60px;
-  margin: 15px;
-}
-main .midle .content_4 .conbox_4 h2 span::after {
-  content: "";
-  animation: aniline4 1s forwards;
-  width: 95%;
-  position: absolute;
-  left: -5%;
-  background-color: #fdd000;
-  border: 5px;
-  padding: 20px;
-  z-index: -1;
-  display: block;
-  transform: translateY(-30px);
-}
-main .midle .content_4 .conbox_4 b {
-  font-family: "Noto Sans KR";
-  font-weight: 300;
-  font-size: 16px;
-  margin: 20px 0px 15px 0px;
-}
-main .midle .content_4 .conbox_4 .event_box {
-  width: 100%;
-}
-main .midle .content_4 .conbox_4 .event_box .event {
+header.active {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flax-start;
-}
-main .midle .content_4 .conbox_4 .event_box .event li {
-  width: 32%;
-  border: 1px solid #aaa;
-  border-radius: 20px;
-  overflow: hidden;
-}
-main .midle .content_4 .conbox_4 .event_box .event li .event_content {
-  overflow: hidden;
-}
-main .midle .content_4 .conbox_4 .event_box .event li .event_content .imghover {
-  width: 100%;
-  overflow: hidden;
-}
-main .midle .content_4 .conbox_4 .event_box .event li .event_content .imghover img {
-  width: 100%;
-}
-main .midle .content_4 .conbox_4 .event_box .event li .event_content .imghover img:hover {
-  transform: scale(1.1);
-  transform-origin: 50% 50%;
-}
-main .midle .content_4 .conbox_4 .event_box .event li .event_content .text_box {
-  padding: 24px;
-  text-overflow: ellipsis;
-}
-main .midle .content_4 .conbox_4 .event_box .event li .event_content .text_box p:nth-of-type(1) {
-  font-family: "Noto Sans KR";
-  font-weight: 300;
-  font-size: 22px;
-  margin-top: 0;
-}
-main .midle .content_4 .conbox_4 .event_box .event li .event_content .text_box p:nth-of-type(2) {
-  font-family: "Noto Sans KR";
-  font-weight: 300;
-  font-size: 14px;
-}
-main .midle .content_4 .conbox_4 .event_warp a input {
-  width: 100%;
-  padding: 20px 30px;
-  margin: 12px;
-  background: #fdd000;
-  border: 0;
-  font-family: "Noto Sans KR";
-  font-weight: 500;
-  font-size: 18px;
-}
-
-footer {
-  background: #212121;
-}
-footer .footer_1 {
-  background-color: #fdd000;
-}
-footer .footer_1 nav {
-  width: 1280px;
-  padding: 20px 0px;
+  align-items: flex-start;
   margin: 0 auto;
-  font-family: "Noto Sans KR";
-  font-weight: 700;
-  font-size: 16px;
+  position: fixed;
+  left: 0%;
+  top: 0;
+  z-index: 10;
+  transition: 0.5s;
 }
-footer .footer_1 nav a:nth-of-type(2) {
-  padding-left: 20px;
-}
-footer .footer_box {
-  width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  padding: 60px 20px;
-  color: #aaa;
-}
-footer .footer_box .footer_text {
-  width: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: 10%;
-}
-footer .footer_box .footer_text div span {
-  margin: 0px 10px 0px 0px;
-  font-family: "Noto Sans KR";
-  font-weight: 300;
-  font-size: 14px;
-}
-footer .footer_box .footer_text div b span {
-  font-family: "Noto Sans KR";
-  font-weight: 700;
-  font-size: 14px;
-  color: #fff;
-}
-footer .footer_box .footer_text div p {
-  font-family: "Noto Sans KR";
-  font-weight: 300;
-  font-size: 14px;
-  margin: 10px 0px;
-}
-footer .footer_box .footer_text .img_box {
+header.active .hdbg {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
   width: 100%;
-  display: flex;
-  justify-content: flax-start;
-  align-items: center;
-  margin-bottom: 15px;
-}
-footer .footer_box .footer_text .img_box .logo {
-  width: 180px;
-  height: 36px;
-  padding-right: 5%;
-}
-footer .footer_box .footer_text .img_box nav {
-  display: flex;
-  width: 60%;
-}
-footer .footer_box .footer_text .img_box nav div {
-  width: 13%;
-  display: flex;
-  border-radius: 100%;
-  background-color: #fff;
-  margin-right: 10px;
-}
-footer .footer_box .footer_text .img_box nav div a {
   display: flex;
   justify-content: center;
-  width: 100%;
-  padding: 5px;
+  align-items: flex-start;
 }
-footer .footer_box .footer_text .img_box nav div:hover {
+header.active .hdbg .head {
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+header.active .hdbg .head .head_logo {
+  width: 20%;
+  padding-top: 30px;
+}
+header.active .hdbg .head .head_logo a img {
+  width: 200px;
+}
+header.active .hdbg .head .menu_wrap {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+header.active .hdbg .head .menu_wrap > li {
+  width: 20%;
+  text-align: center;
+  padding: 40px 0px 20px;
+}
+header.active .hdbg .head .menu_wrap > li a {
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #1c1c1b;
+}
+header.active .hdbg .head .menu_wrap > li > a::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid black;
+  padding-top: 20px;
+  width: 0px;
+  margin: 0 auto;
+}
+header.active .hdbg .head .menu_wrap > li div {
+  padding-top: 20px;
+  margin-top: 0;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  display: none;
+}
+header.active .hdbg .head .menu_wrap > li div ul {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-size: 0.9em;
+  margin-top: 10%;
+}
+header.active .hdbg .head .menu_wrap > li div ul li {
+  width: 100%;
+  padding: 2% 0% 2%;
+}
+header.active .hdbg .head .menu_wrap > li div ul li:nth-of-type(1) {
+  margin-top: 5%;
+}
+header.active .hdbg .head .menu_wrap li:hover > a::after {
+  width: 25%;
+  left: 0%;
+  transition: 0.2s;
+}
+header.active .hdbg .head .menu_wrap div {
+  display: block;
+}
+header.active .hdbg .head li:hover {
   background-color: #fdd000;
 }
-footer .footer_wrap {
-  width: 50%;
+header.active .hdbg .head .sns {
+  width: 20%;
+  padding-top: 30px;
   display: flex;
-  color: #fff;
 }
-footer .footer_wrap li {
+header.active .hdbg .head .sns nav {
   width: 100%;
-  margin: 10px 0px;
-  margin-right: 20px;
+  display: flex;
 }
-footer .footer_wrap li b {
+header.active .hdbg .head .sns nav a {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 100%;
+  padding: 7px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+header.active .hdbg .head .sns nav a:hover {
+  background-color: #fdd000;
+  border-color: #fdd000;
+}
+header.active .hdbg .head .sns .burger_bg {
+  display: none;
+}
+header.active .wrap {
+  position: fixed;
+  right: 30px;
+  top: 30%;
+}
+header.active .wrap li {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  background-color: black;
+  border-radius: 100%;
+  text-align: center;
+  margin-top: 10px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+header.active .wrap li div h2 {
+  color: white;
+}
+header.active .wrap li div h2 p {
+  margin: 0px;
   font-family: "Noto Sans KR";
-  font-weight: 300;
-  font-size: 18px;
+  font-weight: 500;
+  font-size: 14px;
 }
-footer .footer_wrap li div a {
-  display: block;
-  color: #bdbdbd;
-  padding-top: 10%;
-  font-family: "Noto Sans KR";
-  font-weight: 300;
-  font-size: 0.8rem;
+header.active .wrap li div h2 b {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
 }
-
-body {
-  margin: 0;
-  box-sizing: border-box;
+header.active .wrap li:hover {
+  background-color: #fdd000;
+  border-color: #fdd000;
 }
-
-li {
-  margin: 0;
-}
-
-a, ul {
-  text-decoration: none;
-  list-style-type: none;
-}
-
-ul {
-  padding: 0;
-}
-
-::-moz-selection {
-  background: #fdd000;
+header.active .wrap li:hover a {
   color: #1c1c1b;
-}
-
-::selection {
-  background: #fdd000;
-  color: #1c1c1b;
-}
-
-*, ::after, ::before {
-  box-sizing: border-box;
-}
-
-body {
-  transition: 0.5s;
 }
 
 @media (max-width: 1280px) {
@@ -963,6 +575,10 @@ body {
     border-color: #fdd000;
   }
   header .hdbg .head .sns .burger_bg {
+    position: absolute;
+    left: 88%;
+    top: 53%;
+    z-index: 10;
     display: block;
     display: flex;
     align-items: center;
@@ -970,26 +586,39 @@ body {
     justify-content: center;
   }
   header .hdbg .head .sns .burger_bg .line {
+    margin-top: 0px;
     width: 25px;
-    border: 1px solid black;
-    margin-bottom: 10%;
-    border-width: 0px 0px 2.5px 0px;
+    height: 15px;
+    position: relative;
   }
-  header .hdbg .head .sns .burger_bg .line::after {
-    content: "";
-    width: 25px;
+  header .hdbg .head .sns .burger_bg .line span {
+    width: 100%;
     border: 1px solid black;
-    display: block;
-    margin-bottom: 15%;
-    border-width: 0px 0px 2.5px 0px;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
   }
-  header .hdbg .head .sns .burger_bg .line::before {
-    content: "";
-    width: 25px;
-    border: 1px solid black;
-    display: block;
-    margin-bottom: 12%;
-    border-width: 0px 0px 2.5px 0px;
+  header .hdbg .head .sns .burger_bg .line span:nth-child(1) {
+    top: 0;
+  }
+  header .hdbg .head .sns .burger_bg .line span:nth-child(2) {
+    top: calc(50% - 1px);
+  }
+  header .hdbg .head .sns .burger_bg .line span:nth-child(3) {
+    top: calc(100% - 2px);
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span {
+    top: calc(50% - 1px);
+    border: 1px solid white;
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(2) {
+    opacity: 0;
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(3) {
+    transform: rotate(-45deg);
   }
   header .wrap {
     position: fixed;
@@ -1031,553 +660,68 @@ body {
     color: #1c1c1b;
   }
   header .media_menu {
-    display: none;
+    transform: translateX(100%);
+    transition: 1s;
     position: absolute;
     right: 0;
     top: 0;
-    width: 35%;
+    width: 100%;
     height: 100vh;
     background-color: #212121;
     color: #fdd000;
-  }
-  header .media_menu .burger_2 .line2 {
-    width: 40px;
-    border: 1px solid black;
-    margin-bottom: 7%;
-    border-width: 0px 0px 5px 0px;
-  }
-  header .media_menu .burger_2 .line2::after {
-    content: "";
-    width: 40px;
-    border: 1px solid black;
-    display: block;
-    margin-bottom: 10%;
-    border-width: 0px 0px 5px 0px;
-  }
-  header .media_menu .burger_2 .line2::before {
-    content: "";
-    width: 40px;
-    border: 1px solid black;
-    display: block;
-    margin-bottom: 7%;
-    border-width: 0px 0px 5px 0px;
-  }
-  main .menu_wrap_top {
-    display: none;
-  }
-  main .menu_wrap_top li {
     display: flex;
-    margin-bottom: 20px;
+    flex-direction: column;
   }
-  main .menu_wrap_top li div::before {
-    content: "";
-    display: inline-block;
-    /* 기억하자 */
-    vertical-align: middle;
-    border: 1px solid black;
-    width: 8px;
-    margin-right: 5px;
+  header .media_menu figure {
+    margin: 5% auto;
   }
-  main .menu_wrap_top li div {
-    font-family: "Roboto";
-    font-weight: 900;
-    font-size: 16px;
-    line-height: 1;
-    letter-spacing: -1px;
-    color: #1c1c1b;
-  }
-  main .spot_1 {
+  header .media_menu figure img {
     width: 100%;
+    max-width: 200px;
   }
-  main .spot_1 ul {
-    width: 100%;
-    margin: 0;
+  header .media_menu .media_menu_wrap {
     display: flex;
-    flex-direction: row;
-    overflow: hidden;
+    flex-direction: column;
+    margin: 7%;
   }
-  main .spot_1 ul li img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-  }
-  main .spot_1 .media_spot1 {
-    width: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    display: none;
-  }
-  main .spot_1 .media_spot1 li img {
-    width: 100vw;
-    height: 100vh;
-  }
-  main .midle .content_1 {
-    position: static;
-    height: 969px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  main .midle .content_1 .txt {
-    width: 45%;
-    word-break: keep-all;
-    /* < 단어 줄 바꿈 */
-  }
-  main .midle .content_1 .txt .text_box1 {
-    position: static;
-    width: 100%;
-    transform: translateX(0%);
-    font-family: "Noto Sans KR", sans-serif;
-  }
-  main .midle .content_1 .txt .text_box1 p:nth-of-type(1) {
-    font-size: 1.3rem;
-    font-weight: 300;
-    color: #1c1c1b;
-    line-height: 1.4;
-  }
-  main .midle .content_1 .txt .text_box1 b:nth-of-type(1) {
-    position: relative;
-    width: 100%;
-    font-weight: 700;
-    color: #1c1c1b;
-    font-size: 2.5rem;
-    display: inline;
-    animation: ani-1 1s forwards;
-  }
-  main .midle .content_1 .txt .text_box1 b:nth-of-type(1)::after {
-    content: "";
-    animation: ani-1 1s forwards;
-    animation: aniline1 1s forwards;
-    width: 100%;
-    height: 10%;
-    position: absolute;
-    left: 0%;
-    background-color: #fdd000;
-    z-index: -1;
-    display: inline;
-    bottom: 0;
-    transform: translateY(-7px);
-  }
-  main .midle .content_1 .txt .text_box1 b:nth-of-type(2) {
-    font-weight: 400;
-    color: #1c1c1b;
-    font-size: 22px;
-    display: block;
-    margin: 15px 0px;
-    animation: ani-1 1s forwards;
-  }
-  main .midle .content_1 .txt .text_box1 p:nth-of-type(2) {
-    font-weight: 300;
-    color: #1c1c1b;
-    font-size: 0.9em;
-    animation: ani-1 1s forwards;
-    animation-delay: 0.1s;
-    overflow: hidden;
-  }
-  main .midle .content_1 .txt .text_box1 a {
-    width: 150px;
-    background-color: #fdd000;
-    font-weight: 500;
-    padding: 15px 30px;
-    font-size: 18px;
-    margin-top: 20px;
-    display: block;
-    text-align: center;
-    animation: ani-1 1s forwards;
-    animation-delay: 0.2s;
-  }
-  main .midle .content_1 .button_ul {
-    width: 50%;
-    overflow: hidden;
-  }
-  main .midle .content_1 .button_ul .button_img {
-    display: none;
-  }
-  main .midle .content_1 .button_ul .menu_ul .menu_img {
+  header .media_menu .media_menu_wrap li {
     width: 100%;
     display: flex;
+    margin-bottom: 8%;
   }
-  main .midle .content_1 .button_ul .menu_ul .menu_img li {
-    width: 420px;
-    font-family: "Noto Sans KR", sans-serif;
-    flex-shrink: 0;
-    border: 1px solid #aaa;
-    border-radius: 15px;
-    overflow: hidden;
-  }
-  main .midle .content_1 .button_ul .menu_ul .menu_img li div {
-    width: 100%;
-  }
-  main .midle .content_1 .button_ul .menu_ul .menu_img li div img {
-    vertical-align: middle;
-    width: 100%;
-  }
-  main .midle .content_1 .button_ul .menu_ul .menu_img li div .menu_text {
-    background-color: #e9e9e9;
-    padding: 33px;
-    border: none;
-    width: 100%;
-  }
-  main .midle .content_1 .button_ul .menu_ul .menu_img li div .menu_text b {
-    font-weight: 400;
-    font-size: 1.4em;
-  }
-  main .midle .content_1 .button_ul .menu_ul .menu_img li div p {
-    font-weight: 300;
-    font-size: 14px;
-    width: 100%;
-  }
-  main .midle .content_2 {
-    width: 100%;
-    height: 969px;
-    background-color: #fdd000;
-  }
-  main .midle .content_2 .conbox_2 {
-    width: 100%;
-    padding: 0 5%;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  main .midle .content_2 .conbox_2 .text_box2 {
-    width: 50%;
-    word-break: keep-all;
-  }
-  main .midle .content_2 .conbox_2 .text_box2 p:nth-of-type(1) {
-    font-family: "Roboto";
-    font-weight: 300;
-    font-size: 1.3rem;
-  }
-  main .midle .content_2 .conbox_2 .text_box2 div h2 {
-    animation: ani2 1s forwards;
-    font-family: "Roboto";
-    font-weight: 900;
-    font-size: 3rem;
-    margin: 5px 0;
-    position: static;
-    width: 100%;
-    display: inline;
-  }
-  main .midle .content_2 .conbox_2 .text_box2 div h2 span {
-    display: inline;
-    position: relative;
-    padding: 0 1%;
-  }
-  main .midle .content_2 .conbox_2 .text_box2 div h2 span::after {
-    content: "";
-    animation: aniline3 1s forwards;
-    width: 100%;
-    position: absolute;
-    padding: 6% 50%;
-    left: 0;
-    background-color: #ffffff;
-    z-index: -1;
-    display: inline;
-    transform: translateY(5px);
-  }
-  main .midle .content_2 .conbox_2 .text_box2 div div {
-    animation: ani2 1s forwards;
-    font-family: "Roboto";
-    font-weight: 900;
-    font-size: 1.5rem;
-  }
-  main .midle .content_2 .conbox_2 .text_box2 div div span {
-    font-size: 3rem;
-  }
-  main .midle .content_2 .conbox_2 .text_box2 b {
-    display: block;
-    animation: ani2 1s forwards;
-    font-family: "Noto Sans KR";
-    font-weight: 400;
-    font-size: 1.2rem;
-  }
-  main .midle .content_2 .conbox_2 .text_box2 b br {
-    display: inline-block;
-    content: " ";
-    padding: 0 2px;
-  }
-  main .midle .content_2 .conbox_2 .text_box2 p:nth-of-type(2) {
-    animation: ani2 1s forwards;
-    font-family: "Noto Sans KR";
-    font-weight: 300;
-    font-size: 0.8rem;
-  }
-  main .midle .content_2 .conbox_2 .text_box2 p:nth-of-type(2) br {
-    display: inline-block;
-    content: " ";
-    padding: 0 2px;
-  }
-  main .midle .content_2 .conbox_2 .video {
-    width: 50%;
-  }
-  main .midle .content_2 .conbox_2 .video .video_2 {
-    width: 100%;
-    overflow: hidden;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  main .midle .content_2 .conbox_2 .video .button_1 {
-    width: 100%;
-    height: 55px;
-    position: relative;
-  }
-  main .midle .content_2 .conbox_2 .video .button_1 input {
-    width: 100%;
-    height: 100%;
-    padding: 0px 30px;
-    background: #1c1c1b;
+  header .media_menu .media_menu_wrap li h2 {
+    width: 20%;
+    padding-right: 5%;
     color: #fff;
-    position: absolute;
-    left: 0;
-    top: -20%;
-    border: 1px solid #1c1c1b;
     font-family: "Noto Sans KR";
-    font-weight: 300;
-    font-size: 1rem;
-  }
-  main .midle .content_3 {
-    width: 100%;
-    display: flex;
-    margin: 0 auto;
-    justify-content: flex-end;
-    position: relative;
-    align-items: center;
-  }
-  main .midle .content_3 .txt2 {
-    width: 45%;
-  }
-  main .midle .content_3 .txt2 .text_box3 {
-    position: static;
-    transform: translateY(0%);
-    padding-right: 1%;
-    word-break: keep-all;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    font-family: "Noto Sans KR", sans-serif;
-  }
-  main .midle .content_3 .txt2 .text_box3 h1 {
-    font-weight: 300;
-    font-size: 1.3rem;
-  }
-  main .midle .content_3 .txt2 .text_box3 h2 {
-    animation: ani2 1s forwards;
-    margin: 5px;
-    font-family: "Roboto";
-    font-weight: 900;
-    font-size: 3rem;
-  }
-  main .midle .content_3 .txt2 .text_box3 h2 span::after {
-    content: "";
-    animation: aniline 1s forwards;
-    width: 50%;
-    position: absolute;
-    left: 0%;
-    background-color: #fdd000;
-    border: 5px;
-    padding: 20px;
-    z-index: -1;
-    display: block;
-    transform: translateY(-30px);
-  }
-  main .midle .content_3 .txt2 .text_box3 b {
-    animation: ani2 1s forwards;
     font-weight: 400;
-    font-size: 1.2rem;
-    margin: 15px 0px;
-  }
-  main .midle .content_3 .txt2 .text_box3 b br {
-    display: none;
-  }
-  main .midle .content_3 .txt2 .text_box3 p {
-    animation: ani2 1s forwards;
-    font-weight: 300;
-    font-size: 0.8rem;
-    margin-bottom: 40px;
-  }
-  main .midle .content_3 .txt2 .text_box3 p br {
-    display: none;
-  }
-  main .midle .content_3 .txt2 .text_box3 .button_3 {
-    width: 100%;
-    display: flex;
-  }
-  main .midle .content_3 .txt2 .text_box3 .button_3 a {
-    width: 30%;
-    display: block;
-    margin-right: 4%;
-  }
-  main .midle .content_3 .txt2 .text_box3 .button_3 a input {
-    width: 100%;
-    padding: 10%;
-    background: #fdd000;
-    border: 0;
-    font-family: "Noto Sans KR";
-    font-weight: 500;
-    font-size: 18px;
-    animation: ani2 1s forwards;
-  }
-  main .midle .content_3 .txt2 .text_box3 .button_3 a:nth-ot-type(1) {
-    margin-left: 5%;
-  }
-  main .midle .content_3 .spot_2 {
-    width: 50%;
-    overflow: hidden;
-  }
-  main .midle .content_3 .spot_2 img {
-    height: 100vh;
-    width: 100vw;
-    -o-object-fit: cover;
-       object-fit: cover;
-    transform: translateX(-20%) scale(1.2);
-  }
-  main .midle .content_4 {
-    height: 969px;
-  }
-  main .midle .content_4 .conbox_4 {
-    width: 100%;
-    padding: 0 5%;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-  }
-  main .midle .content_4 .conbox_4 h1 {
-    font-family: "Noto Sans KR";
-    font-weight: 300;
-    font-size: 1.3rem;
-    margin-top: 60px;
-  }
-  main .midle .content_4 .conbox_4 h2 {
-    animation: ani2 1s forwards;
-    font-family: "Rotobo";
-    font-weight: 900;
-    font-size: 3rem;
-    margin: 15px;
-  }
-  main .midle .content_4 .conbox_4 h2 span::after {
-    content: "";
-    animation: aniline4 1s forwards;
-    width: 95%;
-    position: absolute;
-    left: -5%;
-    background-color: #fdd000;
-    border: 5px;
-    padding: 20px;
-    z-index: -1;
-    display: block;
-    transform: translateY(-30px);
-  }
-  main .midle .content_4 .conbox_4 b {
-    font-family: "Noto Sans KR";
-    font-weight: 300;
-    font-size: 16px;
-    margin: 20px 0px 15px 0px;
-  }
-  main .midle .content_4 .conbox_4 .event_box {
-    width: 100%;
-  }
-  main .midle .content_4 .conbox_4 .event_box .event {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flax-start;
-  }
-  main .midle .content_4 .conbox_4 .event_box .event li {
-    width: 32%;
-    border: 1px solid #aaa;
-    border-radius: 20px;
-    overflow: hidden;
-  }
-  main .midle .content_4 .conbox_4 .event_box .event li .event_content {
-    overflow: hidden;
-  }
-  main .midle .content_4 .conbox_4 .event_box .event li .event_content .imghover {
-    width: 100%;
-    overflow: hidden;
-    width: 100%;
-  }
-  main .midle .content_4 .conbox_4 .event_box .event li .event_content .imghover img {
-    width: 100%;
-  }
-  main .midle .content_4 .conbox_4 .event_box .event li .event_content .imghover img:hover {
-    transform: scale(1.1);
-    transform-origin: 50% 50%;
-  }
-  main .midle .content_4 .conbox_4 .event_box .event li .event_content .text_box {
-    padding: 24px;
-    text-overflow: ellipsis;
-  }
-  main .midle .content_4 .conbox_4 .event_box .event li .event_content .text_box p:nth-of-type(1) {
-    font-family: "Noto Sans KR";
-    font-weight: 300;
-    font-size: 22px;
+    font-size: 1.1rem;
     margin-top: 0;
   }
-  main .midle .content_4 .conbox_4 .event_box .event li .event_content .text_box p:nth-of-type(2) {
+  header .media_menu .media_menu_wrap li div {
+    width: 80%;
+  }
+  header .media_menu .media_menu_wrap li div ul {
+    width: 100%;
+  }
+  header .media_menu .media_menu_wrap li div ul li {
+    margin-bottom: 1%;
+  }
+  header .media_menu .media_menu_wrap li div ul li a {
+    color: #a9a9a9;
     font-family: "Noto Sans KR";
-    font-weight: 300;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 0.9rem;
   }
-  main .midle .content_4 .conbox_4 .event_warp a input {
+  header .media_menu .media_menu_wrap hr {
     width: 100%;
-    padding: 20px 30px;
-    margin: 12px;
-    background: #fdd000;
-    border: 0;
-    font-family: "Noto Sans KR";
-    font-weight: 500;
-    font-size: 18px;
+    height: 0.3px;
+    margin-bottom: 3%;
+    border: 0px;
+    border-bottom: 0.7px solid rgba(93, 93, 93, 0.4392156863);
   }
-  footer {
-    width: 100%;
-    background: #212121;
-  }
-  footer .footer_wrap {
-    display: none;
-  }
-  footer .footer_1 nav {
-    text-align: center;
-    width: 100%;
-    padding: 20px;
-  }
-  footer .footer_box {
-    width: 100%;
-  }
-  footer .footer_box .footer_text {
-    width: 100%;
-    margin: 0 auto;
-    justify-content: center;
-  }
-  footer .footer_box .footer_text .img_box {
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px;
-  }
-  footer .footer_box .footer_text .img_box .logo {
-    padding-right: 2%;
-  }
-  footer .footer_box .footer_text .img_box nav {
-    display: flex;
-    width: 15%;
-  }
-  footer .footer_box .footer_text .img_box nav div {
-    width: 50px;
-  }
-  footer .footer_box .footer_text div {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+  header .media_menu.menuactive {
+    transform: translateX(0%);
   }
 }
 @media (max-width: 760px) {
@@ -1693,6 +837,10 @@ body {
     border-color: #fdd000;
   }
   header .hdbg .head .sns .burger_bg {
+    position: absolute;
+    left: 85%;
+    z-index: 10;
+    top: 50%;
     display: block;
     display: flex;
     align-items: center;
@@ -1700,26 +848,39 @@ body {
     justify-content: center;
   }
   header .hdbg .head .sns .burger_bg .line {
+    margin-top: 0px;
     width: 25px;
-    border: 1px solid black;
-    margin-bottom: 10%;
-    border-width: 0px 0px 2.5px 0px;
+    height: 15px;
+    position: relative;
   }
-  header .hdbg .head .sns .burger_bg .line::after {
-    content: "";
-    width: 25px;
+  header .hdbg .head .sns .burger_bg .line span {
+    width: 100%;
     border: 1px solid black;
-    display: block;
-    margin-bottom: 15%;
-    border-width: 0px 0px 2.5px 0px;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
   }
-  header .hdbg .head .sns .burger_bg .line::before {
-    content: "";
-    width: 25px;
-    border: 1px solid black;
-    display: block;
-    margin-bottom: 12%;
-    border-width: 0px 0px 2.5px 0px;
+  header .hdbg .head .sns .burger_bg .line span:nth-child(1) {
+    top: 0;
+  }
+  header .hdbg .head .sns .burger_bg .line span:nth-child(2) {
+    top: calc(50% - 1px);
+  }
+  header .hdbg .head .sns .burger_bg .line span:nth-child(3) {
+    top: calc(100% - 2px);
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span {
+    top: calc(50% - 1px);
+    border: 1px solid white;
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(1) {
+    transform: translate rotate(45deg);
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(2) {
+    opacity: 0;
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(3) {
+    transform: translate rotate(-45deg);
   }
   header .wrap {
     position: fixed;
@@ -1761,37 +922,2890 @@ body {
     color: #1c1c1b;
   }
   header .media_menu {
-    display: none;
+    display: block;
     position: absolute;
     right: 0;
     top: 0;
-    width: 35%;
+    width: 240px;
     height: 100vh;
     background-color: #212121;
     color: #fdd000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
   }
-  header .media_menu .burger_2 .line2 {
-    width: 40px;
-    border: 1px solid black;
-    margin-bottom: 7%;
-    border-width: 0px 0px 5px 0px;
+  header .media_menu figure {
+    padding: 20% 0px 10%;
+    margin: 0% auto;
   }
-  header .media_menu .burger_2 .line2::after {
+  header .media_menu figure img {
+    width: 100%;
+    max-width: 190px;
+  }
+  header .media_menu .media_menu_wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 7%;
+    margin-top: 10%;
+  }
+  header .media_menu .media_menu_wrap li {
+    width: 100%;
+    display: flex;
+    margin-bottom: 8%;
+    flex-direction: column;
+  }
+  header .media_menu .media_menu_wrap li h2 {
+    width: 100%;
+    padding-right: 5%;
+    color: #fff;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.9rem;
+    position: relative;
+  }
+  header .media_menu .media_menu_wrap li > h2::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "chevron_right";
+    font-family: "material symbols outlined";
+    display: inline-block;
+    width: 20px;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+  header .media_menu .media_menu_wrap li div {
+    display: none;
+    width: 100%;
+  }
+  header .media_menu .media_menu_wrap li div > ul {
+    width: 100%;
+    margin: 15%;
+  }
+  header .media_menu .media_menu_wrap li div > ul > li {
+    margin-bottom: 1%;
+  }
+  header .media_menu .media_menu_wrap li div > ul > li > a {
+    color: #a9a9a9;
+    margin-bottom: 5%;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+  header .media_menu .media_menu_wrap li div > ul > li a::after {
     content: "";
-    width: 40px;
-    border: 1px solid black;
-    display: block;
-    margin-bottom: 10%;
-    border-width: 0px 0px 5px 0px;
+    display: none;
   }
-  header .media_menu .burger_2 .line2::before {
+  header .media_menu .media_menu_wrap li.active > h2 {
+    color: #fdd000;
+  }
+  header .media_menu .media_menu_wrap li.active > h2::after {
+    transform: rotate(90deg);
+    color: white;
+  }
+  header .media_menu .media_menu_wrap hr {
+    display: none;
+  }
+}
+body {
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+header:hover {
+  background-color: #ffffff;
+  transition: 0.5s;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  position: fixed;
+  left: 0%;
+  top: 0;
+  z-index: 20;
+  transition: 0.5s;
+}
+header .hdbg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: 0.5s;
+}
+header .hdbg .head {
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+header .hdbg .head .head_logo {
+  width: 20%;
+  padding-top: 30px;
+}
+header .hdbg .head .head_logo a img {
+  width: 200px;
+}
+header .hdbg .head .menu_wrap {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+header .hdbg .head .menu_wrap > li {
+  width: 20%;
+  text-align: center;
+  padding: 40px 0px 20px;
+}
+header .hdbg .head .menu_wrap > li a {
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #1c1c1b;
+}
+header .hdbg .head .menu_wrap > li > a::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid black;
+  padding-top: 20px;
+  width: 0px;
+  margin: 0 auto;
+}
+header .hdbg .head .menu_wrap > li div {
+  margin-top: 0;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  display: none;
+}
+header .hdbg .head .menu_wrap > li div ul {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-size: 0.9em;
+  margin-top: 10%;
+}
+header .hdbg .head .menu_wrap > li div ul li {
+  width: 100%;
+  padding: 2% 0% 2%;
+}
+header .hdbg .head .menu_wrap > li div ul li:nth-of-type(1) {
+  margin-top: 5%;
+}
+header .hdbg .head .menu_wrap li:hover > a::after {
+  width: 25%;
+  left: 0%;
+  transition: 0.2s;
+}
+header .hdbg .head .menu_wrap div {
+  display: block;
+}
+header .hdbg .head li:hover {
+  background-color: #fdd000;
+}
+header .hdbg .head .sns {
+  width: 20%;
+  padding-top: 30px;
+  display: flex;
+}
+header .hdbg .head .sns nav {
+  width: 100%;
+  display: flex;
+}
+header .hdbg .head .sns nav a {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 100%;
+  padding: 7px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+header .hdbg .head .sns nav a:hover {
+  background-color: #fdd000;
+  border-color: #fdd000;
+}
+header .hdbg .head .sns .burger_bg {
+  display: none;
+}
+header .wrap {
+  position: fixed;
+  right: 30px;
+  top: 30%;
+  z-index: 10;
+}
+header .wrap li {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  background-color: black;
+  border-radius: 100%;
+  text-align: center;
+  margin-top: 10px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+header .wrap li div a {
+  color: white;
+}
+header .wrap li div a p {
+  margin: 0px;
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 14px;
+}
+header .wrap li div a b {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+header .wrap li:hover {
+  background-color: #fdd000;
+  border-color: #fdd000;
+}
+header .wrap li:hover a {
+  color: #1c1c1b;
+}
+
+header.active {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  position: fixed;
+  left: 0%;
+  top: 0;
+  z-index: 10;
+  transition: 0.5s;
+}
+header.active .hdbg {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+header.active .hdbg .head {
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+header.active .hdbg .head .head_logo {
+  width: 20%;
+  padding-top: 30px;
+}
+header.active .hdbg .head .head_logo a img {
+  width: 200px;
+}
+header.active .hdbg .head .menu_wrap {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+header.active .hdbg .head .menu_wrap > li {
+  width: 20%;
+  text-align: center;
+  padding: 40px 0px 20px;
+}
+header.active .hdbg .head .menu_wrap > li a {
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #1c1c1b;
+}
+header.active .hdbg .head .menu_wrap > li > a::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid black;
+  padding-top: 20px;
+  width: 0px;
+  margin: 0 auto;
+}
+header.active .hdbg .head .menu_wrap > li div {
+  padding-top: 20px;
+  margin-top: 0;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  display: none;
+}
+header.active .hdbg .head .menu_wrap > li div ul {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-size: 0.9em;
+  margin-top: 10%;
+}
+header.active .hdbg .head .menu_wrap > li div ul li {
+  width: 100%;
+  padding: 2% 0% 2%;
+}
+header.active .hdbg .head .menu_wrap > li div ul li:nth-of-type(1) {
+  margin-top: 5%;
+}
+header.active .hdbg .head .menu_wrap li:hover > a::after {
+  width: 25%;
+  left: 0%;
+  transition: 0.2s;
+}
+header.active .hdbg .head .menu_wrap div {
+  display: block;
+}
+header.active .hdbg .head li:hover {
+  background-color: #fdd000;
+}
+header.active .hdbg .head .sns {
+  width: 20%;
+  padding-top: 30px;
+  display: flex;
+}
+header.active .hdbg .head .sns nav {
+  width: 100%;
+  display: flex;
+}
+header.active .hdbg .head .sns nav a {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 100%;
+  padding: 7px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+header.active .hdbg .head .sns nav a:hover {
+  background-color: #fdd000;
+  border-color: #fdd000;
+}
+header.active .hdbg .head .sns .burger_bg {
+  display: none;
+}
+header.active .wrap {
+  position: fixed;
+  right: 30px;
+  top: 30%;
+}
+header.active .wrap li {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  background-color: black;
+  border-radius: 100%;
+  text-align: center;
+  margin-top: 10px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+header.active .wrap li div h2 {
+  color: white;
+}
+header.active .wrap li div h2 p {
+  margin: 0px;
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 14px;
+}
+header.active .wrap li div h2 b {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+header.active .wrap li:hover {
+  background-color: #fdd000;
+  border-color: #fdd000;
+}
+header.active .wrap li:hover a {
+  color: #1c1c1b;
+}
+
+main .menu_wrap_top {
+  position: fixed;
+  bottom: 0px;
+  left: 20px;
+  z-index: 10;
+}
+main .menu_wrap_top li {
+  display: flex;
+  margin-bottom: 20px;
+}
+main .menu_wrap_top li div::before {
+  content: "";
+  display: inline-block;
+  /* 기억하자 */
+  vertical-align: middle;
+  border: 0px solid black;
+  width: 0px;
+  margin-right: 5px;
+  transition: 0.2s;
+}
+main .menu_wrap_top li div {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: rgba(193, 193, 193, 0.5254901961);
+}
+main .menu_wrap_top li.active {
+  display: flex;
+  margin-bottom: 20px;
+}
+main .menu_wrap_top li.active div::before {
+  content: "";
+  display: inline-block;
+  /* 기억하자 */
+  vertical-align: middle;
+  border: 1px solid black;
+  width: 12px;
+  margin-right: 5px;
+}
+main .menu_wrap_top li.active div {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: #1c1c1b;
+}
+main .midle {
+  width: 100%;
+  position: fixed;
+  transition: 1s;
+  overflow: hidden;
+}
+main .midle .spot_1 {
+  width: 100%;
+  overflow: hidden;
+}
+main .midle .spot_1 ul {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  overflow: visible;
+}
+main .midle .spot_1 ul li img {
+  width: 100vw;
+  height: 100vh;
+}
+main .midle .spot_1 .media_spot1 {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  display: none;
+}
+main .midle .spot_1 .media_spot1 li img {
+  width: 100vw;
+  height: 100vh;
+}
+main .midle .content_1 {
+  position: relative;
+  height: 990px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main .midle .content_1 .txt {
+  width: 50%;
+  transition: 1s;
+}
+main .midle .content_1 .txt .text_box1 {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 1080px;
+  transform: translateX(-50%);
+  font-family: "Noto Sans KR", sans-serif;
+  pointer-events: none;
+}
+main .midle .content_1 .txt .text_box1 p:nth-of-type(1) {
+  font-size: 24px;
+  font-weight: 300;
+  color: #1c1c1b;
+  line-height: 1.4;
+  transform: translateY(130%);
+  transition: 1s;
+}
+main .midle .content_1 .txt .text_box1 b:nth-of-type(1) {
+  width: 50%;
+  position: relative;
+  font-weight: 700;
+  color: #1c1c1b;
+  font-size: 51px;
+  display: inline;
+  top: 60px;
+  transition: 1s;
+}
+main .midle .content_1 .txt .text_box1 b:nth-of-type(1)::after {
+  content: "";
+  width: 0%;
+  position: absolute;
+  left: 0%;
+  background-color: #fdd000;
+  border: 5px;
+  padding: 0px;
+  z-index: -1;
+  display: inline;
+  transform: translateY(30px);
+}
+main .midle .content_1 .txt .text_box1 b:nth-of-type(2) {
+  font-weight: 400;
+  color: #1c1c1b;
+  font-size: 22px;
+  display: block;
+  margin: 15px 0px;
+  transform: translateY(150%);
+  transition: 1s;
+}
+main .midle .content_1 .txt .text_box1 p:nth-of-type(2) {
+  font-weight: 300;
+  color: #1c1c1b;
+  font-size: 16px;
+  animation-delay: 0.1s;
+  overflow: hidden;
+  transform: translateY(150%);
+  transition: 1s;
+}
+main .midle .content_1 .txt .text_box1 a {
+  width: 15%;
+  background-color: #fdd000;
+  font-weight: 500;
+  padding: 15px 30px;
+  font-size: 18px;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  animation-delay: 0.2s;
+  transform: translateY(150%);
+  transition: 1s;
+}
+main .midle .content_1 .button_ul {
+  width: 50%;
+  overflow: hidden;
+  position: relative;
+}
+main .midle .content_1 .button_ul .menu_ul .menu_img {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+main .midle .content_1 .button_ul .menu_ul .menu_img li {
+  width: 350px;
+  height: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+  flex-shrink: 0;
+  border: 1px solid #e4e4e4;
+  border-radius: 15px;
+  overflow: hidden;
+}
+main .midle .content_1 .button_ul .menu_ul .menu_img li div {
+  width: 100%;
+}
+main .midle .content_1 .button_ul .menu_ul .menu_img li div img {
+  vertical-align: middle;
+  width: 100%;
+}
+main .midle .content_1 .button_ul .menu_ul .menu_img li div .menu_text {
+  background-color: #f5f5f5;
+  padding: 33px;
+  border: none;
+  width: 100%;
+  display: none;
+}
+main .midle .content_1 .button_ul .menu_ul .menu_img li div .menu_text b {
+  font-weight: 400;
+  font-size: 1.4em;
+}
+main .midle .content_1 .button_ul .menu_ul .menu_img li div p {
+  font-weight: 300;
+  font-size: 14px;
+  width: 100%;
+  color: #8a8a8a;
+}
+main .midle .content_1 .button_ul .menu_ul .menu_img li.swiper-slide-active .menu_text {
+  display: block;
+}
+main .midle .content_1 .button_ul .slide-btn {
+  position: absolute;
+  left: 55%;
+  top: 15%;
+}
+main .midle .content_1 .button_ul .slide-btn .swiper-button-next {
+  display: inline-block;
+  width: 30px;
+}
+main .midle .content_1 .button_ul .slide-btn .swiper-button-prev {
+  display: inline-block;
+}
+main .midle .content_2 {
+  width: 100%;
+  height: 990px;
+  background-color: #fdd000;
+}
+main .midle .content_2 .conbox_2 {
+  width: 1080px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+main .midle .content_2 .conbox_2 .text_box2 {
+  width: 50%;
+}
+main .midle .content_2 .conbox_2 .text_box2 p:nth-of-type(1) {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 24px;
+}
+main .midle .content_2 .conbox_2 .text_box2 div h2 {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 60px;
+  margin: 5px 0px;
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  top: 100px;
+  transition: 1s;
+}
+main .midle .content_2 .conbox_2 .text_box2 div h2 span {
+  display: inline;
+}
+main .midle .content_2 .conbox_2 .text_box2 div h2 span::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  background-color: #ffffff;
+  height: 30%;
+  z-index: -1;
+  display: inline;
+  transform: translateY(10%);
+}
+main .midle .content_2 .conbox_2 .text_box2 div div {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 24px;
+  transform: translateY(150%);
+  transition: 1.2s;
+}
+main .midle .content_2 .conbox_2 .text_box2 div div span {
+  font-size: 48px;
+}
+main .midle .content_2 .conbox_2 .text_box2 b {
+  display: block;
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-size: 22px;
+  transform: translateY(130%);
+  transition: 1.3s;
+}
+main .midle .content_2 .conbox_2 .text_box2 p:nth-of-type(2) {
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  font-size: 16px;
+  transform: translateY(150%);
+  transition: 1.4s;
+}
+main .midle .content_2 .conbox_2 .video {
+  width: 50%;
+}
+main .midle .content_2 .conbox_2 .video .video_2 {
+  width: 100%;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .midle .content_2 .conbox_2 .video .button_1 {
+  width: 100%;
+  height: 55px;
+  position: relative;
+}
+main .midle .content_2 .conbox_2 .video .button_1 input {
+  width: 100%;
+  height: 100%;
+  padding: 0px 30px;
+  background: #1c1c1b;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: -20%;
+  border: 1px solid #1c1c1b;
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  font-size: 1rem;
+}
+main .midle .content_3 {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+main .midle .content_3 .txt2 {
+  width: 1080px;
+}
+main .midle .content_3 .txt2 .text_box3 {
+  position: absolute;
+  top: 20%;
+  left: 7.8%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  font-family: "Noto Sans KR", sans-serif;
+}
+main .midle .content_3 .txt2 .text_box3 h1 {
+  font-weight: 300;
+  font-size: 24px;
+}
+main .midle .content_3 .txt2 .text_box3 h2 {
+  margin: 5px;
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 60px;
+}
+main .midle .content_3 .txt2 .text_box3 h2 span::after {
+  content: "";
+  animation: aniline 1s forwards;
+  width: 0%;
+  position: absolute;
+  left: 0%;
+  background-color: #fdd000;
+  border: 5px;
+  padding: 20px;
+  z-index: -1;
+  display: block;
+  transform: translateY(-30px);
+  transition: 1s;
+}
+main .midle .content_3 .txt2 .text_box3 b {
+  font-weight: 400;
+  font-size: 22px;
+  margin: 15px 0px;
+}
+main .midle .content_3 .txt2 .text_box3 p {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+main .midle .content_3 .txt2 .text_box3 .button_3 {
+  width: 100%;
+}
+main .midle .content_3 .txt2 .text_box3 .button_3 a {
+  width: 100%;
+}
+main .midle .content_3 .txt2 .text_box3 .button_3 a input {
+  width: 30%;
+  padding: 20px;
+  background: #fdd000;
+  border: 0;
+  margin-right: 5%;
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 18px;
+}
+main .midle .content_3 .spot_2 {
+  width: 50%;
+}
+main .midle .content_3 .spot_2 img {
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .midle .content_4 {
+  height: 969px;
+}
+main .midle .content_4 .conbox_4 {
+  width: 1080px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+main .midle .content_4 .conbox_4 h1 {
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  font-size: 24px;
+  margin-top: 60px;
+}
+main .midle .content_4 .conbox_4 h2 {
+  font-family: "Rotobo";
+  font-weight: 900;
+  font-size: 60px;
+  margin: 15px;
+}
+main .midle .content_4 .conbox_4 h2 span::after {
+  content: "";
+  width: 0%;
+  position: absolute;
+  left: 40%;
+  background-color: #fdd000;
+  border: 5px;
+  padding: 0px;
+  z-index: -1;
+  display: block;
+  transform: translateY(-40px);
+}
+main .midle .content_4 .conbox_4 b {
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  font-size: 16px;
+  margin: 20px 0px 15px 0px;
+}
+main .midle .content_4 .conbox_4 .event_box {
+  width: 100%;
+}
+main .midle .content_4 .conbox_4 .event_box .event {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flax-start;
+}
+main .midle .content_4 .conbox_4 .event_box .event li {
+  width: 32%;
+  border: 1px solid #aaa;
+  border-radius: 20px;
+  overflow: hidden;
+}
+main .midle .content_4 .conbox_4 .event_box .event li .event_content {
+  overflow: hidden;
+}
+main .midle .content_4 .conbox_4 .event_box .event li .event_content .imghover {
+  width: 100%;
+  overflow: hidden;
+}
+main .midle .content_4 .conbox_4 .event_box .event li .event_content .imghover img {
+  width: 100%;
+}
+main .midle .content_4 .conbox_4 .event_box .event li .event_content .imghover img:hover {
+  transform: scale(1.1);
+  transform-origin: 50% 50%;
+}
+main .midle .content_4 .conbox_4 .event_box .event li .event_content .text_box {
+  padding: 24px;
+  text-overflow: ellipsis;
+}
+main .midle .content_4 .conbox_4 .event_box .event li .event_content .text_box p:nth-of-type(1) {
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  font-size: 22px;
+  margin-top: 0;
+}
+main .midle .content_4 .conbox_4 .event_box .event li .event_content .text_box p:nth-of-type(2) {
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  font-size: 14px;
+}
+main .midle .content_4 .conbox_4 .event_warp a input {
+  width: 100%;
+  padding: 20px 30px;
+  margin: 12px;
+  background: #fdd000;
+  border: 0;
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 18px;
+}
+main .midle footer {
+  background: #212121;
+}
+main .midle footer .footer_1 {
+  background-color: #fdd000;
+}
+main .midle footer .footer_1 nav {
+  width: 1280px;
+  padding: 20px 0px;
+  margin: 0 auto;
+  color: black;
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  font-size: 16px;
+}
+main .midle footer .footer_1 nav a:nth-of-type(2) {
+  padding-left: 20px;
+}
+main .midle footer .footer_box {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  padding: 60px 20px;
+  color: #aaa;
+}
+main .midle footer .footer_box .footer_text {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 10%;
+}
+main .midle footer .footer_box .footer_text div span {
+  margin: 0px 10px 0px 0px;
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  font-size: 14px;
+}
+main .midle footer .footer_box .footer_text div b span {
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+}
+main .midle footer .footer_box .footer_text div p {
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  font-size: 14px;
+  margin: 10px 0px;
+}
+main .midle footer .footer_box .footer_text .img_box {
+  width: 100%;
+  display: flex;
+  justify-content: flax-start;
+  align-items: center;
+  margin-bottom: 15px;
+}
+main .midle footer .footer_box .footer_text .img_box .logo {
+  width: 180px;
+  height: 36px;
+  padding-right: 5%;
+}
+main .midle footer .footer_box .footer_text .img_box nav {
+  display: flex;
+  width: 60%;
+}
+main .midle footer .footer_box .footer_text .img_box nav div {
+  width: 13%;
+  display: flex;
+  border-radius: 100%;
+  background-color: #fff;
+  margin-right: 10px;
+}
+main .midle footer .footer_box .footer_text .img_box nav div a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 5px;
+}
+main .midle footer .footer_box .footer_text .img_box nav div:hover {
+  background-color: #fdd000;
+}
+main .midle footer .footer_wrap {
+  width: 50%;
+  display: flex;
+  color: #fff;
+}
+main .midle footer .footer_wrap li {
+  width: 100%;
+  margin: 10px 0px;
+  margin-right: 20px;
+}
+main .midle footer .footer_wrap li b {
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  font-size: 18px;
+}
+main .midle footer .footer_wrap li div a {
+  display: block;
+  color: #bdbdbd;
+  padding-top: 10%;
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  margin: 0;
+}
+
+a, ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+}
+
+::-moz-selection {
+  background: #fdd000;
+  color: #1c1c1b;
+}
+
+::selection {
+  background: #fdd000;
+  color: #1c1c1b;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  margin: 0;
+}
+
+a, ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+}
+
+::-moz-selection {
+  background: #fdd000;
+  color: #1c1c1b;
+}
+
+::selection {
+  background: #fdd000;
+  color: #1c1c1b;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+@media (min-width: 1280px) {
+  .media_menu {
+    display: none;
+  }
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  position: fixed;
+  left: 0%;
+  top: 0;
+  z-index: 20;
+  transition: 0.5s;
+}
+header .hdbg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: 0.5s;
+}
+header .hdbg .head {
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+header .hdbg .head .head_logo {
+  width: 20%;
+  padding-top: 30px;
+}
+header .hdbg .head .head_logo a img {
+  width: 200px;
+}
+header .hdbg .head .menu_wrap {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+header .hdbg .head .menu_wrap > li {
+  width: 20%;
+  text-align: center;
+  padding: 40px 0px 20px;
+}
+header .hdbg .head .menu_wrap > li a {
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #1c1c1b;
+}
+header .hdbg .head .menu_wrap > li > a::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid black;
+  padding-top: 20px;
+  width: 0px;
+  margin: 0 auto;
+}
+header .hdbg .head .menu_wrap > li div {
+  margin-top: 0;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  display: none;
+}
+header .hdbg .head .menu_wrap > li div ul {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-size: 0.9em;
+  margin-top: 10%;
+}
+header .hdbg .head .menu_wrap > li div ul li {
+  width: 100%;
+  padding: 2% 0% 2%;
+}
+header .hdbg .head .menu_wrap > li div ul li:nth-of-type(1) {
+  margin-top: 5%;
+}
+header .hdbg .head .menu_wrap li:hover > a::after {
+  width: 25%;
+  left: 0%;
+  transition: 0.2s;
+}
+header .hdbg .head .menu_wrap div {
+  display: block;
+}
+header .hdbg .head li:hover {
+  background-color: #fdd000;
+}
+header .hdbg .head .sns {
+  width: 20%;
+  padding-top: 30px;
+  display: flex;
+}
+header .hdbg .head .sns nav {
+  width: 100%;
+  display: flex;
+}
+header .hdbg .head .sns nav a {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 100%;
+  padding: 7px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+header .hdbg .head .sns nav a:hover {
+  background-color: #fdd000;
+  border-color: #fdd000;
+}
+header .hdbg .head .sns .burger_bg {
+  display: none;
+}
+header .wrap {
+  position: fixed;
+  right: 30px;
+  top: 30%;
+  z-index: 10;
+}
+header .wrap li {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  background-color: black;
+  border-radius: 100%;
+  text-align: center;
+  margin-top: 10px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+header .wrap li div a {
+  color: white;
+}
+header .wrap li div a p {
+  margin: 0px;
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 14px;
+}
+header .wrap li div a b {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+header .wrap li:hover {
+  background-color: #fdd000;
+  border-color: #fdd000;
+}
+header .wrap li:hover a {
+  color: #1c1c1b;
+}
+
+header.active {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  position: fixed;
+  left: 0%;
+  top: 0;
+  z-index: 10;
+  transition: 0.5s;
+}
+header.active .hdbg {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+header.active .hdbg .head {
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+header.active .hdbg .head .head_logo {
+  width: 20%;
+  padding-top: 30px;
+}
+header.active .hdbg .head .head_logo a img {
+  width: 200px;
+}
+header.active .hdbg .head .menu_wrap {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+header.active .hdbg .head .menu_wrap > li {
+  width: 20%;
+  text-align: center;
+  padding: 40px 0px 20px;
+}
+header.active .hdbg .head .menu_wrap > li a {
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #1c1c1b;
+}
+header.active .hdbg .head .menu_wrap > li > a::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid black;
+  padding-top: 20px;
+  width: 0px;
+  margin: 0 auto;
+}
+header.active .hdbg .head .menu_wrap > li div {
+  padding-top: 20px;
+  margin-top: 0;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  display: none;
+}
+header.active .hdbg .head .menu_wrap > li div ul {
+  font-family: "Noto Sans KR";
+  font-weight: 400;
+  font-size: 0.9em;
+  margin-top: 10%;
+}
+header.active .hdbg .head .menu_wrap > li div ul li {
+  width: 100%;
+  padding: 2% 0% 2%;
+}
+header.active .hdbg .head .menu_wrap > li div ul li:nth-of-type(1) {
+  margin-top: 5%;
+}
+header.active .hdbg .head .menu_wrap li:hover > a::after {
+  width: 25%;
+  left: 0%;
+  transition: 0.2s;
+}
+header.active .hdbg .head .menu_wrap div {
+  display: block;
+}
+header.active .hdbg .head li:hover {
+  background-color: #fdd000;
+}
+header.active .hdbg .head .sns {
+  width: 20%;
+  padding-top: 30px;
+  display: flex;
+}
+header.active .hdbg .head .sns nav {
+  width: 100%;
+  display: flex;
+}
+header.active .hdbg .head .sns nav a {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 100%;
+  padding: 7px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+header.active .hdbg .head .sns nav a:hover {
+  background-color: #fdd000;
+  border-color: #fdd000;
+}
+header.active .hdbg .head .sns .burger_bg {
+  display: none;
+}
+header.active .wrap {
+  position: fixed;
+  right: 30px;
+  top: 30%;
+}
+header.active .wrap li {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  background-color: black;
+  border-radius: 100%;
+  text-align: center;
+  margin-top: 10px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+header.active .wrap li div h2 {
+  color: white;
+}
+header.active .wrap li div h2 p {
+  margin: 0px;
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  font-size: 14px;
+}
+header.active .wrap li div h2 b {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+header.active .wrap li:hover {
+  background-color: #fdd000;
+  border-color: #fdd000;
+}
+header.active .wrap li:hover a {
+  color: #1c1c1b;
+}
+
+@media (max-width: 1280px) {
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    position: fixed;
+    left: 0%;
+    top: 0;
+    z-index: 10;
+  }
+  header .hdbg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  header .hdbg .head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px 3%;
+  }
+  header .hdbg .head .head_logo {
+    width: 30%;
+    padding-top: 30px;
+  }
+  header .hdbg .head .head_logo a img {
+    width: 200px;
+  }
+  header .hdbg .head .menu_wrap {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    display: none;
+  }
+  header .hdbg .head .menu_wrap > li {
+    width: 20%;
+    text-align: center;
+    padding: 40px 0;
+  }
+  header .hdbg .head .menu_wrap > li a {
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #1c1c1b;
+  }
+  header .hdbg .head .menu_wrap > li > a::after {
     content: "";
-    width: 40px;
-    border: 1px solid black;
     display: block;
-    margin-bottom: 7%;
-    border-width: 0px 0px 5px 0px;
+    border-bottom: 1px solid black;
+    padding-top: 20px;
+    width: 0px;
+    margin: 0 auto;
   }
+  header .hdbg .head .menu_wrap > li div {
+    padding-top: 20px;
+    margin-top: 0;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
+  header .hdbg .head .menu_wrap > li div ul {
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-top: 10%;
+  }
+  header .hdbg .head .menu_wrap > li div ul li {
+    width: 100%;
+    padding: 2% 0% 2%;
+  }
+  header .hdbg .head .menu_wrap > li div ul li:nth-of-type(1) {
+    margin-top: 5%;
+  }
+  header .hdbg .head .menu_wrap li:hover > a::after {
+    width: 25%;
+    left: 0%;
+    transition: 0.2s;
+  }
+  header .hdbg .head li:hover {
+    background-color: #fdd000;
+  }
+  header .hdbg .head .sns {
+    width: 30%;
+    padding-top: 25px;
+    display: flex;
+  }
+  header .hdbg .head .sns nav {
+    width: 85%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  header .hdbg .head .sns nav a {
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  header .hdbg .head .sns nav a:hover {
+    background-color: #fdd000;
+    border-color: #fdd000;
+  }
+  header .hdbg .head .sns .burger_bg {
+    position: absolute;
+    left: 88%;
+    top: 53%;
+    z-index: 10;
+    display: block;
+    display: flex;
+    align-items: center;
+    width: 15%;
+    justify-content: center;
+  }
+  header .hdbg .head .sns .burger_bg .line {
+    margin-top: 0px;
+    width: 25px;
+    height: 15px;
+    position: relative;
+  }
+  header .hdbg .head .sns .burger_bg .line span {
+    width: 100%;
+    border: 1px solid black;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+  }
+  header .hdbg .head .sns .burger_bg .line span:nth-child(1) {
+    top: 0;
+  }
+  header .hdbg .head .sns .burger_bg .line span:nth-child(2) {
+    top: calc(50% - 1px);
+  }
+  header .hdbg .head .sns .burger_bg .line span:nth-child(3) {
+    top: calc(100% - 2px);
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span {
+    top: calc(50% - 1px);
+    border: 1px solid white;
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(2) {
+    opacity: 0;
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  header .wrap {
+    position: fixed;
+    right: 30px;
+    top: 30%;
+    display: none;
+  }
+  header .wrap li {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 100%;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  }
+  header .wrap li div a {
+    color: white;
+  }
+  header .wrap li div a p {
+    margin: 0px;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 14px;
+  }
+  header .wrap li div a b {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+  header .wrap li:hover {
+    background-color: #fdd000;
+    border-color: #fdd000;
+  }
+  header .wrap li:hover a {
+    color: #1c1c1b;
+  }
+  header .media_menu {
+    transform: translateX(100%);
+    transition: 1s;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #212121;
+    color: #fdd000;
+    display: flex;
+    flex-direction: column;
+  }
+  header .media_menu figure {
+    margin: 5% auto;
+  }
+  header .media_menu figure img {
+    width: 100%;
+    max-width: 200px;
+  }
+  header .media_menu .media_menu_wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 7%;
+  }
+  header .media_menu .media_menu_wrap li {
+    width: 100%;
+    display: flex;
+    margin-bottom: 8%;
+  }
+  header .media_menu .media_menu_wrap li h2 {
+    width: 20%;
+    padding-right: 5%;
+    color: #fff;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin-top: 0;
+  }
+  header .media_menu .media_menu_wrap li div {
+    width: 80%;
+  }
+  header .media_menu .media_menu_wrap li div ul {
+    width: 100%;
+  }
+  header .media_menu .media_menu_wrap li div ul li {
+    margin-bottom: 1%;
+  }
+  header .media_menu .media_menu_wrap li div ul li a {
+    color: #a9a9a9;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+  header .media_menu .media_menu_wrap hr {
+    width: 100%;
+    height: 0.3px;
+    margin-bottom: 3%;
+    border: 0px;
+    border-bottom: 0.7px solid rgba(93, 93, 93, 0.4392156863);
+  }
+  header .media_menu.menuactive {
+    transform: translateX(0%);
+  }
+}
+@media (max-width: 760px) {
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    position: fixed;
+    left: 0%;
+    top: 0;
+    z-index: 10;
+  }
+  header .hdbg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  header .hdbg .head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px 3%;
+  }
+  header .hdbg .head .head_logo {
+    width: 30%;
+    padding-top: 10px;
+  }
+  header .hdbg .head .head_logo a img {
+    width: 150px;
+  }
+  header .hdbg .head .menu_wrap {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    display: none;
+  }
+  header .hdbg .head .menu_wrap > li {
+    width: 20%;
+    text-align: center;
+    padding: 40px 0;
+  }
+  header .hdbg .head .menu_wrap > li a {
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #1c1c1b;
+  }
+  header .hdbg .head .menu_wrap > li > a::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid black;
+    padding-top: 20px;
+    width: 0px;
+    margin: 0 auto;
+  }
+  header .hdbg .head .menu_wrap > li div {
+    padding-top: 20px;
+    margin-top: 0;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
+  header .hdbg .head .menu_wrap > li div ul {
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.9em;
+    margin-top: 10%;
+  }
+  header .hdbg .head .menu_wrap > li div ul li {
+    width: 100%;
+    padding: 2% 0% 2%;
+  }
+  header .hdbg .head .menu_wrap > li div ul li:nth-of-type(1) {
+    margin-top: 5%;
+  }
+  header .hdbg .head .menu_wrap li:hover > a::after {
+    width: 25%;
+    left: 0%;
+    transition: 0.2s;
+  }
+  header .hdbg .head li:hover {
+    background-color: #fdd000;
+  }
+  header .hdbg .head .sns {
+    width: 30%;
+    padding-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  header .hdbg .head .sns nav {
+    width: 85%;
+    display: none;
+    justify-content: flex-end;
+  }
+  header .hdbg .head .sns nav a {
+    width: 50px;
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  header .hdbg .head .sns nav a:hover {
+    background-color: #fdd000;
+    border-color: #fdd000;
+  }
+  header .hdbg .head .sns .burger_bg {
+    position: absolute;
+    left: 85%;
+    z-index: 10;
+    top: 50%;
+    display: block;
+    display: flex;
+    align-items: center;
+    width: 15%;
+    justify-content: center;
+  }
+  header .hdbg .head .sns .burger_bg .line {
+    margin-top: 0px;
+    width: 25px;
+    height: 15px;
+    position: relative;
+  }
+  header .hdbg .head .sns .burger_bg .line span {
+    width: 100%;
+    border: 1px solid black;
+    position: absolute;
+    left: 0;
+    transition: 0.5s;
+  }
+  header .hdbg .head .sns .burger_bg .line span:nth-child(1) {
+    top: 0;
+  }
+  header .hdbg .head .sns .burger_bg .line span:nth-child(2) {
+    top: calc(50% - 1px);
+  }
+  header .hdbg .head .sns .burger_bg .line span:nth-child(3) {
+    top: calc(100% - 2px);
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span {
+    top: calc(50% - 1px);
+    border: 1px solid white;
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(1) {
+    transform: translate rotate(45deg);
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(2) {
+    opacity: 0;
+  }
+  header .hdbg .head .sns .burger_bg.burger_active .line span:nth-child(3) {
+    transform: translate rotate(-45deg);
+  }
+  header .wrap {
+    position: fixed;
+    right: 30px;
+    top: 30%;
+    display: none;
+  }
+  header .wrap li {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 100%;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  }
+  header .wrap li div a {
+    color: white;
+  }
+  header .wrap li div a p {
+    margin: 0px;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 14px;
+  }
+  header .wrap li div a b {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+  header .wrap li:hover {
+    background-color: #fdd000;
+    border-color: #fdd000;
+  }
+  header .wrap li:hover a {
+    color: #1c1c1b;
+  }
+  header .media_menu {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 240px;
+    height: 100vh;
+    background-color: #212121;
+    color: #fdd000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  header .media_menu figure {
+    padding: 20% 0px 10%;
+    margin: 0% auto;
+  }
+  header .media_menu figure img {
+    width: 100%;
+    max-width: 190px;
+  }
+  header .media_menu .media_menu_wrap {
+    display: flex;
+    flex-direction: column;
+    margin: 7%;
+    margin-top: 10%;
+  }
+  header .media_menu .media_menu_wrap li {
+    width: 100%;
+    display: flex;
+    margin-bottom: 8%;
+    flex-direction: column;
+  }
+  header .media_menu .media_menu_wrap li h2 {
+    width: 100%;
+    padding-right: 5%;
+    color: #fff;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.9rem;
+    position: relative;
+  }
+  header .media_menu .media_menu_wrap li > h2::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "chevron_right";
+    font-family: "material symbols outlined";
+    display: inline-block;
+    width: 20px;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+  header .media_menu .media_menu_wrap li div {
+    display: none;
+    width: 100%;
+  }
+  header .media_menu .media_menu_wrap li div > ul {
+    width: 100%;
+    margin: 15%;
+  }
+  header .media_menu .media_menu_wrap li div > ul > li {
+    margin-bottom: 1%;
+  }
+  header .media_menu .media_menu_wrap li div > ul > li > a {
+    color: #a9a9a9;
+    margin-bottom: 5%;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+  header .media_menu .media_menu_wrap li div > ul > li a::after {
+    content: "";
+    display: none;
+  }
+  header .media_menu .media_menu_wrap li.active > h2 {
+    color: #fdd000;
+  }
+  header .media_menu .media_menu_wrap li.active > h2::after {
+    transform: rotate(90deg);
+    color: white;
+  }
+  header .media_menu .media_menu_wrap hr {
+    display: none;
+  }
+}
+body {
+  transition: 0.5s;
+}
+
+@media (min-width: 1280px) {
+  .media_menu {
+    display: none;
+  }
+}
+@media (max-width: 1280px) {
+  main .menu_wrap_top {
+    display: none;
+  }
+  main .menu_wrap_top li {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  main .menu_wrap_top li div::before {
+    content: "";
+    display: inline-block;
+    /* 기억하자 */
+    vertical-align: middle;
+    border: 1px solid black;
+    width: 8px;
+    margin-right: 5px;
+  }
+  main .menu_wrap_top li div {
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: #1c1c1b;
+  }
+  main .spot_1 {
+    width: 100%;
+  }
+  main .spot_1 ul {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+  main .spot_1 ul li img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+  main .spot_1 .media_spot1 {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    display: none;
+  }
+  main .spot_1 .media_spot1 li img {
+    width: 100vw;
+    height: 100vh;
+  }
+  main .midle .content_1 {
+    position: static;
+    height: 969px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  main .midle .content_1 .txt {
+    width: 45%;
+    word-break: keep-all;
+    /* < 단어 줄 바꿈 */
+  }
+  main .midle .content_1 .txt .text_box1 {
+    position: static;
+    width: 100%;
+    transform: translateX(0%);
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  main .midle .content_1 .txt .text_box1 p:nth-of-type(1) {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #1c1c1b;
+    line-height: 1.4;
+  }
+  main .midle .content_1 .txt .text_box1 b:nth-of-type(1) {
+    position: relative;
+    width: 100%;
+    font-weight: 700;
+    color: #1c1c1b;
+    font-size: 2.5rem;
+    display: inline;
+  }
+  main .midle .content_1 .txt .text_box1 b:nth-of-type(1)::after {
+    content: "";
+    animation: aniline1 1s forwards;
+    width: 0%;
+    height: 0%;
+    position: absolute;
+    left: 0%;
+    background-color: #fdd000;
+    z-index: -1;
+    display: inline;
+    bottom: 0;
+    padding: 0;
+    transform: translateY(-50px);
+  }
+  main .midle .content_1 .txt .text_box1 b:nth-of-type(2) {
+    font-weight: 400;
+    color: #1c1c1b;
+    font-size: 22px;
+    display: block;
+    margin: 15px 0px;
+  }
+  main .midle .content_1 .txt .text_box1 p:nth-of-type(2) {
+    font-weight: 300;
+    color: #1c1c1b;
+    font-size: 0.9em;
+    animation-delay: 0.1s;
+    overflow: hidden;
+  }
+  main .midle .content_1 .txt .text_box1 a {
+    width: 150px;
+    background-color: #fdd000;
+    font-weight: 500;
+    padding: 15px 30px;
+    font-size: 18px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    animation-delay: 0.2s;
+  }
+  main .midle .content_1 .button_ul {
+    width: 50%;
+    overflow: hidden;
+  }
+  main .midle .content_1 .button_ul .button_img {
+    display: none;
+  }
+  main .midle .content_1 .button_ul .menu_ul .menu_img {
+    width: 100%;
+    display: flex;
+  }
+  main .midle .content_1 .button_ul .menu_ul .menu_img li {
+    width: 420px;
+    font-family: "Noto Sans KR", sans-serif;
+    flex-shrink: 0;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  main .midle .content_1 .button_ul .menu_ul .menu_img li div {
+    width: 100%;
+  }
+  main .midle .content_1 .button_ul .menu_ul .menu_img li div img {
+    vertical-align: middle;
+    width: 100%;
+  }
+  main .midle .content_1 .button_ul .menu_ul .menu_img li div .menu_text {
+    background-color: #e9e9e9;
+    padding: 33px;
+    border: none;
+    width: 100%;
+  }
+  main .midle .content_1 .button_ul .menu_ul .menu_img li div .menu_text b {
+    font-weight: 400;
+    font-size: 1.4em;
+  }
+  main .midle .content_1 .button_ul .menu_ul .menu_img li div p {
+    font-weight: 300;
+    font-size: 14px;
+    width: 100%;
+  }
+  main .midle .content_1.active {
+    position: static;
+    height: 969px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  main .midle .content_1.active .txt {
+    width: 45%;
+    word-break: keep-all;
+    /* < 단어 줄 바꿈 */
+  }
+  main .midle .content_1.active .txt .text_box1 {
+    position: static;
+    width: 100%;
+    transform: translateX(0%);
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  main .midle .content_1.active .txt .text_box1 p:nth-of-type(1) {
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #1c1c1b;
+    line-height: 1.4;
+    transform: translateY(-108px);
+  }
+  main .midle .content_1.active .txt .text_box1 b:nth-of-type(1) {
+    position: relative;
+    width: 100%;
+    font-weight: 700;
+    color: #1c1c1b;
+    font-size: 2.5rem;
+    display: inline;
+    top: -100px;
+  }
+  main .midle .content_1.active .txt .text_box1 b:nth-of-type(1)::after {
+    content: "";
+    animation: aniline1 1s forwards;
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    left: 0%;
+    padding: 5%;
+    background-color: #fdd000;
+    z-index: -1;
+    display: inline;
+    bottom: 0;
+    transform: translateY(-5px);
+  }
+  main .midle .content_1.active .txt .text_box1 b:nth-of-type(2) {
+    font-weight: 400;
+    color: #1c1c1b;
+    font-size: 22px;
+    display: block;
+    margin: 15px 0px;
+    transform: translateY(-90px);
+  }
+  main .midle .content_1.active .txt .text_box1 p:nth-of-type(2) {
+    font-weight: 300;
+    color: #1c1c1b;
+    font-size: 0.9em;
+    animation-delay: 0.1s;
+    overflow: hidden;
+    transform: translateY(-90px);
+  }
+  main .midle .content_1.active .txt .text_box1 a {
+    width: 150px;
+    background-color: #fdd000;
+    font-weight: 500;
+    padding: 15px 30px;
+    font-size: 18px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    animation-delay: 0.2s;
+    transform: translateY(-90px);
+  }
+  main .midle .content_1.active .button_ul {
+    width: 50%;
+    overflow: hidden;
+  }
+  main .midle .content_1.active .button_ul .button_img {
+    display: none;
+  }
+  main .midle .content_1.active .button_ul .menu_ul .menu_img {
+    width: 100%;
+    display: flex;
+  }
+  main .midle .content_1.active .button_ul .menu_ul .menu_img li {
+    width: 420px;
+    font-family: "Noto Sans KR", sans-serif;
+    flex-shrink: 0;
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  main .midle .content_1.active .button_ul .menu_ul .menu_img li div {
+    width: 100%;
+  }
+  main .midle .content_1.active .button_ul .menu_ul .menu_img li div img {
+    vertical-align: middle;
+    width: 100%;
+  }
+  main .midle .content_1.active .button_ul .menu_ul .menu_img li div .menu_text {
+    background-color: #f5f5f5;
+    padding: 33px;
+    border: none;
+    width: 100%;
+  }
+  main .midle .content_1.active .button_ul .menu_ul .menu_img li div .menu_text b {
+    font-weight: 400;
+    font-size: 1.4em;
+  }
+  main .midle .content_1.active .button_ul .menu_ul .menu_img li div p {
+    font-weight: 300;
+    font-size: 14px;
+    width: 100%;
+  }
+  main .midle .content_2 {
+    width: 100%;
+    height: 969px;
+    background-color: #fdd000;
+  }
+  main .midle .content_2 .conbox_2 {
+    width: 100%;
+    padding: 0 5%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  main .midle .content_2 .conbox_2 .text_box2 {
+    width: 50%;
+    word-break: keep-all;
+  }
+  main .midle .content_2 .conbox_2 .text_box2 p:nth-of-type(1) {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 1.3rem;
+    transform: translateY(-50px);
+    transition: 0.5s;
+  }
+  main .midle .content_2 .conbox_2 .text_box2 div {
+    transform: translateY(-56px);
+  }
+  main .midle .content_2 .conbox_2 .text_box2 div h2 {
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 3rem;
+    margin: 5px 0;
+    position: static;
+    width: 100%;
+    display: inline;
+  }
+  main .midle .content_2 .conbox_2 .text_box2 div h2 span {
+    display: inline;
+    position: relative;
+    padding: 0 1%;
+  }
+  main .midle .content_2 .conbox_2 .text_box2 div h2 span::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    padding: 6% 50%;
+    left: 0;
+    background-color: #ffffff;
+    z-index: -1;
+    display: inline;
+    transform: translateY(5px);
+  }
+  main .midle .content_2 .conbox_2 .text_box2 div div {
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
+  main .midle .content_2 .conbox_2 .text_box2 div div span {
+    font-size: 3rem;
+  }
+  main .midle .content_2 .conbox_2 .text_box2 b {
+    display: block;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+  main .midle .content_2 .conbox_2 .text_box2 b br {
+    display: inline-block;
+    content: " ";
+    padding: 0 2px;
+  }
+  main .midle .content_2 .conbox_2 .text_box2 p:nth-of-type(2) {
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    font-size: 0.8rem;
+  }
+  main .midle .content_2 .conbox_2 .text_box2 p:nth-of-type(2) br {
+    display: inline-block;
+    content: " ";
+    padding: 0 2px;
+  }
+  main .midle .content_2 .conbox_2 .video {
+    width: 50%;
+  }
+  main .midle .content_2 .conbox_2 .video .video_2 {
+    width: 100%;
+    overflow: hidden;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .midle .content_2 .conbox_2 .video .button_1 {
+    width: 100%;
+    height: 55px;
+    position: relative;
+  }
+  main .midle .content_2 .conbox_2 .video .button_1 input {
+    width: 100%;
+    height: 100%;
+    padding: 0px 30px;
+    background: #1c1c1b;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: -20%;
+    border: 1px solid #1c1c1b;
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  main .midle .content_2.active {
+    width: 100%;
+    height: 969px;
+    background-color: #fdd000;
+  }
+  main .midle .content_2.active .conbox_2 {
+    width: 100%;
+    padding: 0 5%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  main .midle .content_2.active .conbox_2 .text_box2 {
+    width: 50%;
+    word-break: keep-all;
+  }
+  main .midle .content_2.active .conbox_2 .text_box2 p:nth-of-type(1) {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 1.3rem;
+    transform: translateY(-60px);
+  }
+  main .midle .content_2.active .conbox_2 .text_box2 div h2 {
+    transform: translateY(-60px);
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 3rem;
+    margin: 5px 0;
+    position: static;
+    width: 100%;
+    display: inline;
+  }
+  main .midle .content_2.active .conbox_2 .text_box2 div h2 span {
+    display: inline;
+    position: relative;
+    padding: 0 1%;
+  }
+  main .midle .content_2.active .conbox_2 .text_box2 div h2 span::after {
+    content: "";
+    animation: aniline3 1s forwards;
+    width: 100%;
+    position: absolute;
+    padding: 6% 50%;
+    left: 0;
+    background-color: #ffffff;
+    z-index: -1;
+    display: inline;
+    transform: translateY(5px);
+  }
+  main .midle .content_2.active .conbox_2 .text_box2 div div {
+    animation: ani2 1s forwards;
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
+  main .midle .content_2.active .conbox_2 .text_box2 div div span {
+    font-size: 3rem;
+  }
+  main .midle .content_2.active .conbox_2 .text_box2 b {
+    display: block;
+    animation: ani2 1s forwards;
+    font-family: "Noto Sans KR";
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+  main .midle .content_2.active .conbox_2 .text_box2 b br {
+    display: inline-block;
+    content: " ";
+    padding: 0 2px;
+  }
+  main .midle .content_2.active .conbox_2 .text_box2 p:nth-of-type(2) {
+    animation: ani2 1s forwards;
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    font-size: 0.8rem;
+  }
+  main .midle .content_2.active .conbox_2 .text_box2 p:nth-of-type(2) br {
+    display: inline-block;
+    content: " ";
+    padding: 0 2px;
+  }
+  main .midle .content_2.active .conbox_2 .video {
+    width: 50%;
+  }
+  main .midle .content_2.active .conbox_2 .video .video_2 {
+    width: 100%;
+    overflow: hidden;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .midle .content_2.active .conbox_2 .video .button_1 {
+    width: 100%;
+    height: 55px;
+    position: relative;
+  }
+  main .midle .content_2.active .conbox_2 .video .button_1 input {
+    width: 100%;
+    height: 100%;
+    padding: 0px 30px;
+    background: #1c1c1b;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: -20%;
+    border: 1px solid #1c1c1b;
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    font-size: 1rem;
+  }
+  main .midle .content_3 {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: flex-end;
+    position: relative;
+    align-items: center;
+  }
+  main .midle .content_3 .txt2 {
+    width: 45%;
+  }
+  main .midle .content_3 .txt2 .text_box3 {
+    position: static;
+    transform: translateY(0%);
+    padding-right: 1%;
+    word-break: keep-all;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  main .midle .content_3 .txt2 .text_box3 h1 {
+    font-weight: 300;
+    font-size: 1.3rem;
+  }
+  main .midle .content_3 .txt2 .text_box3 h2 {
+    animation: ani2 1s forwards;
+    margin: 5px;
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 3rem;
+  }
+  main .midle .content_3 .txt2 .text_box3 h2 span::after {
+    content: "";
+    animation: aniline 1s forwards;
+    width: 50%;
+    position: absolute;
+    left: 0%;
+    background-color: #fdd000;
+    border: 5px;
+    padding: 20px;
+    z-index: -1;
+    display: block;
+    transform: translateY(-30px);
+  }
+  main .midle .content_3 .txt2 .text_box3 b {
+    animation: ani2 1s forwards;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 15px 0px;
+  }
+  main .midle .content_3 .txt2 .text_box3 b br {
+    display: none;
+  }
+  main .midle .content_3 .txt2 .text_box3 p {
+    animation: ani2 1s forwards;
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin-bottom: 40px;
+  }
+  main .midle .content_3 .txt2 .text_box3 p br {
+    display: none;
+  }
+  main .midle .content_3 .txt2 .text_box3 .button_3 {
+    width: 100%;
+    display: flex;
+  }
+  main .midle .content_3 .txt2 .text_box3 .button_3 a {
+    width: 30%;
+    display: block;
+    margin-right: 4%;
+  }
+  main .midle .content_3 .txt2 .text_box3 .button_3 a input {
+    width: 100%;
+    padding: 10%;
+    background: #fdd000;
+    border: 0;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 18px;
+    animation: ani2 1s forwards;
+  }
+  main .midle .content_3 .txt2 .text_box3 .button_3 a:nth-ot-type(1) {
+    margin-left: 5%;
+  }
+  main .midle .content_3 .spot_2 {
+    width: 50%;
+    overflow: hidden;
+  }
+  main .midle .content_3 .spot_2 img {
+    height: 100vh;
+    width: 100vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transform: translateX(-20%) scale(1.2);
+  }
+  main .midle .content_3.active {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: flex-end;
+    position: relative;
+    align-items: center;
+  }
+  main .midle .content_3.active .txt2 {
+    width: 45%;
+  }
+  main .midle .content_3.active .txt2 .text_box3 {
+    position: static;
+    transform: translateY(0%);
+    padding-right: 1%;
+    word-break: keep-all;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  main .midle .content_3.active .txt2 .text_box3 h1 {
+    font-weight: 300;
+    font-size: 1.3rem;
+  }
+  main .midle .content_3.active .txt2 .text_box3 h2 {
+    animation: ani2 1s forwards;
+    margin: 5px;
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 3rem;
+  }
+  main .midle .content_3.active .txt2 .text_box3 h2 span::after {
+    content: "";
+    animation: aniline 1s forwards;
+    width: 50%;
+    position: absolute;
+    left: 0%;
+    background-color: #fdd000;
+    border: 5px;
+    padding: 20px;
+    z-index: -1;
+    display: block;
+    transform: translateY(-30px);
+  }
+  main .midle .content_3.active .txt2 .text_box3 b {
+    animation: ani2 1s forwards;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 15px 0px;
+  }
+  main .midle .content_3.active .txt2 .text_box3 b br {
+    display: none;
+  }
+  main .midle .content_3.active .txt2 .text_box3 p {
+    animation: ani2 1s forwards;
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin-bottom: 40px;
+  }
+  main .midle .content_3.active .txt2 .text_box3 p br {
+    display: none;
+  }
+  main .midle .content_3.active .txt2 .text_box3 .button_3 {
+    width: 100%;
+    display: flex;
+  }
+  main .midle .content_3.active .txt2 .text_box3 .button_3 a {
+    width: 30%;
+    display: block;
+    margin-right: 4%;
+  }
+  main .midle .content_3.active .txt2 .text_box3 .button_3 a input {
+    width: 100%;
+    padding: 10%;
+    background: #fdd000;
+    border: 0;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 18px;
+    animation: ani2 1s forwards;
+  }
+  main .midle .content_3.active .txt2 .text_box3 .button_3 a:nth-ot-type(1) {
+    margin-left: 5%;
+  }
+  main .midle .content_3.active .spot_2 {
+    width: 50%;
+    overflow: hidden;
+  }
+  main .midle .content_3.active .spot_2 img {
+    height: 100vh;
+    width: 100vw;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transform: translateX(-20%) scale(1.2);
+  }
+  main .midle .content_4 {
+    height: 969px;
+  }
+  main .midle .content_4 .conbox_4 {
+    width: 100%;
+    padding: 0 5%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  main .midle .content_4 .conbox_4 h1 {
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    font-size: 1.3rem;
+    margin-top: 60px;
+  }
+  main .midle .content_4 .conbox_4 h2 {
+    animation: ani2 1s forwards;
+    font-family: "Rotobo";
+    font-weight: 900;
+    font-size: 3rem;
+    margin: 15px;
+  }
+  main .midle .content_4 .conbox_4 h2 span::after {
+    content: "";
+    animation: aniline4 1s forwards;
+    width: 95%;
+    position: absolute;
+    left: -5%;
+    background-color: #fdd000;
+    border: 5px;
+    padding: 20px;
+    z-index: -1;
+    display: block;
+    transform: translateY(-30px);
+  }
+  main .midle .content_4 .conbox_4 b {
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    font-size: 16px;
+    margin: 20px 0px 15px 0px;
+  }
+  main .midle .content_4 .conbox_4 .event_box {
+    width: 100%;
+  }
+  main .midle .content_4 .conbox_4 .event_box .event {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flax-start;
+  }
+  main .midle .content_4 .conbox_4 .event_box .event li {
+    width: 32%;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  main .midle .content_4 .conbox_4 .event_box .event li .event_content {
+    overflow: hidden;
+  }
+  main .midle .content_4 .conbox_4 .event_box .event li .event_content .imghover {
+    width: 100%;
+    overflow: hidden;
+    width: 100%;
+  }
+  main .midle .content_4 .conbox_4 .event_box .event li .event_content .imghover img {
+    width: 100%;
+  }
+  main .midle .content_4 .conbox_4 .event_box .event li .event_content .imghover img:hover {
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
+  }
+  main .midle .content_4 .conbox_4 .event_box .event li .event_content .text_box {
+    padding: 24px;
+    text-overflow: ellipsis;
+  }
+  main .midle .content_4 .conbox_4 .event_box .event li .event_content .text_box p:nth-of-type(1) {
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    font-size: 22px;
+    margin-top: 0;
+  }
+  main .midle .content_4 .conbox_4 .event_box .event li .event_content .text_box p:nth-of-type(2) {
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    font-size: 14px;
+  }
+  main .midle .content_4 .conbox_4 .event_warp a input {
+    width: 100%;
+    padding: 20px 30px;
+    margin: 12px;
+    background: #fdd000;
+    border: 0;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 18px;
+  }
+  main .midle .content_4.active {
+    height: 969px;
+  }
+  main .midle .content_4.active .conbox_4 {
+    width: 100%;
+    padding: 0 5%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  main .midle .content_4.active .conbox_4 h1 {
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    font-size: 1.3rem;
+    margin-top: 60px;
+  }
+  main .midle .content_4.active .conbox_4 h2 {
+    animation: ani2 1s forwards;
+    font-family: "Rotobo";
+    font-weight: 900;
+    font-size: 3rem;
+    margin: 15px;
+  }
+  main .midle .content_4.active .conbox_4 h2 span::after {
+    content: "";
+    animation: aniline4 1s forwards;
+    width: 95%;
+    position: absolute;
+    left: -5%;
+    background-color: #fdd000;
+    border: 5px;
+    padding: 20px;
+    z-index: -1;
+    display: block;
+    transform: translateY(-30px);
+  }
+  main .midle .content_4.active .conbox_4 b {
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    font-size: 16px;
+    margin: 20px 0px 15px 0px;
+  }
+  main .midle .content_4.active .conbox_4 .event_box {
+    width: 100%;
+  }
+  main .midle .content_4.active .conbox_4 .event_box .event {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flax-start;
+  }
+  main .midle .content_4.active .conbox_4 .event_box .event li {
+    width: 32%;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  main .midle .content_4.active .conbox_4 .event_box .event li .event_content {
+    overflow: hidden;
+  }
+  main .midle .content_4.active .conbox_4 .event_box .event li .event_content .imghover {
+    width: 100%;
+    overflow: hidden;
+    width: 100%;
+  }
+  main .midle .content_4.active .conbox_4 .event_box .event li .event_content .imghover img {
+    width: 100%;
+  }
+  main .midle .content_4.active .conbox_4 .event_box .event li .event_content .imghover img:hover {
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
+  }
+  main .midle .content_4.active .conbox_4 .event_box .event li .event_content .text_box {
+    padding: 24px;
+    text-overflow: ellipsis;
+  }
+  main .midle .content_4.active .conbox_4 .event_box .event li .event_content .text_box p:nth-of-type(1) {
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    font-size: 22px;
+    margin-top: 0;
+  }
+  main .midle .content_4.active .conbox_4 .event_box .event li .event_content .text_box p:nth-of-type(2) {
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    font-size: 14px;
+  }
+  main .midle .content_4.active .conbox_4 .event_warp a input {
+    width: 100%;
+    padding: 20px 30px;
+    margin: 12px;
+    background: #fdd000;
+    border: 0;
+    font-family: "Noto Sans KR";
+    font-weight: 500;
+    font-size: 18px;
+  }
+  main .midle footer {
+    width: 100%;
+    background: #212121;
+  }
+  main .midle footer .footer_wrap {
+    display: none;
+  }
+  main .midle footer .footer_1 nav {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+  }
+  main .midle footer .footer_box {
+    width: 100%;
+  }
+  main .midle footer .footer_box .footer_text {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  main .midle footer .footer_box .footer_text .img_box {
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  main .midle footer .footer_box .footer_text .img_box .logo {
+    padding-right: 2%;
+  }
+  main .midle footer .footer_box .footer_text .img_box nav {
+    display: flex;
+    width: 15%;
+  }
+  main .midle footer .footer_box .footer_text .img_box nav div {
+    width: 50px;
+  }
+  main .midle footer .footer_box .footer_text div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 760px) {
   main .menu_wrap_top {
     display: none;
   }
@@ -1847,7 +3861,7 @@ body {
   }
   main .midle .content_1 {
     position: static;
-    height: 890px;
+    height: 740px;
     padding: 0%;
     margin-bottom: 15%;
     flex-direction: column;
@@ -1938,13 +3952,13 @@ body {
     justify-content: flex-start;
   }
   main .midle .content_1 .button_ul .menu_ul .menu_img li {
-    width: 30%;
+    width: 40%;
     font-family: "Noto Sans KR", sans-serif;
     flex-shrink: 0;
     border: 1px solid #e6e5e5;
     border-radius: 15px;
     overflow: hidden;
-    margin: 0 1%;
+    margin: 0 2.5%;
   }
   main .midle .content_1 .button_ul .menu_ul .menu_img li div {
     width: 100%;
@@ -1981,7 +3995,7 @@ body {
   }
   main .midle .content_2 .conbox_2 {
     width: 100%;
-    padding: 0 5%;
+    padding: 10%;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -2098,13 +4112,13 @@ body {
   }
   main .midle .content_3 .txt2 {
     width: 100%;
-    height: 55vh;
+    height: 80vh;
   }
   main .midle .content_3 .txt2 .text_box3 {
     position: absolute;
     left: 0%;
     top: 0%;
-    transform: translateY(80%);
+    transform: translateY(50%);
     padding: 30px;
     word-break: keep-all;
     display: flex;
@@ -2161,7 +4175,7 @@ body {
     display: flex;
   }
   main .midle .content_3 .txt2 .text_box3 .button_3 a {
-    width: 20%;
+    width: 100%;
     display: block;
     margin-right: 4%;
   }
@@ -2198,7 +4212,7 @@ body {
   }
   main .midle .content_4 .conbox_4 {
     width: 100%;
-    padding: 0 5%;
+    padding: 10%;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -2238,6 +4252,7 @@ body {
     font-weight: 300;
     font-size: 0.8rem;
     margin: 20px 0px 15px 0px;
+    text-align: center;
   }
   main .midle .content_4 .conbox_4 .event_box {
     width: 100%;
@@ -2253,7 +4268,7 @@ body {
     width: 100%;
     border: none;
     border-radius: 20px;
-    margin-bottom: 2%;
+    margin-bottom: 6%;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.3);
   }
   main .midle .content_4 .conbox_4 .event_box .event li .event_content {
@@ -2261,7 +4276,7 @@ body {
     overflow: hidden;
   }
   main .midle .content_4 .conbox_4 .event_box .event li .event_content .imghover {
-    width: 25%;
+    width: 50%;
     overflow: hidden;
   }
   main .midle .content_4 .conbox_4 .event_box .event li .event_content .imghover img {
@@ -2270,11 +4285,13 @@ body {
   }
   main .midle .content_4 .conbox_4 .event_box .event li .event_content .text_box {
     padding: 10px;
-    text-overflow: ellipsis;
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   main .midle .content_4 .conbox_4 .event_box .event li .event_content .text_box p:nth-of-type(1) {
     font-family: "Noto Sans KR";
@@ -2355,7 +4372,8 @@ body {
   }
   footer .footer_box .footer_text .img_box nav {
     display: flex;
-    width: 15%;
+    width: 100%;
+    justify-content: center;
     margin-top: 4%;
   }
   footer .footer_box .footer_text .img_box nav div {
